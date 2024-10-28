@@ -62,4 +62,37 @@ dependencies {
     // implementation ('com.google.code.gson:gson:2.8.6') {
     //     transitive = false
     // }
+
+    implementation rfg.deobf("curse.maven:had-enough-items-557549:5471944")
+    implementation("com.cleanroommc:groovyscript:1.2.0-hotfix1") { transitive = false } // so it doesn't installs JEI
+
+    implementation rfg.deobf("curse.maven:patchouli-rofl-edition-905159:5201041")
+
+    // Runtime dependencies
+    runtimeOnly rfg.deobf("curse.maven:the-one-probe-community-edition-885670:5824252")
+    runtimeOnly rfg.deobf("curse.maven:topalldependents-1120632:5808089") // updated version of the one probe addons
+    runtimeOnly rfg.deobf("curse.maven:vintagefix-871198:5010926")
+    runtimeOnly rfg.deobf("curse.maven:modern-splash-629058:5282442")
+
+    runtimeOnly "com.cleanroommc:configanytime:3.0"
+    runtimeOnly rfg.deobf("curse.maven:red-core-873867:5618189")
+    runtimeOnly rfg.deobf("curse.maven:alfheim-lighting-engine-910715:5637644")
+    runtimeOnly rfg.deobf("curse.maven:valkyrie-874067:5235356")
+
+    // Mod Compatibility
+    // Dependencies
+    if (project.debug_moarboats.toBoolean()) {
+        runtimeOnly rfg.deobf("curse.maven:forgelin-continuous-456403:5832299")
+    }
+
+    // Content Mods
+    // Moar Boats
+    if (project.debug_moarboats.toBoolean()) {
+        runtimeOnly rfg.deobf("curse.maven:moar-boats-285865:2733014")
+    }
+
+    // Pressure Pipes
+    if (project.debug_pressure.toBoolean()) {
+        runtimeOnly rfg.deobf("curse.maven:pressure-pipes-221214:2476931")
+    }
 }
