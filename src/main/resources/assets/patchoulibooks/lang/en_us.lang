@@ -1,0 +1,13 @@
+# Patchouli Books
+## GUI Tweaks
+patchoulibooks.gui.lexicon.version_str=Patchouli Books v%s
+patchoulibooks.gui.lexicon.landing=This Book documents the items and blocks in the <mod> mod. It is part of the <pb> mod that tries to document as many mods as possible.<br>All information about <mod> are taken from these sources:<li>$(l:%s)Curseforge$(/l)<li>$(l:%s)GitHub$(/l)<li>$(l:%s)Wiki$(/l)
+
+## Item Tweaks
+patchoulibooks.item.book.tooltip=written by §5%s§r
+
+## Comfigs
+config.patchoulibooks.debug=Debug Mode
+config.patchoulibooks.debug.tooltip=Enables debug mode, this registers all books even if the required mod is not present
+config.patchoulibooks.general=General
+config.patchoulibooks.general.tooltip=General settings for Patchouli Books
