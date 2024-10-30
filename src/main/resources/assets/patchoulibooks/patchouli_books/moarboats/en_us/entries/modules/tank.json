@@ -1,0 +1,18 @@
+{
+    "name": "Tank Module",
+    "icon": "moarboats:boat_tank",
+    "category": "modules",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "moarboats:boat_tank",
+            "link_recipe": true,
+            "title": "Tank Module",
+            "text": "The Tank can hold any fluid registered via Forge. Use a Fluid (Un)Loader to (un)load it."
+        },
+        {
+            "type": "crafting",
+            "recipe": "moarboats:boat_tank"
+        }
+    ]
+}
