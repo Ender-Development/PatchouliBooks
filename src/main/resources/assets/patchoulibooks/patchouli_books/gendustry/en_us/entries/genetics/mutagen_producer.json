@@ -1,0 +1,18 @@
+{
+    "name": "Mutagen Producer",
+    "icon": "gendustry:mutagen_producer",
+    "category": "genetics",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "gendustry:mutagen_producer",
+            "link_recipe": true,
+            "text": "<li>Converts solid items into <l>(misc/resources#mutagen)Mutagen</l><li>the gauge on the left is the internal power storage<li>the gauge on the right is internal mutagen tank<li>items can be inserted from every side<li>mutagen will be automatically outputted to any nearby pipe or tank"
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:mutagen_producer",
+            "text": "Can process redstone, glowstone and various kinds of uranium and radioactive material."
+        }
+    ]
+}

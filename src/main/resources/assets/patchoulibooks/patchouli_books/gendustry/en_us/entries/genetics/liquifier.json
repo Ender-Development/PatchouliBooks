@@ -1,0 +1,18 @@
+{
+    "name": "Liquifier",
+    "icon": "gendustry:liquifier",
+    "category": "genetics",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "gendustry:liquifier",
+            "link_recipe": true,
+            "text": "<li>liquifies meat and fish to produce <l>(misc/resources#protein)Protein</l><li>the gauge on the left is the internal power storage<li>the gauge on the right is internal protein tank<li>items can be inserted from every side<li>protein will be automatically outputted to any nearby pipe or tank"
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:liquifier",
+            "text": "Extracts Protein."
+        }
+    ]
+}

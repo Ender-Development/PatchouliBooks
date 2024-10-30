@@ -1,0 +1,18 @@
+{
+    "name": "Imprinter",
+    "icon": "gendustry:imprinter",
+    "category": "genetics",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "gendustry:imprinter",
+            "link_recipe": true,
+            "text": "<li>consumes <l>(misc/crafting_material#labware)Labware</l> (top right slot)<li>the <l>(misc/crafting_material#gene_template)template</l> will not be consumed (top left slot)<li>will place all traits that are present in the template at once<li>creatures from artificial sources (a.k.a. ignoble stock) have a chance of not surviving the imprinting process"
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:imprinter",
+            "text": "Can be used to imprint genetic traits."
+        }
+    ]
+}

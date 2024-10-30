@@ -1,0 +1,16 @@
+{
+    "name": "Industrial Grafter",
+    "icon": "gendustry:industrial_grafter",
+    "category": "misc",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "gendustry:industrial_grafter",
+            "text": "<li>acts asa forestry grafter but can also clear non-forestry leafs<li>required power to operate but will never break<li>very fast, breaks multiple leaf blocks around<li>can be charged for up to <mark>200 uses</>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:industrial_grafter"
+        }
+    ]
+}

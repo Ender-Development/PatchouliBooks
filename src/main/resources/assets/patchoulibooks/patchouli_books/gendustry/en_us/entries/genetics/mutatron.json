@@ -1,0 +1,28 @@
+{
+    "name": "Mutatron",
+    "icon": "gendustry:mutatron",
+    "category": "genetics",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "gendustry:mutatron",
+            "link_recipe": true,
+            "text": "<li>consumes <l>(misc/resources#mutagen)Mutagen</l> to force mutations<li>gauges on the left are internal power and mutagen storage<li>requires 1 bucket of <l>(misc/resources#mutagen)Mutagen</l> per operation<li>consumes <l>(misc/crafting_material#labware)Labware</l> in the process<li><l>(misc/crafting_material#labware)Labware</l> and inputs can be inserted from any side"
+        },
+        {
+            "type": "text",
+            "title": "Bee Mutations",
+            "text": "The Mutatron is able to mutate bees.<li>Princess goes in the top slot<li>drone in the bottom slot<li>produces a queen of a new species that will produce pure bred offspring when she dies<li>creatures from artificial sources (a.k.a. ignoble stock) have a chance of not surviving the mutation process"
+        },
+        {
+            "type": "text",
+            "title": "Tree Mutations",
+            "text": "The Mutatron is able to mutate trees.<li>the sapling goes in the top slot<li>the pollen goes in the bottom slot<li>produces a sapling of a new species"
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:mutatron",
+            "text": "Can be used to create new species of bees."
+        }
+    ]
+}

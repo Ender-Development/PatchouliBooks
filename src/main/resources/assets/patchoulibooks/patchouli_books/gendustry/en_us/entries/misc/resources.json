@@ -1,0 +1,25 @@
+{
+    "name": "Resources",
+    "icon": "gendustry:mutagen_tank",
+    "category": "misc",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "gendustry:mutagen",
+            "anchor": "mutagen",
+            "text": "<li>produced by the <l>(genetics/mutagen_producer)Mutagen Producer</l> from various solid items<li>required to run the <l>(genetics/mutatron)Mutatron</l> and <l>(genetics/mutatron_advanced)Advanced Mutatron</l>"
+        },
+        {
+            "type": "spotlight",
+            "item": "gendustry:protein",
+            "anchor": "protein",
+            "text": "<li>produced by the <l>(genetics/liquifier)Liquifier</l><li>used by the <l>(genetics/replicator)Replicator</l> to construct new organisms"
+        },
+        {
+            "type": "spotlight",
+            "item": "gendustry:liquiddna",
+            "anchor": "dna",
+            "text": "<li>produced by the <l>(genetics/extractor)Extractor</l><li>used by the <l>(genetics/replicator)Replicator</l> to construct new organisms"
+        }
+    ]
+}

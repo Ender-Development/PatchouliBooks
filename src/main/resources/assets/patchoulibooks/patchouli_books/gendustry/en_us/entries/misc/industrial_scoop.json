@@ -1,0 +1,16 @@
+{
+    "name": "Industrial Scoop",
+    "icon": "gendustry:industrial_scoop",
+    "category": "misc",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "gendustry:industrial_scoop",
+            "text": "<li>acts asa forestry scoop<li>required power to operate but will never break<li>very fast, breaks multiple leaf blocks around<li>can be charged for up to <mark>500 uses</><li>right click hives to pick them up as block (consumes 20x more energy)"
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:industrial_scoop"
+        }
+    ]
+}

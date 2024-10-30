@@ -1,0 +1,18 @@
+{
+    "name": "Extractor",
+    "icon": "gendustry:extractor",
+    "category": "genetics",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "gendustry:extractor",
+            "link_recipe": true,
+            "text": "<li>extracts <l>(misc/resources#dna)DNA</l> from organisms<li>consumes 1 set of <l>(misc/crafting_material#labware)Labware</l> per 10 runs on average<li>the gauge on the left is the internal power storage<li>the gauge on the right is internal DNA tank<li>items can be inserted from every side<li>extracted DNA will be automatically outputted to any nearby pipe or tank"
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:extractor",
+            "text": "Extracts DNA from organisms."
+        }
+    ]
+}

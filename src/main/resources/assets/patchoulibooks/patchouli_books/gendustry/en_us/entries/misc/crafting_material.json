@@ -1,0 +1,72 @@
+{
+    "name": "Crafting Material",
+    "icon": "gendustry:bee_receptacle",
+    "category": "misc",
+    "pages": [
+        {
+            "type": "text",
+            "text": "To craft all of the blocks and items in <mod> there are a few intermediary items that are used in multiple recipes or are used in a few machines."
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:gene_sample_blank",
+            "anchor": "gene_sample_blank",
+            "text": "Used in a <l>(genetics/sampler)Sampler</l> to take genetic samples from organisms. It holds a single chromosome."
+        },
+        {
+            "type": "spotlight",
+            "title": "Gene Sample",
+            "item": "gendustry:gene_sample",
+            "anchor": "gene_sample",
+            "text": "<li>produced in a <l>(genetics/sampler)Sampler</l><li>heat to erase genetic information<li>can be added to a template with normal crafting"
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:gene_template",
+            "anchor": "gene_template",
+            "text": "<li>Holds multiple samples belonging to a single species<li>used in <l>(genetics/imprinter)Imprinters</l> to modify organisms<li>heat to erase genetic information"
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:genetics_processor",
+            "text": "An advanced processor, with the ability to manipulate genetic information."
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:env_processor",
+            "text": "An advanced processor, with the ability to manipulate the environment."
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:mutagen_tank",
+            "text": "A special tank used to safely store <l>(misc/resources#mutagen)Mutagen</l>."
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:power_module",
+            "text": "Allows machines to safely receive and store large loads of energy."
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:bee_receptacle",
+            "text": "Safely holds a living bee and allows it's genome to be manipulated."
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:upgrade_frame",
+            "text": "A basic frame used in construction of <l>(bee_keeping/upgrades)apiary upgrades</l>."
+        },
+        {
+            "type": "crafting",
+            "recipe": "gendustry:labware",
+            "anchor":  "labware",
+            "text": "Used in machines operating on genetic material."
+        },
+        {
+            "type": "spotlight",
+            "item": "gendustry:waste",
+            "anchor": "waste",
+            "text": "An unlucky creature that did not survive your experiments.<br><c_dark_green><i>You monster!</>"
+        }
+    ]
+}
