@@ -3,3 +3,39 @@
 
 // If you wish to use the default helper methods, uncomment the line below
 // apply from: 'gradle/scripts/helpers.gradle'
+
+import groovy.json.JsonBuilder
+
+tasks.register('generateItemModels') {
+    group 'patchoulibooks'
+    def sourceDir = file('src/main/resources/assets/patchoulibooks/textures/items')
+    def destDir = file('src/main/resources/assets/patchoulibooks/models/item')
+
+    inputs.dir(sourceDir)
+    outputs.dir(destDir)
+
+    doLast {
+        destDir.deleteDir()
+        destDir.mkdirs()
+        // Iterate over each file in the source directory
+        sourceDir.eachFile { file ->
+            if (file.isFile()) {  // Only process files, not directories
+                // Define the new JSON file in the destination directory
+                def fileName = file.getName().substring(0,file.getName().length()-4)
+                def newFile = new File(destDir, "${fileName}.json")
+
+                // Create JSON content with the filename and any other details
+                def jsonContent = new JsonBuilder()
+                jsonContent {
+                    parent "item/generated"
+                    textures(
+                            layer0: "patchoulibooks:items/${fileName}"
+                    )
+                }
+
+                // Write the JSON content to the new file
+                newFile.text = jsonContent.toPrettyString()
+            }
+        }
+    }
+}
