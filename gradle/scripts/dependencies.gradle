@@ -69,30 +69,70 @@ dependencies {
     implementation rfg.deobf("curse.maven:patchouli-rofl-edition-905159:5201041")
 
     // Runtime dependencies
-    runtimeOnly rfg.deobf("curse.maven:the-one-probe-community-edition-885670:5824252")
-    runtimeOnly rfg.deobf("curse.maven:topalldependents-1120632:5808089") // updated version of the one probe addons
-    runtimeOnly rfg.deobf("curse.maven:vintagefix-871198:5010926")
-    runtimeOnly rfg.deobf("curse.maven:modern-splash-629058:5282442")
+    runtimeOnly "curse.maven:the-one-probe-community-edition-885670:5824252"
+    runtimeOnly "curse.maven:topalldependents-1120632:5808089" // updated version of the one probe addons
+    runtimeOnly rfg.deobf("curse.maven:vintagefix-871198:5010926") // otherwise it will crash
+    runtimeOnly rfg.deobf("curse.maven:modern-splash-629058:5282442") // otherwise it will crash
+
+    // runtimeOnly "curse.maven:smooth-font-285742:3944565"
 
     runtimeOnly "com.cleanroommc:configanytime:3.0"
-    runtimeOnly rfg.deobf("curse.maven:red-core-873867:5618189")
-    runtimeOnly rfg.deobf("curse.maven:alfheim-lighting-engine-910715:5637644")
-    runtimeOnly rfg.deobf("curse.maven:valkyrie-874067:5235356")
+    runtimeOnly "curse.maven:red-core-873867:5618189"
+    runtimeOnly "curse.maven:alfheim-lighting-engine-910715:5637644"
+    runtimeOnly "curse.maven:valkyrie-874067:5235356"
 
     // Mod Compatibility
     // Dependencies
     if (project.debug_moarboats.toBoolean()) {
-        runtimeOnly rfg.deobf("curse.maven:forgelin-continuous-456403:5832299")
+        runtimeOnly "curse.maven:forgelin-continuous-456403:5832299"
+    }
+
+    if (project.debug_pressure.toBoolean() || project.debug_gendustry.toBoolean()) {
+        runtimeOnly "curse.maven:bdlib-70496:4675629"
+    }
+
+    if (project.debug_gendustry.toBoolean()) {
+        runtimeOnly "curse.maven:forestry-59751:2684780"
+    }
+
+    if (project.debug_thermalexpansion.toBoolean() || project.debug_thermallogistics.toBoolean()) {
+        runtimeOnly "curse.maven:codechicken-lib-1-8-242818:2779848"
+    }
+
+    if (project.debug_thermalexpansion.toBoolean() || project.debug_thermallogistics.toBoolean()) {
+        runtimeOnly "curse.maven:redstone-flux-270789:2920436"
+        runtimeOnly "curse.maven:cofh-core-69162:2920433"
+        runtimeOnly "curse.maven:cofh-world-271384:2920434"
+        runtimeOnly "curse.maven:thermal-foundation-222880:2926428"
+    }
+
+    if (project.debug_thermallogistics.toBoolean()) {
+        runtimeOnly "curse.maven:thermal-dynamics-227443:2920505"
     }
 
     // Content Mods
+    // Gendustry
+    if (project.debug_gendustry.toBoolean()) {
+        runtimeOnly "curse.maven:gendustry-70492:2516215"
+    }
+
     // Moar Boats
     if (project.debug_moarboats.toBoolean()) {
-        runtimeOnly rfg.deobf("curse.maven:moar-boats-285865:2733014")
+        runtimeOnly "curse.maven:moar-boats-285865:2733014"
     }
 
     // Pressure Pipes
     if (project.debug_pressure.toBoolean()) {
-        runtimeOnly rfg.deobf("curse.maven:pressure-pipes-221214:2476931")
+        runtimeOnly "curse.maven:pressure-pipes-221214:2476931"
+    }
+
+    // Thermal Expansion
+    if (project.debug_thermalexpansion.toBoolean()) {
+        runtimeOnly "curse.maven:thermal-expansion-69163:2926431"
+    }
+
+    // Thermal Logistics
+    if (project.debug_thermallogistics.toBoolean()) {
+        runtimeOnly "curse.maven:thermal-logistics-313298:3379693"
     }
 }

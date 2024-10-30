@@ -1,7 +1,15 @@
 # Patchouli Books
 
-This is an add-on for the [Patchouli](https://www.curseforge.com/minecraft/mc-mods/patchouli-rofl-edition) mod that adds various books for different mods, trying to document them as best as possible. Furthermore there are a few more QoL features I have in mind. This mod will only ever exist for 1.12.2 as I have currently no interest in doing anyting on the newer versions of Minecraft.
+This is an add-on for the [Patchouli](https://www.curseforge.com/minecraft/mc-mods/patchouli-rofl-edition) mod that adds various books for different mods, trying to document them as best as possible. Furthermore there are a few more QoL features I have in mind. This mod will only ever exist for 1.12.2 as I have currently no interest in doing anything on the newer versions of Minecraft.
 If you want to take a look at the things I encountered while working on this project, feel free to check out my [project notes](NOTES.md).
+
+##  Possible Features
+Stuff I may work on in the future:
+- [ ] backporting [PatchouliButton](https://www.curseforge.com/minecraft/mc-mods/patchoulibutton)
+- [ ] backporting [PatchouliQuests](https://www.curseforge.com/minecraft/mc-mods/patchouli-quests)
+- [ ] implement the "inventory-scanning-to-open-a-book-entry" thing from [Botania](https://github.com/VazkiiMods/Botania/blob/1.12-final/src/main/java/vazkii/botania/client/core/handler/TooltipAdditionDisplayHandler.java)
+- [ ] add new page types ([PedestalCrafting](https://www.curseforge.com/minecraft/customization/pedestal-recipe-template-for-patchouli), [Boss Info](https://www.curseforge.com/minecraft/customization/patchouli-template-boss-info))
+- [ ] implementing proper [JEI Integration](https://github.com/CaliforniaDemise/Patchouli/issues/1)
 
 ## [Ender-Development](https://github.com/Ender-Development)
 
