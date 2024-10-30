@@ -1,0 +1,17 @@
+{
+    "name": "Tank Pressure Intake",
+    "icon": "pressure:tank_pressure_input",
+    "category": "tanks",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:tank_pressure_input",
+            "link_recipe": true,
+            "text": "<li>accepts fluids from <li>(transport/pipe)Pressure Pipes</l>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:tank_pressure_input"
+        }
+    ]
+}

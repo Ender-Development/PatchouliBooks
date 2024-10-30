@@ -1,0 +1,18 @@
+{
+    "name": "Tank Data Port",
+    "icon": "pressure:tank_data_port",
+    "category": "tanks",
+    "flag": "|mod:computercraft,mod:opencomputers",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:tank_data_port",
+            "link_recipe": true,
+            "text": "<li>works as peripheral for:<li2><l_cc>ComputerCraft</l><li2><l_oc>OpenComputers</l>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:tank_data_port"
+        }
+    ]
+}

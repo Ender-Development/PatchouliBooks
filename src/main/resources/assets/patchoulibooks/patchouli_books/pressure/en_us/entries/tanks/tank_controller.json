@@ -1,0 +1,17 @@
+{
+    "name": "Tank Controller",
+    "icon": "pressure:tank_controller",
+    "category": "tanks",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:tank_controller",
+            "link_recipe": true,
+            "text": "<li>main block of the tank<li>required for the tank to function<li><c_red>if broken all content will be lost</>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:tank_controller"
+        }
+    ]
+}

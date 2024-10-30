@@ -1,0 +1,16 @@
+{
+    "name": "Canister",
+    "icon": "pressure:canister",
+    "category": "misc",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:canister",
+            "text": "<li>holds up to 64 buckets of any fluid<li>right click on tank/machine to fill them<li>can be filled using a <l>(misc/hand_pump)Hand Pump</l> in player inventory<li>can be filled and drained in tanks and machines that support <mark>IFluidContainerItem</>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:canister"
+        }
+    ]
+}

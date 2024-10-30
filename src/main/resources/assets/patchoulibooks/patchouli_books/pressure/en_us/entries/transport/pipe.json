@@ -1,0 +1,21 @@
+{
+    "name": "High Pressure Pipe",
+    "icon": "pressure:pipe",
+    "category": "transport",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:pipe",
+            "link_recipe": true,
+            "text": "<li>connects <l>(transport/output)output</l> and <l>(transport/input)inputs</l><li>fluids are instantly transported<li>throughput is unlimited<li>multiple fluids can be transported at the same time<li>can be placed in any shape"
+        },
+        {
+            "type": "text",
+            "text": "<li>loops that connect the output from a block or valve back to itself will explode<li>if <l_fmp>Forge Multiparts</l> is installed - pipes can be covered by covers and pass through hollow covers"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:pipe"
+        }
+    ]
+}

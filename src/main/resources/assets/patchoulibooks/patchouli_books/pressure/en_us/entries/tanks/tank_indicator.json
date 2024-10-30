@@ -1,0 +1,17 @@
+{
+    "name": "Tank Indicator",
+    "icon": "pressure:tank_indicator",
+    "category": "tanks",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:tank_indicator",
+            "link_recipe": true,
+            "text": "<li>acts as a tank block (increases capacity)<li>will display the current level of fluid in tank<li>multiple can be stacked in a column for a larger display"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:tank_indicator"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "name": "Mekanism Integration",
+    "icon": "mekanism:basic_control_circuit",
+    "category": "misc",
+    "flag": "mod:mekanism",
+    "pages": [
+        {
+            "type": "text",
+            "text": "These blocks are available if <mark>Mekanism</> is installed. This includes <li>Pressurized Gas Input/Output<li>Tank Gas Intake/Outlet</>"
+        },
+        {
+            "type": "link",
+            "text": "Mekanism is a tech mod that brings low, mid, and high tier machinery to Minecraft. It adds a variety of ways to transport, generate and store energy, and to produce and process materials. For more information, check out the CurseForge page.",
+            "link": "https://www.curseforge.com/minecraft/mc-mods/mekanism-ce-unofficial"
+        },
+        {
+            "type": "text",
+            "title": "Pressurized Gas Input/Output",
+            "text": "<li>allows gases input/output from <l>(transport/pipe)pressure pipes</l><li>will convert between gas/fluid as needed<li>to set a filter you need to use the fluid version"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressire:gas_input",
+            "recipe2": "pressure:gas_output"
+        },
+        {
+            "type": "text",
+            "title": "Tank Gas Intake/Outlet",
+            "text": "<li>allows gases to be stored in <l>(transport/tank)tanks</l><li>will convert to liquid form for storage, and convert back as needed"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressire:tank_gas_input",
+            "recipe2": "pressure:tank_gas_output"
+        }
+    ]
+}

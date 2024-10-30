@@ -1,0 +1,17 @@
+{
+    "name": "Check Valve",
+    "icon": "pressure:check_valve",
+    "category": "transport",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:check_valve",
+            "link_recipe": true,
+            "text": "<li>has input and output side (arrow points to output)<li>Fluid can flow from input to output side if no redstone signal is applied<li>Fluid will not flow if a signal is applied<li>can be rotated with a wrench<li>can be covered by <l_fmp>FMP Covers</l>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:check_valve"
+        }
+    ]
+}

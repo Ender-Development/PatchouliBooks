@@ -1,0 +1,17 @@
+{
+    "name": "Pump",
+    "icon": "pressure:pump",
+    "category": "transport",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:pump",
+            "link_recipe": true,
+            "text": "<li>pumps fluids between tanks, pipes and machines<li>will pump as much fluid as possible per tick<li>needs a redstone signal to activate<li>can be <l>(transport/filtering)filtered</l>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:pump"
+        }
+    ]
+}

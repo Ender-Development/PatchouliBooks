@@ -1,0 +1,17 @@
+{
+    "name": "High Pressure Output",
+    "icon": "pressure:output",
+    "category": "transport",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:output",
+            "link_recipe": true,
+            "text": "<li>connects to a <l>(transport/pipe)pressure pipe</l> on the back (darker side without arrows)<li>outputs fluids into pipes/tanks in the front (brighter side with arrows)<li>can be <l>(transport/filtering)filtered</l>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:output"
+        }
+    ]
+}

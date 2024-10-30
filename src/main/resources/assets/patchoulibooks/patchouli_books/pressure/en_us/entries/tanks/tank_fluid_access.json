@@ -1,0 +1,17 @@
+{
+    "name": "Tank Fluid Access",
+    "icon": "pressure:tank_fluid_access",
+    "category": "tanks",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:tank_fluid_access",
+            "link_recipe": true,
+            "text": "<li>allows input and output of fluids<li>functions as combination of <l>(tanks/tank_fluid_input)Tank Fluid Intake</l> and <l>(tanks/tank_fluid_output)Tank Fluid Outlet</l>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:tank_fluid_access"
+        }
+    ]
+}

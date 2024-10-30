@@ -1,0 +1,17 @@
+{
+    "name": "Configurator",
+    "icon": "pressure:configurator",
+    "category": "misc",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:configurator",
+            "text": "Right click on any filterable block to change it's filter settings. Works with <li><l>(transport/input)High Pressure Input</l><li><l>(transport/output)High Pressure Output</l><li><l>(transport/pump)High Pressure Pump</l><li><l>(transport/drain)Fluid Drain</l><li><l>(tank/filter)Tank Fluid Filter</l>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:configurator",
+            "text": "In the GUI text field on top can be used to search for fluids. You can mouse over fluid icons to see their name. Clicking on a fluid icon will set the filter, while clicking the X button will remove the filter setting."
+        }
+    ]
+}

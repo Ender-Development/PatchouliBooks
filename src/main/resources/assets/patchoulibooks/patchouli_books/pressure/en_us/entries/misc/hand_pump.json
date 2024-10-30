@@ -1,0 +1,17 @@
+{
+    "name": "Hand Pump",
+    "icon": "pressure:hand_pump",
+    "category": "misc",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:hand_pump",
+            "link_recipe": true,
+            "text": "<li>Sucks fluids from the world and tanks and places them in <l>(misc/canister)Canisters</l> in your inventory<li>Also should work with other items that support <mark>IFluidHandlerItem</>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:hand_pump"
+        }
+    ]
+}

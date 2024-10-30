@@ -1,0 +1,17 @@
+{
+    "name": "Tank Pressure Outlet",
+    "icon": "pressure:tank_pressure_output",
+    "category": "tanks",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:tank_pressure_output",
+            "link_recipe": true,
+            "text": "<li>allows output from a tank into<li>(transport/pipe)Pressure Pipes</l><li>will automatically push as much fluid as it can (if enabled)<li>can connect on multiple sides, every side will become a separate colored output<li>can be configured from the tank GUI"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:tank_pressure_output"
+        }
+    ]
+}

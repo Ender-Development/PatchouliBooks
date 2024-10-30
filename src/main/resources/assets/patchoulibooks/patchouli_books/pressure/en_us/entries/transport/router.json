@@ -1,0 +1,26 @@
+{
+    "name": "High Pressure Router",
+    "icon": "pressure:router",
+    "category": "transport",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:router",
+            "link_recipe": true,
+            "text": "<li>has 6 colored sides<li>connects to both <l>(transport/pipe)Pressure Pipes</l> and normal fluid pipes/tanks/machines<li>each side can have separate redstone control<li>each side can have separate filters"
+        },
+        {
+            "type": "text",
+            "text": "Each side can be configured as input/output or disabled.<li>Output sides can have High/Medium/Low priority<li>Fluid will always flow to higher priority outputs as long as they can accept it<li>if multiple outputs with the same priority can accept a fluid, they will be processed in arbitrary order<li>input sides can be active or passive (this doesn't affect connections to <l>(transport/pipe)Pressure Pipes</l>)<li>in Input (active) mode, fluid will be actively pulled out of tanks or machines."
+        },
+        {
+            "type": "text",
+            "title": "GUI",
+            "text": "The GUI has 3 rows:<li>Row 1: Current Mode<li>Row 2: Filter<li>Row 3: Redstone Control<2br><c_red><b>Warning! Pipe loops that connect from an output nack to an input without special filtering or other precautions will likely blow up."
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:router"
+        }
+    ]
+}

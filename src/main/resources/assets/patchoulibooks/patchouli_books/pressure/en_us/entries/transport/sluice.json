@@ -1,0 +1,17 @@
+{
+    "name": "Sluice",
+    "icon": "pressure:sluice",
+    "category": "transport",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:sluice",
+            "link_recipe": true,
+            "text": "<li>connects to <l>(transport/pipe)pressure</l> or normal pipes<li>only accepts fluids that can be placed in the world<li>only accepts one bucket at a time<li>if the block in front is Air and at least a bucket has been piped in a source block will be placed<li>can be <l>(transport/filtering)filtered</l>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:sluice"
+        }
+    ]
+}

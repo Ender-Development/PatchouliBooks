@@ -1,0 +1,11 @@
+{
+    "book_texture": "patchouli:textures/gui/book_blue.png",
+    "link_curseforge": "https://www.curseforge.com/minecraft/mc-mods/pressure-pipes",
+    "link_github": "https://github.com/bdew/pressure/",
+    "link_wiki": "https://bdew.net/pressure/",
+    "macros": {
+        "<l_fmp>": "$(l:https://www.curseforge.com/minecraft/mc-mods/mcmultipart)",
+        "<l_cc>": "$(l:https://www.curseforge.com/minecraft/mc-mods/cc-tweaked)",
+        "<l_oc": "$(l:https://www.curseforge.com/minecraft/mc-mods/opencomputers)"
+    }
+}

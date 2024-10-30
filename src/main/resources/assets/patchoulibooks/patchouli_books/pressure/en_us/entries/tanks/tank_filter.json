@@ -1,0 +1,17 @@
+{
+    "name": "Tank Fluid Filter",
+    "icon": "pressure:tank_filter",
+    "category": "tanks",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "pressure:tank_filter",
+            "link_recipe": true,
+            "text": "<li>shows the current filter setting of the tank<li>can be configured by right clicking it with a <l>(misc/configurator)Configurator</l>"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pressure:tank_filter"
+        }
+    ]
+}
