@@ -78,11 +78,11 @@ public abstract class GuiBookLandingMixin extends GuiBook {
             int topSeparator = TOP_PADDING + 12;
             int bottomSeparator = topSeparator + 8 + 11 * loadedCategories;
             patchouliBooks$drawHeader();
-            drawSeparator(book, RIGHT_PAGE_X, topSeparator);
+            drawSeparator(bookExtension, RIGHT_PAGE_X, topSeparator);
             if (loadedCategories <= 12) {
-                drawSeparator(book, RIGHT_PAGE_X, bottomSeparator);
+                drawSeparator(bookExtension, RIGHT_PAGE_X, bottomSeparator);
             }
-            if (book.contents.isErrored()) {
+            if (bookExtension.contents.isErrored()) {
                 int x = RIGHT_PAGE_X + PAGE_WIDTH / 2;
                 int y = bottomSeparator + 12;
                 drawCenteredStringNoShadow(I18n.format("patchouli.gui.lexicon.loading_error"), x, y, 0xFF0000);
