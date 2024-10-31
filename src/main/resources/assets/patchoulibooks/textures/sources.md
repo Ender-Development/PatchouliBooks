@@ -1,7 +1,7 @@
 # Sources
 
 This is a list of all the sources for all textures used in this mod. If you see something that you believe is yours and you are not credited, please let me know.
-If you want a neat way to view all the textures, you can use the [Minecraft Texture Viewer]().
+If you want a neat way to view all the textures, you can use the [Minecraft Texture Viewer](https://oparisblue.github.io/minecraft-textures-viewer/#github/Ender-Development/PatchouliBooks/master).
 
 ## [Cataclysm_Spellbooks](https://www.curseforge.com/minecraft/mc-mods/cataclysm-spellbooks) ![GNU Lesser General Public License v2.1](https://img.shields.io/badge/License-LGPL%20v2.1-blue)
 
