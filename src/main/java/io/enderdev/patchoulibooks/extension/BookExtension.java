@@ -47,6 +47,7 @@ public class BookExtension extends Book {
         put("<2br>", "$(br)$(br)"); // double line break
         put("<l>(", "$(l:"); // start link
         put("</l>", "$(/l)"); // end link
+        put("<k>(", "$(k:"); // start keybind
     }};
 
     @SerializedName("author")
