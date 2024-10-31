@@ -15,15 +15,21 @@ public class ConfigMain {
     public static class ConfigDebug {
         @Config.Name("Enable Debug")
         @Config.Comment("Enable debug mode.")
+        @Config.RequiresMcRestart
         public static boolean enableDebug = false;
     }
 
     @Config(modid = Tags.MOD_ID, category = "recipes")
     @Config.LangKey("config.patchoulibooks.general")
-    public static class ConfigRecipes {
+    public static class ConfigGeneral {
         @Config.Name("Enable Recipes")
         @Config.Comment("Add default recipes for Patchouli books.")
+        @Config.RequiresMcRestart
         public static boolean enableRecipes = true;
+
+        @Config.Name("Enable Pamphlets for everyone")
+        @Config.Comment("Enable Pamphlets for everyone if there is only one category and less than 13 entries.")
+        public static boolean enablePamphlets = false;
     }
 
     @SubscribeEvent

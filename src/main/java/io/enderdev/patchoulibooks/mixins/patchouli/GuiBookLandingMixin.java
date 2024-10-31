@@ -1,5 +1,6 @@
 package io.enderdev.patchoulibooks.mixins.patchouli;
 
+import io.enderdev.patchoulibooks.config.ConfigMain;
 import io.enderdev.patchoulibooks.extension.BookExtension;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.renderer.GlStateManager;
@@ -47,9 +48,8 @@ public abstract class GuiBookLandingMixin extends GuiBook {
     @Inject(method = "initGui", at = @At(value = "INVOKE", target = "Ljava/util/Collections;sort(Ljava/util/List;)V", remap = false), cancellable = true)
     private void renderPamphlet(CallbackInfo ci) {
         Book book = this.book;
-        if (book instanceof BookExtension && book.contents.categories.size() <= 1 && book.contents.entries.size() <= 12) {
-            BookExtension bookExtension = (BookExtension) book;
-            ArrayList<BookEntry> entriesInPamphlet = new ArrayList<>(bookExtension.contents.entries.values());
+        if (patchouliBooks$checkPamphlet(book)) {
+            ArrayList<BookEntry> entriesInPamphlet = new ArrayList<>(book.contents.entries.values());
             entriesInPamphlet.removeIf(BookEntry::shouldHide);
             Collections.sort(entriesInPamphlet);
             int i = 0;
@@ -72,17 +72,16 @@ public abstract class GuiBookLandingMixin extends GuiBook {
     @Inject(method = "drawForegroundElements", at = @At(value = "INVOKE", target = "Lvazkii/patchouli/client/book/gui/GuiBookLanding;drawCenteredStringNoShadow(Ljava/lang/String;III)V"), cancellable = true)
     private void drawForegroundElements(int mouseX, int mouseY, float partialTicks, CallbackInfo ci) {
         Book book = this.book;
-        if (book.contents.categories.size() <= 1 && book.contents.entries.size() <= 12 && book instanceof BookExtension) {
-            BookExtension bookExtension = (BookExtension) book;
+        if (patchouliBooks$checkPamphlet(book)) {
             drawCenteredStringNoShadow(I18n.format("patchoulibooks.gui.lexicon.pamphlet"), RIGHT_PAGE_X + PAGE_WIDTH / 2, TOP_PADDING, book.headerColor);
             int topSeparator = TOP_PADDING + 12;
             int bottomSeparator = topSeparator + 8 + 11 * loadedCategories;
             patchouliBooks$drawHeader();
-            drawSeparator(bookExtension, RIGHT_PAGE_X, topSeparator);
+            drawSeparator(book, RIGHT_PAGE_X, topSeparator);
             if (loadedCategories <= 12) {
-                drawSeparator(bookExtension, RIGHT_PAGE_X, bottomSeparator);
+                drawSeparator(book, RIGHT_PAGE_X, bottomSeparator);
             }
-            if (bookExtension.contents.isErrored()) {
+            if (book.contents.isErrored()) {
                 int x = RIGHT_PAGE_X + PAGE_WIDTH / 2;
                 int y = bottomSeparator + 12;
                 drawCenteredStringNoShadow(I18n.format("patchouli.gui.lexicon.loading_error"), x, y, 0xFF0000);
@@ -110,5 +109,10 @@ public abstract class GuiBookLandingMixin extends GuiBook {
 			fontRenderer.setUnicodeFlag(true);
 		fontRenderer.drawString(book.contents.getSubtitle(), 24, 24, color);
 		fontRenderer.setUnicodeFlag(unicode);
+    }
+
+    @Unique
+    private boolean patchouliBooks$checkPamphlet(Book book) {
+        return book.contents.categories.size() <= 1 && book.contents.entries.size() <= 14 && (book instanceof BookExtension || ConfigMain.ConfigGeneral.enablePamphlets);
     }
 }
