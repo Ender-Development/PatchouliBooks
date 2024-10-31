@@ -1,0 +1,26 @@
+{
+    "name": "Network Manager",
+    "icon": "thermallogistics:manager",
+    "category": "pamphlet",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "thermallogistics:manager",
+            "text": "The Network Manager is a tool which has two modes: monitoring and linking. By default, the mode is set to monitoring, but it can be switched using the <mark><k>(cofh.multimode)</> key."
+        },
+        {
+            "type": "text+",
+            "title": "Monitoring",
+            "text": "When right-clicked on the end of an itemduct, a Network Manager set to Monitoring will tell you which items are travelling to that ending."
+        },
+        {
+            "type": "text",
+            "title": "Linking",
+            "text": "When set to Linking, a Network Manager is capable of linking two Crafters by right-clicking them both. This will signify that these <l>(crafter)Crafters</l> are part of the same operation: if one Crafter gets a request, both Crafters will supply themselves with the necessary items."
+        },
+        {
+            "type": "crafting",
+            "recipe": "thermallogistics:manager"
+        }
+    ]
+}

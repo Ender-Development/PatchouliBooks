@@ -1,0 +1,12 @@
+{
+    "name": "Crafter",
+    "icon": "thermallogistics:crafter",
+    "category": "pamphlet",
+    "pages": [
+        {
+            "type": "spotlight",
+            "item": "thermallogistics:crafter",
+            "text": ""
+        }
+    ]
+}

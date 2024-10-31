@@ -6,7 +6,7 @@
         {
             "type": "spotlight",
             "item": "thermallogistics:terminal_item",
-            "text": "The Terminal is a block that can request items from your network. When attached to an itemduct, it can see all items available from that duct. To be able to request items, you need to insert a <l>(requester)Requester</l> into the Requester slot. If an item is requested, it will travel to the internal inventory of the Terminal. If an item is not available, the Terminal will attempt to craft it using a <l>(crafter)Crafter</l>."
+            "text": "The Terminal is a block that can request items from your network. When attached to an itemduct, it can see all items available from that duct. To be able to request items, you need to insert a <l>(requester)Requester</l> into the Requester slot. If an item is requested, it will travel to the internal inventory of the Terminal otherwise it will attempt to craft it using a <l>(crafter)Crafter</l>."
         },
         {
             "type": "text",
