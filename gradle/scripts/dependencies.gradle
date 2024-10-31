@@ -71,10 +71,10 @@ dependencies {
     // Runtime dependencies
     runtimeOnly "curse.maven:the-one-probe-community-edition-885670:5824252"
     runtimeOnly "curse.maven:topalldependents-1120632:5808089" // updated version of the one probe addons
+
+    runtimeOnly rfg.deobf("curse.maven:lolasm-460609:5257348") // otherwise it will crash
     runtimeOnly rfg.deobf("curse.maven:vintagefix-871198:5010926") // otherwise it will crash
     runtimeOnly rfg.deobf("curse.maven:modern-splash-629058:5282442") // otherwise it will crash
-
-    // runtimeOnly "curse.maven:smooth-font-285742:3944565"
 
     runtimeOnly "com.cleanroommc:configanytime:3.0"
     runtimeOnly "curse.maven:red-core-873867:5618189"
