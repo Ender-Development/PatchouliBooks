@@ -66,6 +66,14 @@ If you want a neat way to view all the textures, you can use the [Minecraft Text
 |----------------------|-----------------------------------------------------------------------------------------------------|
 | `book_moarboats.png` | [malcolmriley](https://github.com/malcolmriley/unused-textures/blob/master/items/book_tattered.png) |
 
+## [Unity](https://www.curseforge.com/minecraft/texture-packs/unity/files/2576530) ![Attribution-NonCommercial-NoDerivatives 4.0 International](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-blue)
+
+| Texture                     | Author                                                                                                                             |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| `book_thermalexpansion.png` | [CyanideX](https://github.com/Unity-Resource-Pack/Unity-Modded/blob/1.12/assets/thermalfoundation/textures/items/util/lexicon.png) |
+
+
+
 ## [\[Patchouli Template\] Pedestal Crafting](https://www.curseforge.com/minecraft/customization/pedestal-recipe-template-for-patchouli) ![MIT License](https://img.shields.io/badge/License-MIT-blue)
 
 | Texture               | Author                                                            |
