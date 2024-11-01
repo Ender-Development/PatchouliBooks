@@ -14,7 +14,7 @@
             "text": "When right-clicked on the end of an itemduct, a Network Manager set to Monitoring will tell you which items are travelling to that ending."
         },
         {
-            "type": "text",
+            "type": "text+",
             "title": "Linking",
             "text": "When set to Linking, a Network Manager is capable of linking two Crafters by right-clicking them both. This will signify that these <l>(crafter)Crafters</l> are part of the same operation: if one Crafter gets a request, both Crafters will supply themselves with the necessary items."
         },

@@ -12,8 +12,7 @@
         "ClientBookRegistryMixin",
         "ItemModBookMixin",
         "PageCraftingMixin",
-        "PageSpotlightMixin",
-        "PageWithTextAccessor"
+        "PageSpotlightMixin"
     ],
     "server": [],
     "client": [
