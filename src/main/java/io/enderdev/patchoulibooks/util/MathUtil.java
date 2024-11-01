@@ -1,11 +1,12 @@
 package io.enderdev.patchoulibooks.util;
 
-import net.minecraft.util.Tuple;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class MathUtil {
+    private MathUtil() {
+    }
+
     public static class Point {
         private final double x;
         private final double y;
