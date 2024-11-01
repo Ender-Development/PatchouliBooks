@@ -14,8 +14,6 @@ import vazkii.patchouli.common.util.ItemStackUtil;
 
 import java.util.List;
 
-import static java.lang.Math.round;
-
 @PageRegister("pillar")
 public class PagePillar extends PageBase {
     String title = "";
@@ -84,8 +82,6 @@ public class PagePillar extends PageBase {
 
     private void drawItemWithPillar(Object item, boolean core, int posX, int posY, int mouseX, int mouseY) {
         drawItem(false, item, posX, posY, mouseX, mouseY);
-        mc.renderEngine.bindTexture(core ? TEXTURES.get("pillar_middle") : TEXTURES.get("pillar"));
-        GlStateManager.enableBlend();
-        Gui.drawModalRectWithCustomSizedTexture(posX, posY + 12, 0, 0, 16, 16, 16, 16);
+        drawFullTexture(core ? TEXTURES.get("pillar_middle") : TEXTURES.get("pillar"), posX, posY + 12, 16, 16);
     }
 }
