@@ -14,6 +14,7 @@ import vazkii.patchouli.common.util.ItemStackUtil;
 
 import java.util.List;
 
+@PageRegister("pillar")
 public class PagePillar extends PageBase {
     String title = "";
     @SerializedName("output")

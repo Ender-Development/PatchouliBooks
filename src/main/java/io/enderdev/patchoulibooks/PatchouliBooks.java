@@ -21,7 +21,7 @@ public class PatchouliBooks {
 	@Mod.Instance(value = Tags.MOD_ID)
 	public static PatchouliBooks instance;
 
-	@SidedProxy(clientSide = CLIENT_PROXY, serverSide = COMMON_PROXY)
+	@SidedProxy(modId = Tags.MOD_ID, clientSide = CLIENT_PROXY, serverSide = COMMON_PROXY)
 	public static CommonProxy proxy;
 
 	@Mod.EventHandler

@@ -5,6 +5,7 @@ import vazkii.patchouli.client.book.gui.BookTextRenderer;
 import vazkii.patchouli.client.book.gui.GuiBook;
 import vazkii.patchouli.client.book.gui.GuiBookEntry;
 
+@PageRegister("text+")
 public class PageTextE extends PageBase {
     String title;
     String title2;
