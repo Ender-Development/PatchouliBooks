@@ -1,12 +1,38 @@
 {
-    "name": "Crafter",
+    "name": "Crafter - Basic",
     "icon": "thermallogistics:crafter",
     "category": "pamphlet",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "thermallogistics:crafter",
-            "text": ""
+            "text": "If a <l>(requester)Requester</l> or <l>(terminal_item)Terminal</l> wants an item that is not available in the network, they can enlist the help of a Crafter. Crafters pull inputs from the network into the adjacent inventory and wait for it to craft an output. This output is then sent to the Requester or Terminal. They can also request from each other recursively."
+        },
+        {
+            "type": "text+",
+            "title": "Configuration",
+            "text": "The higher the tier of a Crafter is, the more inputs and outputs are available to it, ranging from 2 inputs and 1 output (Basic Crafter) to 12 inputs and 6 outputs (Resonant Crafter). These inputs and outputs are specified by clicking on a slot with an item. The item will not be consumed. A Crafter with inputs will send items to the side it is attached on."
+        },
+        {
+            "type": "text+",
+            "text": "A Crafter with outputs expects the attached machine to output at that side.<br>Crafters have a whole bunch of functionality, so let's take them one step at a time.",
+            "title2": "Basic Crafter",
+            "text2": "In the Basic Crafter, you will be able to see two buttons: the link button and the enable/disable button. Instead of using Redstone Control, crafters are enabled and disabled with a simple button."
+        },
+        {
+            "type": "text+",
+            "text": "This is so you can easily disable and enable all crafters linked to each other at the same time.<br>If two Crafters are part of the same operation (i.e. they are codependent), the two should be linked. Linking is done by clicking on the link button with your <l>(network_manager)Network Manager</l>. Crafters can be linked to infinite other Crafters. If one Crafter gets a request, all linked Crafters will also be activated. If you need to link a whole bunch of recipes at once, there is also a"
+        },
+        {
+            "type": "text+",
+            "text": "“bulk linking mode” on the <l>(network_manager)Network Manager</l> that will link the 1st recipe of crafter A to the 1st recipe of crafter B, the 2nd recipe of A to the 2nd recipe of B, etc.",
+            "text2": "Finally, there are the input and output tabs. These tabs give a peek into the internal memory of the crafter. The input tab tells you what the crafter is requesting and where it expects it to come from,"
+        },
+        {
+            "type": "crafting+",
+            "text": "and the output tab tells you what the crafter expects to output. Disabling and re-enabling recipes resets this internal memory, should anything go wrong.",
+            "title2": "Basic Crafter",
+            "recipe2": "thermallogistics:crafter"
         }
     ]
 }

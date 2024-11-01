@@ -1,0 +1,18 @@
+{
+    "name": "Crafter - Reinforced",
+    "icon": "thermallogistics:crafter:2",
+    "category": "pamphlet",
+    "pages": [
+        {
+            "type": "spotlight+",
+            "item": "thermallogistics:crafter:2",
+            "text": "Finally, there is sometimes the problem that a Crafter sends too much of one item into a machine, and that there is then no more room left for the other inputs. To remedy this, there is now a new option in the Crafters: max stack size."
+        },
+        {
+            "type": "crafting+",
+            "text": "This works the same way as it does in the Retriever and Requester: it limits the number of items it will send into the machine per item type. For the Basic and Hardened Crafters, this is set to 64.",
+            "title2": "Crafting",
+            "recipe2": "thermallogistics:crafter:2"
+        }
+    ]
+}

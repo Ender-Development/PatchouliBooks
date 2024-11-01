@@ -1,0 +1,22 @@
+{
+    "name": "Crafter - Hardened",
+    "icon": "thermallogistics:crafter:1",
+    "category": "pamphlet",
+    "pages": [
+        {
+            "type": "spotlight+",
+            "item": "thermallogistics:crafter:1",
+            "text": "Starting from the Hardened Crafter, Crafters can contain more than one recipe. These recipes act independently from each other, but they cannot request from each other. You can also see another button at the bottom: whether or not recipes should be processed in series or in parallel. To explain the difference between the two,"
+        },
+        {
+            "type": "text+",
+            "text": "let’s look at the Induction Smelter from <l_te>Thermal Expansion</l> and the Crafter from <l_rft>RFTools</l>. The Induction Smelter can only handle one recipe at a time, so it should not get inputs from multiple recipes sent to it at once, as it might get stuck if you do that. That’s there's the option to process the recipes in series: it will only process one recipe at a time until that recipe is done, after which it will move on to the next recipe. The current recipe will be highlighted in green."
+        },
+        {
+            "type": "crafting+",
+            "text": "the Crafter from RFTools is different. It can handle multiple recipes at once, and so you might also want the Crafter to send all inputs from its recipes at once. To do so, set up the Crafter to process the recipes in parallel.",
+            "title2": "Crafting",
+            "recipe2": "thermallogistics:crafter:1"
+        }
+    ]
+}
