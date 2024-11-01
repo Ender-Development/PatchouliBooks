@@ -33,13 +33,13 @@ public class PageSpotlight extends PageBase {
     @Override
     public void onDisplayed(GuiBookEntry parent, int left, int top) {
         super.onDisplayed(parent, left, top);
-        textRenderer = new BookTextRenderer(parent, text, 0, 40);
+        textRenderer = new BookTextRenderer(parent, text, 0, DIST_SEP_TEXT + 3 * TEXT_LINE_HEIGHT);
     }
 
     @Override
     public void render(int mouseX, int mouseY, float pticks) {
         drawTitle(title != null && !title.isEmpty() ? title : itemStack.getDisplayName());
-        drawHighlightItem(itemStack, 15, mouseX, mouseY);
+        drawHighlightItem(itemStack, DIST_SEP_TEXT, mouseX, mouseY);
         textRenderer.render(mouseX, mouseY);
     }
 }
