@@ -10,8 +10,7 @@
         "BookRegistryMixin",
         "BookTextParserMixin",
         "ItemModBookMixin",
-        "PageCraftingMixin",
-        "PageSpotlightMixin"
+        "PageCraftingMixin"
     ],
     "server": [],
     "client": [

@@ -16,6 +16,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class PageBase extends BookPage {
+
+    public static final int FULL_WIDTH = GuiBook.FULL_WIDTH;
+    public static final int FULL_HEIGHT = GuiBook.FULL_HEIGHT;
+    public static final int PAGE_WIDTH = GuiBook.PAGE_WIDTH;
+    public static final int PAGE_CENTER_HORIZONTAL = PAGE_WIDTH / 2;
+    public static final int PAGE_HEIGHT = GuiBook.PAGE_HEIGHT;
+    public static final int PAGE_CENTER_VERTICAL = PAGE_HEIGHT / 2;
+    public static final int TOP_PADDING = GuiBook.TOP_PADDING;
+    public static final int LEFT_PAGE_X = GuiBook.LEFT_PAGE_X;
+    public static final int RIGHT_PAGE_X = GuiBook.RIGHT_PAGE_X;
+    public static final int TEXT_LINE_HEIGHT = GuiBook.TEXT_LINE_HEIGHT;
+    public static final int MAX_BOOKMARKS = GuiBook.MAX_BOOKMARKS;
+    public static final int ITEM_WIDTH = 16;
+    public static final int ITEM_HEIGHT = 16;
+
     protected static final Map<String, ResourceLocation> TEXTURES = new HashMap<String, ResourceLocation>() {
         {
             put("hourglass", new ResourceLocation(Tags.MOD_ID, "textures/templates/pedestal_crafting/hourglass.png"));
@@ -25,8 +40,9 @@ public abstract class PageBase extends BookPage {
     };
 
     /**
-     * Is called when the page is built, can be used to load resources convert data into ItemStacks.
-     * @param entry The entry the page is in, this gives access to the book's data
+     * Is called when the page is built, can be used to load resources and convert data into ItemStacks.
+     *
+     * @param entry   The entry the page is in, this gives access to the book's data
      * @param pageNum The page number of the entry in the book
      */
     @Override
@@ -36,9 +52,10 @@ public abstract class PageBase extends BookPage {
 
     /**
      * Is called when the page is displayed, must be used to create text renderers.
+     *
      * @param parent The parent GuiBookEntry
-     * @param left The left position of the page, relative to the page of the book
-     * @param top The top position of the page, relative to the page of the book
+     * @param left   The left position of the page, relative to the page of the book
+     * @param top    The top position of the page, relative to the page of the book
      */
     @Override
     public void onDisplayed(GuiBookEntry parent, int left, int top) {
@@ -47,6 +64,7 @@ public abstract class PageBase extends BookPage {
 
     /**
      * Is called when the page is rendered, must be used to render the page.
+     *
      * @param mouseX The x position of the mouse
      * @param mouseY The y position of the mouse
      * @param pticks The partial ticks (unused)
@@ -55,9 +73,10 @@ public abstract class PageBase extends BookPage {
     public abstract void render(int mouseX, int mouseY, float pticks);
 
     /**
-     * Draws the title at the top of the page with a separator.
+     * Draws the title at the top of the page with a separator at y=12.
      * It also draws a small text below the title if the advanced tooltips are
      * enabled that shows the resource location of the entry.
+     *
      * @param title The title to draw
      */
     protected void drawTitle(String title) {
@@ -65,8 +84,11 @@ public abstract class PageBase extends BookPage {
         String smolText = "";
 
         if (mc.gameSettings.advancedItemTooltips) {
-            ResourceLocation res = parent.getEntry().getResource();
-            smolText = res.toString();
+            if (pageNum == 0) {
+                smolText = parent.getEntry().getResource().toString();
+            } else {
+                smolText = I18n.format("patchoulibooks.gui.lexicon.page_type", type);
+            }
         } else if (entry.isExtension()) {
             String name = entry.getTrueProvider().getOwnerName();
             smolText = I18n.format("patchouli.gui.lexicon.added_by", name);
@@ -74,22 +96,23 @@ public abstract class PageBase extends BookPage {
 
         if (!smolText.isEmpty()) {
             GlStateManager.scale(0.5F, 0.5F, 1F);
-            parent.drawCenteredStringNoShadow(smolText, GuiBook.PAGE_WIDTH, 12, book.headerColor);
+            parent.drawCenteredStringNoShadow(smolText, PAGE_WIDTH, 12, book.headerColor);
             GlStateManager.scale(2F, 2F, 1F);
             renderedSmol = true;
         }
-        parent.drawCenteredStringNoShadow(title, GuiBook.PAGE_WIDTH / 2, renderedSmol ? -3 : 0, book.headerColor);
+        parent.drawCenteredStringNoShadow(title, PAGE_CENTER_HORIZONTAL, renderedSmol ? -3 : 0, book.headerColor);
         GuiBook.drawSeparator(book, 0, 12);
     }
 
     /**
      * Draws an item at the given position.
+     *
      * @param drawFrame If a frame should be drawn around the item
-     * @param item The item to draw can be an ItemStack or an Ingredient
-     * @param posX The x position to draw the item
-     * @param posY The y position to draw the item
-     * @param mouseX The x position of the mouse
-     * @param mouseY The y position of the mouse
+     * @param item      The item to draw can be an ItemStack or an Ingredient
+     * @param posX      The x position to draw the item
+     * @param posY      The y position to draw the item
+     * @param mouseX    The x position of the mouse
+     * @param mouseY    The y position of the mouse
      */
     protected void drawItem(boolean drawFrame, Object item, int posX, int posY, int mouseX, int mouseY) {
         if (item instanceof ItemStack) {
@@ -107,14 +130,15 @@ public abstract class PageBase extends BookPage {
 
     /**
      * Draws a texture at the given position.
-     * @param texture The texture to draw
-     * @param posX The x position to draw the texture
-     * @param posY The y position to draw the texture
-     * @param posU The x position of the texture to start drawing from
-     * @param posV The y position of the texture to start drawing from
-     * @param width The width of the texture to draw
-     * @param height The height of the texture to draw
-     * @param textureWidth The width of the texture
+     *
+     * @param texture       The texture to draw
+     * @param posX          The x position to draw the texture
+     * @param posY          The y position to draw the texture
+     * @param posU          The x position of the texture to start drawing from
+     * @param posV          The y position of the texture to start drawing from
+     * @param width         The width of the texture to draw
+     * @param height        The height of the texture to draw
+     * @param textureWidth  The width of the texture
      * @param textureHeight The height of the texture
      */
     protected void drawTexture(ResourceLocation texture, int posX, int posY, int posU, int posV, int width, int height, int textureWidth, int textureHeight) {
@@ -125,13 +149,38 @@ public abstract class PageBase extends BookPage {
 
     /**
      * Draws a full texture at the given position.
+     *
      * @param texture The texture to draw
-     * @param posX The x position to draw the texture
-     * @param posY The y position to draw the texture
-     * @param width The width of the given texture
-     * @param height The height of the given texture
+     * @param posX    The x position to draw the texture
+     * @param posY    The y position to draw the texture
+     * @param width   The width of the given texture
+     * @param height  The height of the given texture
      */
     protected void drawFullTexture(ResourceLocation texture, int posX, int posY, int width, int height) {
         drawTexture(texture, posX, posY, 0, 0, width, height, width, height);
+    }
+
+    /**
+     * Draws the item spotlight texture at the given y position.
+     * It will always draw the texture at the horizontal center of the page.
+     *
+     * @param item   The item to draw can be an ItemStack or an Ingredient
+     * @param posY   The y position to draw the texture
+     * @param mouseX The x position of the mouse
+     * @param mouseY The y position of the mouse
+     */
+    protected void drawHighlightItem(Object item, int posY, int mouseX, int mouseY) {
+        int w = 66;
+        int h = 26;
+        drawTexture(book.craftingResource, centerHorizontal(w), posY, 0, 128 - h, w, h, 128, 128);
+        drawItem(false, item, centerHorizontal(ITEM_WIDTH), posY + 5, mouseX, mouseY);
+    }
+
+    protected int centerHorizontal(int width) {
+        return PAGE_CENTER_HORIZONTAL - width / 2;
+    }
+
+    protected int centerVertical(int height) {
+        return PAGE_CENTER_VERTICAL - height / 2;
     }
 }
