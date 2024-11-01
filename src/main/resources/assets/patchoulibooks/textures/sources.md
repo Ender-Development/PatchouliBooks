@@ -55,10 +55,10 @@ If you want a neat way to view all the textures, you can use the [Minecraft Text
 
 ## [foreck-textures](https://github.com/Foreck1/foreck-textures) ![Attribution-NonCommercial-ShareAlike 4.0 International](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue)
 
-| Texture           | Author                                                                                                         |
-|-------------------|----------------------------------------------------------------------------------------------------------------|
-| `book_codex.png`  | [Foreck1](https://github.com/Foreck1/foreck-textures/blob/main/textures/x16items/codex.png)                    |
-| `book_slayer.png` | [Foreck1](https://github.com/Foreck1/foreck-textures/blob/main/textures/x16items/slayers_tattered_journal.png) |
+| Texture                   | Author                                                                                                         |
+|---------------------------|----------------------------------------------------------------------------------------------------------------|
+| `book_patchoulibooks.png` | [Foreck1](https://github.com/Foreck1/foreck-textures/blob/main/textures/x16items/codex.png)                    |
+| `book_slayer.png`         | [Foreck1](https://github.com/Foreck1/foreck-textures/blob/main/textures/x16items/slayers_tattered_journal.png) |
 
 ## [unused-textures](https://github.com/malcolmriley/unused-textures) ![Attribution-NonCommercial-ShareAlike 4.0 International](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue)
 
