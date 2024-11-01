@@ -23,13 +23,20 @@ public class ConfigMain {
     @Config.LangKey("config.patchoulibooks.general")
     public static class ConfigGeneral {
         @Config.Name("Enable Recipes")
-        @Config.Comment("Add default recipes for Patchouli books.")
+        @Config.Comment("Add default recipes for Patchouli Books books.")
         @Config.RequiresMcRestart
         public static boolean enableRecipes = true;
 
         @Config.Name("Enable Pamphlets for everyone")
-        @Config.Comment("Enable Pamphlets for everyone if there is only one category and less than 13 entries.")
+        @Config.Comment("Enable Pamphlets for all books if there is only one category, which has less than 15 entries.")
         public static boolean enablePamphlets = false;
+
+        @Config.Name("Improve Recipe Lookup")
+        @Config.Comment({
+                "Improve recipe lookup by checking for output instead of recipe id.",
+                "This is untested with books added by other mods. User added books work fine."
+        })
+        public static boolean improveRecipeLookup = false;
     }
 
     @SubscribeEvent
