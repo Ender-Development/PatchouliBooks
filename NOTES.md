@@ -16,6 +16,7 @@ Just a few things I encountered while working on this project.
 
 - [Patchouli](#patchouli)
 - [Patchouli Books](#patchouli-books)
+- [Mixins](#mixins)
 - [Moar Boats](#moar-boats)
 
 ## Patchouli
@@ -41,6 +42,9 @@ I already talked about them, but mixins can't be underestimated. They are a powe
 ![Note](https://img.shields.io/badge/-Note-lightgrey)
 Patchouli comes with a "version" system by default, that means the book gets a tooltip that say `x`th Edition. I didn't like this, as I prefer to use [SemVer](https://semver.org). So I added a special check to allow the usage of [SemVer](https://semver.org) instead of the default version system. All it does is checking the input matches it against a regex and return a translated I18n string.
 
+![Important](https://img.shields.io/badge/-Important-blue)
+The `BookContentsMixin` got another functionality in one of the latest commits. I started tinkering with Templates for my books, but I wanted a way to use them across all books without needing to copy them into every single book. This mixin now also hijacks the loading of the templates and redirects them to a central location and can access them from all of my books.
+
 ### [BookEntryMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/BookEntryMixin.java)
 
 ![Note](https://img.shields.io/badge/-Note-lightgrey)
@@ -56,10 +60,21 @@ I already mentioned this one before, when I talked about the mixin to disable my
 ![Note](https://img.shields.io/badge/-Note-lightgrey)
 All this mixin does is adding some logging, when the creation of an internal link fails. This is useful for debugging purposes, as it allows me to see if I made a mistake in the link creation and i don't find the default error message informative enough.
 
+### [ClientBookRegistryMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/ClientBookRegistryMixin.java)
+
+![Important](https://img.shields.io/badge/-Important-blue)
+This mixin registers my new patchouli pages. I know there is probably a way to register them myself within Patchouli Books, but I don't see a reason to do so. It isn't invasive as it only appends my pages to the default `addPageTypes` method. This may be refactored in the future, but for now it works.
+
+![Warning](https://img.shields.io/badge/-Warning-red)
+Small update regarding this mixin. It no longer exists. I refactored the registration process so it doesn't uses a mixin anymore. Instead, I use a custom decorator and some reflection magic to register my pages at the correct loading stage.
+
 ### [GuiBookLandingMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/GuiBookLandingMixin.java)
 
 ![Note](https://img.shields.io/badge/-Note-lightgrey)
 Like I mentioned before, if I can unify something across all my books, I will do it. This mixin replaced the default Landing Page text with a default I18n String, which gets populated with the data from my `BookExtension.class`. This way I can have a unified landing page for all my books, without the need of setting it in every single book.
+
+![Important](https://img.shields.io/badge/-Important-blue)
+Great news! This mixin now plays a major role as I backported pamphlets from newer versions of Patchouli. Pamphlets a single category books, where all entries are displayed in a list view without having to select a category first. All of the related GUI stuff is now handled by this mixin.
 
 ### [ItemModBookMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/ItemModBookMixin.java)
 
@@ -74,7 +89,7 @@ This is a good one. If you want to display a crafting recipe in a book, you need
 ### [PageSpotlightMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/PageSpotlightMixin.java)
 
 ![Note](https://img.shields.io/badge/-Note-lightgrey)
-Another minor tweak. It decreases the empty space between the text and the item in the spotlight page.
+Another minor tweak. It decreases the empty space between the text and the item in the spotlight page. This will hopefully be deprecated in the future, as I plan to implement a custom page for this so it doesn't break any other patchouli books that originate outside of my mod.
 
 ## Moar Boats
 
