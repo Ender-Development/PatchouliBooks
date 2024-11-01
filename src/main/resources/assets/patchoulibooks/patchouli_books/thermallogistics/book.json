@@ -4,5 +4,8 @@
     "link_github": "https://github.com/Astavie/ThermalLogistics",
     "link_wiki": "https://github.com/Astavie/ThermalLogistics/wiki",
     "is_pamphlet": true,
-    "macros": {}
+    "macros": {
+        "<l_te>": "<l>(https://www.curseforge.com/minecraft/mc-mods/thermal-expansion)",
+        "<l_rft>": "<l>(https://www.curseforge.com/minecraft/mc-mods/rftools)"
+    }
 }

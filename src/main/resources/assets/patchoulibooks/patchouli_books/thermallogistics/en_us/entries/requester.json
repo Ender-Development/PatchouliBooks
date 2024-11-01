@@ -4,14 +4,14 @@
     "category": "pamphlet",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "thermallogistics:requester",
-            "text": "The Requester is the smart version of the Retriever from Thermal Dynamics. It extracts items from the network and attempts to insert them into the adjacent inventory. Unlike the Retriever, the Requester will not attempt to extract items from itself. If a Requester can't find an item in the network, it will attempt to craft it with the help of a <l>(crafter)Crafter</l>."
+            "text": "The Requester is the smart version of the Retriever from Thermal Dynamics. It extracts items from the network and attempts to insert them into the adjacent inventory. Unlike the Retriever, the Requester will not attempt to extract items from itself."
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "thermallogistics:requester",
-            "text": "Requesters can be upgraded in a crafting grid in combination with a higher tier ingot."
+            "text2": "If a Requester can't find an item in the network, it will attempt to craft it with the help of a <l>(crafter)Crafter</l>. Requesters can be upgraded in a crafting grid in combination with a higher tier ingot."
         }
     ]
 }

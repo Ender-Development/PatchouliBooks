@@ -4,22 +4,24 @@
     "category": "pamphlet",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "thermallogistics:terminal_item",
-            "text": "The Terminal is a block that can request items from your network. When attached to an itemduct, it can see all items available from that duct. To be able to request items, you need to insert a <l>(requester)Requester</l> into the Requester slot. If an item is requested, it will travel to the internal inventory of the Terminal otherwise it will attempt to craft it using a <l>(crafter)Crafter</l>."
+            "link_recipe": true,
+            "text": "The Terminal is a block that can request items from your network. When attached to an itemduct, it can see all items available from that duct. To be able to request items, you need to insert a <l>(requester)Requester</l> into the Requester slot. If an item is requested, it will travel to the internal inventory of the Terminal."
         },
         {
-            "type": "text",
+            "type": "text+",
+            "text": "If it can not find the item in the network it will attempt to craft it using a <l>(crafter)Crafter</l>.",
+            "title2": "Request List",
+            "text2": "To the right of the Requester slot are the list of items currently being requested. You can cancel these requests if you wish. All ongoing crafting operations will be cancelled."
+        },
+        {
+            "type": "text+",
             "title": "Crafting Tab",
             "text": "The Terminal has a tab called 'Crafting'. Inside you can specify a recipe in the crafting grid using items. The items will not be consumed. If you request the recipe it will request all items you're still missing. If you want to craft a chest and you already have 2 planks, it will only request 6 more."
         },
         {
-            "type": "text",
-            "title": "Request List",
-            "text": "To the right of the Requester slot are the list of items currently being requested. You can cancel these requests if you wish. All ongoing crafting operations will be cancelled."
-        },
-        {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "thermallogistics:terminal_item"
         }
     ]

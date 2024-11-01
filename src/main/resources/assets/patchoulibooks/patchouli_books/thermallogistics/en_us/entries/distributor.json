@@ -4,12 +4,12 @@
     "category": "pamphlet",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "thermallogistics:distributor",
             "text": "The Distributor is the smart version of the Servo from Thermal Dynamics. It extracts items from the inventory it is attached to and attempts to send it somewhere else. Unlike the Servo, the Distributor will not attempt to send items to itself and will prioritise filters. If an item fits in a filter, it tries to send it there first."
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "thermallogistics:distributor",
             "text": "Distributors can be upgraded in a crafting grid in combination with a higher tier ingot."
         }
