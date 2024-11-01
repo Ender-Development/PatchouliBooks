@@ -14,6 +14,8 @@ import vazkii.patchouli.common.util.ItemStackUtil;
 
 import java.util.List;
 
+import static java.lang.Math.round;
+
 @PageRegister("pillar")
 public class PagePillar extends PageBase {
     String title = "";
@@ -53,7 +55,7 @@ public class PagePillar extends PageBase {
     @Override
     public void onDisplayed(GuiBookEntry parent, int left, int top) {
         super.onDisplayed(parent, left, top);
-        textRenderer = new BookTextRenderer(parent, "$(l)" + time + "t$()", 20, 22);
+        textRenderer = new BookTextRenderer(parent, String.format("$(l)%.1fs$()", ((double)time)/20), 20, 22);
     }
 
     @Override
