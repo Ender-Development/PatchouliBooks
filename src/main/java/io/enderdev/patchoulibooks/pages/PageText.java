@@ -2,7 +2,6 @@ package io.enderdev.patchoulibooks.pages;
 
 import vazkii.patchouli.client.book.BookEntry;
 import vazkii.patchouli.client.book.gui.BookTextRenderer;
-import vazkii.patchouli.client.book.gui.GuiBook;
 import vazkii.patchouli.client.book.gui.GuiBookEntry;
 
 @PageRegister("text+")
@@ -25,11 +24,11 @@ public class PageText extends PageBase {
         if (text == null) {
             text = "";
         }
-        textRenderer1 = new BookTextRenderer(parent, text, 0, title != null ? 22 : -4);
+        textRenderer1 = new BookTextRenderer(parent, text, 0, title != null ? DIST_SEP_TEXT : DIST_SEP_TEXT - 2 * TEXT_LINE_HEIGHT);
         if (text2 == null) {
             text2 = "";
         }
-        textRenderer2 = new BookTextRenderer(parent, text2, 0, (GuiBook.PAGE_HEIGHT / 2) + 22);
+        textRenderer2 = new BookTextRenderer(parent, text2, 0, PAGE_CENTER_VERTICAL + DIST_SEP_TEXT);
     }
 
     @Override
@@ -45,8 +44,7 @@ public class PageText extends PageBase {
             textRenderer1.render(mouseX, mouseY);
         }
         if (title2 != null && !title2.isEmpty()) {
-            parent.drawCenteredStringNoShadow(title2, GuiBook.PAGE_WIDTH / 2, GuiBook.PAGE_HEIGHT / 2, book.headerColor);
-            GuiBook.drawSeparator(book, 0, (GuiBook.PAGE_HEIGHT / 2) + 12);
+            drawHeading(title2, PAGE_CENTER_VERTICAL - 2, true);
         }
         if (text2 != null && !text2.isEmpty()) {
             textRenderer2.render(mouseX, mouseY);
