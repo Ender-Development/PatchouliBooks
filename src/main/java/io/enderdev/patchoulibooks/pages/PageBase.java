@@ -5,8 +5,11 @@ import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.crafting.IShapedRecipe;
 import vazkii.patchouli.client.book.BookEntry;
 import vazkii.patchouli.client.book.BookPage;
 import vazkii.patchouli.client.book.gui.GuiBook;
@@ -20,9 +23,7 @@ public abstract class PageBase extends BookPage {
     public static final int FULL_WIDTH = GuiBook.FULL_WIDTH;
     public static final int FULL_HEIGHT = GuiBook.FULL_HEIGHT;
     public static final int PAGE_WIDTH = GuiBook.PAGE_WIDTH;
-    public static final int PAGE_CENTER_HORIZONTAL = PAGE_WIDTH / 2;
     public static final int PAGE_HEIGHT = GuiBook.PAGE_HEIGHT;
-    public static final int PAGE_CENTER_VERTICAL = PAGE_HEIGHT / 2;
     public static final int TOP_PADDING = GuiBook.TOP_PADDING;
     public static final int LEFT_PAGE_X = GuiBook.LEFT_PAGE_X;
     public static final int RIGHT_PAGE_X = GuiBook.RIGHT_PAGE_X;
@@ -30,6 +31,10 @@ public abstract class PageBase extends BookPage {
     public static final int MAX_BOOKMARKS = GuiBook.MAX_BOOKMARKS;
     public static final int ITEM_WIDTH = 16;
     public static final int ITEM_HEIGHT = 16;
+    public static final int DIST_HEADER_SEP = 10;
+    public static final int DIST_SEP_TEXT = 12;
+    public static final int PAGE_CENTER_HORIZONTAL = PAGE_WIDTH / 2;
+    public static final int PAGE_CENTER_VERTICAL = DIST_SEP_TEXT + 7 * TEXT_LINE_HEIGHT;
 
     protected static final Map<String, ResourceLocation> TEXTURES = new HashMap<String, ResourceLocation>() {
         {
@@ -96,12 +101,29 @@ public abstract class PageBase extends BookPage {
 
         if (!smolText.isEmpty()) {
             GlStateManager.scale(0.5F, 0.5F, 1F);
-            parent.drawCenteredStringNoShadow(smolText, PAGE_WIDTH, 12, book.headerColor);
+            parent.drawCenteredStringNoShadow(smolText, PAGE_WIDTH, 5, book.headerColor);
             GlStateManager.scale(2F, 2F, 1F);
             renderedSmol = true;
         }
-        parent.drawCenteredStringNoShadow(title, PAGE_CENTER_HORIZONTAL, renderedSmol ? -3 : 0, book.headerColor);
-        GuiBook.drawSeparator(book, 0, 12);
+        drawHeading(title, renderedSmol ? -6 : -3, true, renderedSmol ? 3 : 0);
+    }
+
+    /**
+     * Draws a heading at the given position.
+     *
+     * @param title     The title to draw
+     * @param posY      The y position to draw the title
+     * @param separator If a separator should be drawn below the title
+     */
+    protected void drawHeading(String title, int posY, boolean separator) {
+        drawHeading(title, posY, separator, 0);
+    }
+
+    protected void drawHeading(String title, int posY, boolean separator, int spacing) {
+        parent.drawCenteredStringNoShadow(title, PAGE_CENTER_HORIZONTAL, posY, book.headerColor);
+        if (separator) {
+            GuiBook.drawSeparator(book, 0, posY + DIST_HEADER_SEP + spacing);
+        }
     }
 
     /**
@@ -174,6 +196,46 @@ public abstract class PageBase extends BookPage {
         int h = 26;
         drawTexture(book.craftingResource, centerHorizontal(w), posY, 0, 128 - h, w, h, 128, 128);
         drawItem(false, item, centerHorizontal(ITEM_WIDTH), posY + 5, mouseX, mouseY);
+    }
+
+    /**
+     * Draws the crafting recipe at the given position.
+     *
+     * @param recipe  The recipe to draw
+     * @param recipeY The y position to draw the recipe
+     * @param mouseX  The x position of the mouse
+     * @param mouseY  The y position of the mouse
+     */
+    protected void drawCraftingRecipe(IRecipe recipe, int recipeY, int mouseX, int mouseY) {
+        if (recipe == null) {
+            return;
+        }
+        int recipeX = GuiBook.PAGE_WIDTH / 2 - 49;
+        mc.renderEngine.bindTexture(book.craftingResource);
+        GlStateManager.enableBlend();
+        Gui.drawModalRectWithCustomSizedTexture(recipeX - 2, recipeY - 2, 0, 0, 100, 62, 128, 128);
+
+        boolean shaped = recipe instanceof IShapedRecipe;
+        if (!shaped) {
+            int iconX = recipeX + 62;
+            int iconY = recipeY + 2;
+            Gui.drawModalRectWithCustomSizedTexture(iconX, iconY, 0, 64, 11, 11, 128, 128);
+            if (parent.isMouseInRelativeRange(mouseX, mouseY, iconX, iconY, 11, 11)) {
+                parent.setTooltip(I18n.format("patchouli.gui.lexicon.shapeless"));
+            }
+        }
+
+        parent.renderItemStack(recipeX + 79, recipeY + 22, mouseX, mouseY, recipe.getRecipeOutput());
+
+        NonNullList<Ingredient> ingredients = recipe.getIngredients();
+        int wrap = 3;
+        if (shaped) {
+            wrap = ((IShapedRecipe) recipe).getRecipeWidth();
+        }
+
+        for (int i = 0; i < ingredients.size(); i++) {
+            parent.renderIngredient(recipeX + (i % wrap) * 19 + 3, recipeY + (i / wrap) * 19 + 3, mouseX, mouseY, ingredients.get(i));
+        }
     }
 
     protected int centerHorizontal(int width) {
