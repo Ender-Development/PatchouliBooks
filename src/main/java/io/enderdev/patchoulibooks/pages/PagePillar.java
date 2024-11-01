@@ -80,6 +80,13 @@ public class PagePillar extends PageBase {
         }
     }
 
+    @Override
+    public void mouseClicked(int mouseX, int mouseY, int mouseButton) {
+        if (textRenderer != null) {
+            textRenderer.click(mouseX, mouseY, mouseButton);
+        }
+    }
+
     private void drawItemWithPillar(Object item, boolean core, int posX, int posY, int mouseX, int mouseY) {
         drawItem(false, item, posX, posY, mouseX, mouseY);
         drawFullTexture(core ? TEXTURES.get("pillar_middle") : TEXTURES.get("pillar"), posX, posY + 12, 16, 16);

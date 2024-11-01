@@ -50,4 +50,14 @@ public class PageText extends PageBase {
             textRenderer2.render(mouseX, mouseY);
         }
     }
+
+    @Override
+    public void mouseClicked(int mouseX, int mouseY, int mouseButton) {
+        if (textRenderer1 != null) {
+            textRenderer1.click(mouseX, mouseY, mouseButton);
+        }
+        if (textRenderer2 != null) {
+            textRenderer2.click(mouseX, mouseY, mouseButton);
+        }
+    }
 }

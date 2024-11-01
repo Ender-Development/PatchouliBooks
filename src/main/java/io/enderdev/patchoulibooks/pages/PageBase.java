@@ -77,6 +77,9 @@ public abstract class PageBase extends BookPage {
     @Override
     public abstract void render(int mouseX, int mouseY, float pticks);
 
+    @Override
+    public abstract void mouseClicked(int mouseX, int mouseY, int mouseButton);
+
     /**
      * Draws the title at the top of the page with a separator at y=12.
      * It also draws a small text below the title if the advanced tooltips are

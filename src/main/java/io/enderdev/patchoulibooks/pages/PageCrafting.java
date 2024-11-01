@@ -88,6 +88,16 @@ public class PageCrafting extends PageBase {
         }
     }
 
+    @Override
+    public void mouseClicked(int mouseX, int mouseY, int mouseButton) {
+        if (textRenderer1 != null) {
+            textRenderer1.click(mouseX, mouseY, mouseButton);
+        }
+        if (textRenderer2 != null) {
+            textRenderer2.click(mouseX, mouseY, mouseButton);
+        }
+    }
+
     protected IRecipe loadRecipe(BookEntry entry, String loc) {
         // this now uses my improved method to load the recipe
         if (loc == null) {

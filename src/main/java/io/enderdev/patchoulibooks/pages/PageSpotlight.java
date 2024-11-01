@@ -42,4 +42,11 @@ public class PageSpotlight extends PageBase {
         drawHighlightItem(itemStack, DIST_SEP_TEXT, mouseX, mouseY);
         textRenderer.render(mouseX, mouseY);
     }
+
+    @Override
+    public void mouseClicked(int mouseX, int mouseY, int mouseButton) {
+        if (textRenderer != null) {
+            textRenderer.click(mouseX, mouseY, mouseButton);
+        }
+    }
 }
