@@ -72,6 +72,7 @@ public class BookExtension extends Book {
         this.showProgress = false;
         this.model = String.format("%s:book_%s", Tags.MOD_ID, this.resourceLoc.getPath());
         this.name = String.format("%s Guide", getOriginalOwner(this.resourceLoc).getName());
+        this.fillerResource = new ResourceLocation(Tags.MOD_ID, String.format("textures/filler/%s.png",this.resourceLoc.getPath()));
         this.version = Tags.VERSION;
 
         // add special macros
@@ -84,7 +85,6 @@ public class BookExtension extends Book {
             modelResourceLoc = new ModelResourceLocation(this.model, "inventory");
 
             bookResource = new ResourceLocation(bookTexture);
-            fillerResource = new ResourceLocation(fillerTexture);
             craftingResource = new ResourceLocation(craftingTexture);
 
             textColor = 0xFF000000 | Integer.parseInt(textColorRaw, 16);
