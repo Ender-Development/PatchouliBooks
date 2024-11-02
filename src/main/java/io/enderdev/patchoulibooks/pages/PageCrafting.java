@@ -49,18 +49,18 @@ public class PageCrafting extends PageBase {
         if (title == null && recipe1 == null && pageNum == 0) {
             title = entry.getName();
         }
+
+        text = text == null ? "" : text;
+        text2 = text2 == null ? "" : text2;
+        if (!text.isEmpty() && text2.isEmpty()) {
+            text2 = text;
+        }
     }
 
     @Override
     public void onDisplayed(GuiBookEntry parent, int left, int top) {
         super.onDisplayed(parent, left, top);
-        if (text == null) {
-            text = "";
-        }
         textRenderer1 = new BookTextRenderer(parent, text, 0, ((title != null && !title.isEmpty() || recipeRaw != null && pageNum != 0) ? DIST_SEP_TEXT : DIST_SEP_TEXT - 2 * TEXT_LINE_HEIGHT));
-        if (text2 == null) {
-            text2 = "";
-        }
         textRenderer2 = new BookTextRenderer(parent, text2, 0, PAGE_CENTER_VERTICAL + ((title2 != null && !title2.isEmpty() || recipe2Raw != null) ? DIST_SEP_TEXT : 0));
     }
 
