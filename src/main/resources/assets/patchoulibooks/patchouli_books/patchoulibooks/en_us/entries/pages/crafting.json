@@ -5,8 +5,8 @@
     "pages": [
         {
             "type": "crafting+",
-            "text": "This is probably the most complex page type in the mod. It's an iteration on the default 'crafting' page type, but with a lot more features. It allows you to freely display crafting recipes and texts with and without titles on the page. Everything is dynamic, that means if you don't want any aspect of the page to be displayed, you can simply don't define it and it won't be rendered.",
-            "title2": "Exmaple Crafting Recipe",
+            "text": "This is probably the most complex page type in the mod. It's an iteration on the default 'crafting' page type, but with a lot more features. It allows you to freely display crafting recipes and texts with and without titles on the page.",
+            "title2": "",
             "recipe2": "minecraft:crafting_table"
         },
         {
@@ -26,6 +26,17 @@
             "title": "Double Crafting Recipe",
             "recipe": "minecraft:bookshelf",
             "recipe2": "minecraft:enchanting_table"
+        },
+        {
+            "type": "crafting+",
+            "title": "More Explanation",
+            "text": "Everything is dynamic, that means if you don't want an aspect of the page to be displayed, you can simply don't define it and it won't be rendered.",
+            "recipe": "minecraft:jukebox"
+        },
+        {
+            "type": "text+",
+            "title": "Keys of 'crafting+'",
+            "text": "<li>'title'<li>'recipe'<li>'text'<li>'title2'<li>'recipe2'<li>'text2'"
         }
     ]
 }

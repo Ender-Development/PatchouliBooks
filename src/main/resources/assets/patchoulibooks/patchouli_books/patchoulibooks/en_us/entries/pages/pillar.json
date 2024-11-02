@@ -15,8 +15,8 @@
                 "minecraft:comparator",
                 "minecraft:noteblock",
                 "minecraft:slime",
-                "ore:ingotCopper",
-                "ore:gearEnderium"
+                "ore:blockGlass",
+                "ore:plankWood"
             ]
         },
         {

@@ -12,6 +12,11 @@
             "type": "spotlight+",
             "item": "patchoulibooks:textures/icons/info.png",
             "text": "One major difference to the default 'spotlight' page type is that you can display custom textures instead of items. This allows you to have a more flexible design for your book. Without the need of making a template for it. Like making a 'info' page."
+        },
+        {
+            "type": "spotlight+",
+            "item": "ore:ingotIron",
+            "text": "You can also display Ingredients."
         }
     ]
 }

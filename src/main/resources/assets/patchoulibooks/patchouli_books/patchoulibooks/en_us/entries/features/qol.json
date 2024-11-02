@@ -1,0 +1,12 @@
+{
+    "name": "General QoL Features",
+    "icon": "patchoulibooks:textures/icons/book_grimoire_wild.png",
+    "category": "qol",
+    "pages": [
+        {
+            "type": "text+",
+            "text": "<li>auto scaling for titles, so they won't render outside the page.<li>improved debug information about pages when advanced item tooltips are enabled<li>easy adaptability as these pages function with the default values of the Patchouli pages. All you need to do is append a '+' to the page type where you want to use the <pb> one instead."
+        }
+    ]
+
+}
