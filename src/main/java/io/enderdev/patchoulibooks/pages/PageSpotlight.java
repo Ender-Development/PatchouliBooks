@@ -9,7 +9,7 @@ import vazkii.patchouli.client.book.gui.GuiBookEntry;
 @PageRegister("spotlight+")
 public class PageSpotlight extends PageBase {
     @SerializedName("item")
-    String itemRaw;
+    String objRaw;
     String title;
     String text;
 
@@ -18,18 +18,17 @@ public class PageSpotlight extends PageBase {
     @SerializedName("link_recipe")
     boolean linkRecipe;
 
-    transient ItemStack itemStack;
-    transient RenderObject item;
+    transient RenderObject obj;
 
     @Override
     public void build(BookEntry entry, int pageNum) {
         super.build(entry, pageNum);
-        item = new RenderObject(itemRaw);
-        if (item.isItem() && linkRecipe) {
-            entry.addRelevantStack(item.getStack(), pageNum);
+        obj = new RenderObject(objRaw);
+        if (obj.isItem() && linkRecipe) {
+            entry.addRelevantStack(obj.getItemStack(), pageNum);
         }
         if (title == null) {
-            title = item.isItem() ? item.getStack().getDisplayName() : "";
+            title = obj.isItem() ? obj.getItemStack().getDisplayName() : "";
             if (title.isEmpty() && pageNum == 0) {
                 title = entry.getName();
             }
@@ -47,7 +46,7 @@ public class PageSpotlight extends PageBase {
         if (!title.isEmpty()) {
             drawTitle(title);
         }
-        drawHighlightItem(item, !title.isEmpty() ? DIST_SEP_TEXT : DIST_SEP_TEXT - 2 * TEXT_LINE_HEIGHT, mouseX, mouseY);
+        drawHighlightItem(obj, !title.isEmpty() ? DIST_SEP_TEXT : DIST_SEP_TEXT - 2 * TEXT_LINE_HEIGHT, mouseX, mouseY);
         textRenderer.render(mouseX, mouseY);
     }
 
