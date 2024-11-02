@@ -24,7 +24,7 @@ public class PageText extends PageBase {
         if (text == null) {
             text = "";
         }
-        textRenderer1 = new BookTextRenderer(parent, text, 0, title != null ? DIST_SEP_TEXT : DIST_SEP_TEXT - 2 * TEXT_LINE_HEIGHT);
+        textRenderer1 = new BookTextRenderer(parent, text, 0, title != null || pageNum == 0 ? DIST_SEP_TEXT : DIST_SEP_TEXT - 2 * TEXT_LINE_HEIGHT);
         if (text2 == null) {
             text2 = "";
         }
