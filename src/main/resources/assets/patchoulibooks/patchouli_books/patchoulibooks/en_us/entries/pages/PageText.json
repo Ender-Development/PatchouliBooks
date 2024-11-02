@@ -1,0 +1,28 @@
+{
+    "name": "PageText+",
+    "icon": "patchoulibooks:textures/icons/book_page_written.png",
+    "category": "pages",
+    "pages": [
+        {
+            "type": "text+",
+            "text": "This page type is a variant of the <mark>text</> page type. It allows you to have multiple text boxes on a single page. This is useful for when you want to have multiple paragraphs of text on a single page, but don't want to have to navigate through multiple pages to read it all. Everything is dynamic, that means if you don't want any aspect of the page to be displayed, you can simply don't define it and it won't be rendered."
+        },
+        {
+            "type": "text+",
+            "title": "[Title]",
+            "text": "This is the first text box.",
+            "title2": "[Title 2]",
+            "text2": "This is the second text box."
+        },
+        {
+            "type": "text+",
+            "title2": "[Another Ttitle]",
+            "text2": "Now the first text box is missing."
+        },
+        {
+            "type": "text+",
+            "text": "If you don't define a title for a text box, it won't be rendered.",
+            "text2": "and the text starts where the title would be. This becomes especially powerful in other page types."
+        }
+    ]
+}
