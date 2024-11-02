@@ -65,8 +65,10 @@ public class PageCrafting extends PageBase {
     }
 
     public void render(int mouseX, int mouseY, float pticks) {
-        if (title != null && !title.isEmpty()) {
-            drawTitle(title);
+        if (title != null) {
+            if (!title.isEmpty()) {
+                drawTitle(title);
+            }
         } else if (recipeRaw != null) {
             drawTitle(getRecipeOutput(recipe1).getDisplayName());
         }
@@ -76,8 +78,10 @@ public class PageCrafting extends PageBase {
         } else {
             textRenderer1.render(mouseX, mouseY);
         }
-        if (title2 != null && !title2.isEmpty()) {
-            drawHeading(title2, PAGE_CENTER_VERTICAL - 2, true);
+        if (title2 != null) {
+            if (!title2.isEmpty()) {
+                drawHeading(title2, PAGE_CENTER_VERTICAL - 2, true);
+            }
         } else if (recipe2Raw != null) {
             drawHeading(getRecipeOutput(recipe2).getDisplayName(), PAGE_CENTER_VERTICAL - 2, true);
         }
