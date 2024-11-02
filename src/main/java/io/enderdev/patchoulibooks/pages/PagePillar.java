@@ -3,8 +3,6 @@ package io.enderdev.patchoulibooks.pages;
 import com.google.gson.annotations.SerializedName;
 import io.enderdev.patchoulibooks.PatchouliBooks;
 import io.enderdev.patchoulibooks.util.MathUtil;
-import net.minecraft.client.gui.Gui;
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 import vazkii.patchouli.client.book.BookEntry;
@@ -53,17 +51,17 @@ public class PagePillar extends PageBase {
     @Override
     public void onDisplayed(GuiBookEntry parent, int left, int top) {
         super.onDisplayed(parent, left, top);
-        textRenderer = new BookTextRenderer(parent, String.format("$(l)%.1fs$()", ((double)time)/20), 20, 22);
+        textRenderer = new BookTextRenderer(parent, String.format("$(l)%.1fs$()", ((double)time)/20), 18, 20);
     }
 
     @Override
     public void render(int mouseX, int mouseY, float pticks) {
         drawTitle(!title.isEmpty() ? title : itemOutput.getDisplayName());
-        drawItem(true, itemOutput, 50, 20, mouseX, mouseY);
+        drawItem(true, itemOutput, 50, 16, mouseX, mouseY);
         drawItemWithPillar(itemMiddle, true, 50, 78, mouseX, mouseY);
 
         if (time > 0) {
-            drawFullTexture(TEXTURES.get("hourglass"), 0, 20, 16, 16);
+            drawFullTexture(TEXTURES.get("hourglass"), 0, 16, 16, 16);
             textRenderer.render(mouseX, mouseY);
         }
 
