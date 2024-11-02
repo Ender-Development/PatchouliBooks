@@ -147,7 +147,7 @@ public abstract class PageBase extends BookPage {
      * Draws an item at the given position.
      *
      * @param drawFrame If a frame should be drawn around the item
-     * @param item      The item to draw can be an ItemStack or an Ingredient
+     * @param item      The item to draw can be an ItemStack, an Ingredient or a BookIcon
      * @param posX      The x position to draw the item
      * @param posY      The y position to draw the item
      * @param mouseX    The x position of the mouse
@@ -156,8 +156,17 @@ public abstract class PageBase extends BookPage {
     protected void drawItem(boolean drawFrame, Object item, int posX, int posY, int mouseX, int mouseY) {
         if (item instanceof ItemStack) {
             parent.renderItemStack(posX, posY, mouseX, mouseY, (ItemStack) item);
-        } else {
+        } else if (item instanceof Ingredient) {
             parent.renderIngredient(posX, posY, mouseX, mouseY, (Ingredient) item);
+        } else if (item instanceof RenderObject) {
+            RenderObject renderObject = (RenderObject) item;
+            if (renderObject.isItem()) {
+                parent.renderItemStack(posX, posY, mouseX, mouseY, renderObject.getStack());
+            } else {
+                GlStateManager.color(1F, 1F, 1F, 1F);
+                mc.renderEngine.bindTexture(renderObject.getResource());
+                Gui.drawScaledCustomSizeModalRect(posX, posY, 0, 0, 16, 16, 16, 16, 16, 16);
+            }
         }
         if (drawFrame) {
             GlStateManager.enableBlend();

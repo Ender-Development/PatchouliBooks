@@ -1,0 +1,17 @@
+{
+    "name": "Page: 'spotlight+'",
+    "icon": "patchoulibooks:textures/icons/book_page_written.png",
+    "category": "pages",
+    "pages": [
+        {
+            "type": "spotlight+",
+            "item": "minecraft:nether_star",
+            "text": "The 'spotlight+' page type works similarly to the 'spotlight' page type, but uses the same formating as all my other pages. This allows you to have a more consistent look in your book. You also get the improved debug information like on all other pages."
+        },
+        {
+            "type": "spotlight+",
+            "item": "patchoulibooks:textures/icons/info.png",
+            "text": "One major difference to the default 'spotlight' page type is that you can display custom textures instead of items. This allows you to have a more flexible design for your book. Without the need of making a template for it. Like making a 'info' page."
+        }
+    ]
+}

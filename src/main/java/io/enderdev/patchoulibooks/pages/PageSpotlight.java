@@ -5,11 +5,11 @@ import net.minecraft.item.ItemStack;
 import vazkii.patchouli.client.book.BookEntry;
 import vazkii.patchouli.client.book.gui.BookTextRenderer;
 import vazkii.patchouli.client.book.gui.GuiBookEntry;
-import vazkii.patchouli.common.util.ItemStackUtil;
 
 @PageRegister("spotlight+")
 public class PageSpotlight extends PageBase {
-    String item;
+    @SerializedName("item")
+    String itemRaw;
     String title;
     String text;
 
@@ -19,27 +19,35 @@ public class PageSpotlight extends PageBase {
     boolean linkRecipe;
 
     transient ItemStack itemStack;
+    transient RenderObject item;
 
     @Override
     public void build(BookEntry entry, int pageNum) {
         super.build(entry, pageNum);
-        itemStack = ItemStackUtil.loadStackFromString(item);
-
-        if (linkRecipe) {
-            entry.addRelevantStack(itemStack, pageNum);
+        item = new RenderObject(itemRaw);
+        if (item.isItem() && linkRecipe) {
+            entry.addRelevantStack(item.getStack(), pageNum);
+        }
+        if (title == null) {
+            title = item.isItem() ? item.getStack().getDisplayName() : "";
+            if (title.isEmpty() && pageNum == 0) {
+                title = entry.getName();
+            }
         }
     }
 
     @Override
     public void onDisplayed(GuiBookEntry parent, int left, int top) {
         super.onDisplayed(parent, left, top);
-        textRenderer = new BookTextRenderer(parent, text, 0, DIST_SEP_TEXT + 3 * TEXT_LINE_HEIGHT);
+        textRenderer = new BookTextRenderer(parent, text, 0, !title.isEmpty() ? DIST_SEP_TEXT + 3 * TEXT_LINE_HEIGHT : DIST_SEP_TEXT + TEXT_LINE_HEIGHT);
     }
 
     @Override
     public void render(int mouseX, int mouseY, float pticks) {
-        drawTitle(title != null && !title.isEmpty() ? title : itemStack.getDisplayName());
-        drawHighlightItem(itemStack, DIST_SEP_TEXT, mouseX, mouseY);
+        if (!title.isEmpty()) {
+            drawTitle(title);
+        }
+        drawHighlightItem(item, !title.isEmpty() ? DIST_SEP_TEXT : DIST_SEP_TEXT - 2 * TEXT_LINE_HEIGHT, mouseX, mouseY);
         textRenderer.render(mouseX, mouseY);
     }
 

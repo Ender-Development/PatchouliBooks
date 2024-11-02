@@ -1,0 +1,54 @@
+{
+    "name": "Page: 'pillar'",
+    "icon": "patchoulibooks:textures/icons/book_page_written.png",
+    "category": "pages",
+    "pages": [
+        {
+            "type": "text+",
+            "text": "The 'pillar' page type is an alternative to the 'crafting' page. It's based on a <l>(https://www.curseforge.com/minecraft/customization/pedestal-recipe-template-for-patchouli)Template I found on curseforge</l> and is intended to use with mods like <l_ec>Extended Crafting</l> or <l_pc>Pedestal Crafting</l>. It dynamically renders all specified items and spaces them evenly around the center."
+        },
+        {
+            "type": "pillar",
+            "output": "minecraft:hopper",
+            "center": "minecraft:observer",
+            "inputs": [
+                "minecraft:comparator",
+                "minecraft:noteblock",
+                "minecraft:slime",
+                "ore:ingotCopper",
+                "ore:gearEnderium"
+            ]
+        },
+        {
+            "type": "text+",
+            "title": "Fields",
+            "text": "The 'pillar' page type has the following fields:<li>'time' - takes the crafting time in ticks and displays them in seconds<li>'link_recipe' - mark this page as the recipe for the output item"
+        },
+        {
+            "type": "pillar",
+            "title": "This is custom Title",
+            "output": "minecraft:dragon_egg",
+            "center": "minecraft:diamond_block",
+            "link_recipe": true,
+            "time": 100,
+            "inputs": [
+                "minecraft:wool:0",
+                "minecraft:wool:1",
+                "minecraft:wool:2",
+                "minecraft:wool:3",
+                "minecraft:wool:4",
+                "minecraft:wool:5",
+                "minecraft:wool:6",
+                "minecraft:wool:7",
+                "minecraft:wool:8",
+                "minecraft:wool:9",
+                "minecraft:wool:10",
+                "minecraft:wool:11",
+                "minecraft:wool:12",
+                "minecraft:wool:13",
+                "minecraft:wool:14",
+                "minecraft:wool:15"
+            ]
+        }
+    ]
+}

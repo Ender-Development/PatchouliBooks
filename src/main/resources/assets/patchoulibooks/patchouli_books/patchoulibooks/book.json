@@ -3,5 +3,8 @@
     "link_curseforge": "https://www.curseforge.com/minecraft/mc-mods/patchoulibooks",
     "link_github": "https://github.com/Ender-Development/PatchouliBooks/tree/master",
     "link_wiki": "https://github.com/Ender-Development/PatchouliBooks/wiki",
-    "macros": {}
+    "macros": {
+        "<l_ec>": "<l>(https://www.curseforge.com/minecraft/mc-mods/extended-crafting-nomifactory-edition)",
+        "<l_pc>": "<l>(https://www.curseforge.com/minecraft/mc-mods/pedestal-crafting)"
+    }
 }

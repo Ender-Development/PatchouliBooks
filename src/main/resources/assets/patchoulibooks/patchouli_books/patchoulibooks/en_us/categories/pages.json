@@ -1,5 +1,5 @@
 {
     "name": "Pages",
-    "description": "This chapter explains all the additional pages that <pb> has to offer. Instead of using the pages provided by patchouli, <pb> has its own set of pages that can be used in your books. These offer additional functionality and customization options.",
+    "description": "This chapter explains all the additional pages that <pb> has to offer. Instead of using the pages provided by patchouli, <pb> has its own set of pages that can be used in your books. These offer additional functionality and customization options. Here are a few examples:<li>auto scaling for titles, so they won't render outside the page.<li>improved debug information about pages when advanded item tooltips are enabled<br>You can also easily adapt my pages as they function with the default values of the Patchouli pages. All you need to do is append a '+' to the page type you want to use.",
     "icon": "patchoulibooks:textures/icons/book_grimoire_wild.png"
 }

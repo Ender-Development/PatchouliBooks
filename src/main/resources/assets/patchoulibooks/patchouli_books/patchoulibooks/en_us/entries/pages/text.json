@@ -1,5 +1,5 @@
 {
-    "name": "PageText+",
+    "name": "Page: 'text+'",
     "icon": "patchoulibooks:textures/icons/book_page_written.png",
     "category": "pages",
     "pages": [
@@ -16,7 +16,7 @@
         },
         {
             "type": "text+",
-            "title2": "[Another Ttitle]",
+            "title2": "[Another Title]",
             "text2": "Now the first text box is missing."
         },
         {
