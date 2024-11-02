@@ -4,13 +4,13 @@
     "category": "transport",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "pressure:pipe_sensor",
             "link_recipe": true,
             "text": "<li>has input and output side (small arrows point to the output)<li>Fluid can only flow from input to output side<li>if fluid is flowing through it will emit a redstone signal<li>can be rotated with a wrench<li>can be covered by <l_fmp>FMP covers</l>"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "pressure:pipe_sensor"
         }
     ]

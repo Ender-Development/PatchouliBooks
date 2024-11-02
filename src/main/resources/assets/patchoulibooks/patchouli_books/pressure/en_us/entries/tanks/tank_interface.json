@@ -4,13 +4,13 @@
     "category": "tanks",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "pressure:tank_interface",
             "link_recipe": true,
             "text": "<li>allows draining and filling containers<li>can be used with hoppers, pipes form other mods, conduits, etc.<li>empty and full containers can be piped in and after processing piped out from any side"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "pressure:tank_interface"
         }
     ]

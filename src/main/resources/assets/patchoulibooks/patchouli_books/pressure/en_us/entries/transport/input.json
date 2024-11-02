@@ -4,18 +4,16 @@
     "category": "transport",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "pressure:input",
             "link_recipe": true,
             "text": "<li>accepts fluids from pipes on the back (brighter side without arrows)<li>if given a redstone signal it will extract from tanks and machines<li>connects to a <l>(transport/pipe)pressure pipe</l> on the front (darker side with arrows)"
         },
         {
-            "type": "text",
-            "text": "<li>will only accept fluids if a valid output is connected with a high pressure pipe<li>if multiple outputs are connected it will do it's best to distribute the fluid evenly<li>can be <l>(transport/filtering)filtered</l>"
-        },
-        {
-            "type": "crafting",
-            "recipe": "pressure:input"
+            "type": "crafting+",
+            "text": "<li>will only accept fluids if a valid output is connected with a high pressure pipe<li>if multiple outputs are connected it will do it's best to distribute the fluid evenly<li>can be <l>(transport/filtering)filtered</l>",
+            "title2": "Crafting",
+            "recipe2": "pressure:input"
         }
     ]
 }

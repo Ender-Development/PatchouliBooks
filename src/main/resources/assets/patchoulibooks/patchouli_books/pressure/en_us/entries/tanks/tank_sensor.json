@@ -4,19 +4,20 @@
     "category": "tanks",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "pressure:tank_sensor",
             "link_recipe": true,
-            "text": "<li>a tank can contain up to 10 sensor blocks in it's structure<li>can check for different conditions on the tank and emit a redstone signal when a condition is met<li>the redstone signal is 'weak' (will not pass through blocks) and will only be emitter from one side<li>can be rotated with any wrench"
+            "text": "<li>a tank can contain up to 10 sensor blocks in it's structure<li>can check for different conditions on the tank and emit a redstone signal when a condition is met<li>the redstone signal is 'weak' (will not pass through blocks) and will only be emitter from one side"
         },
         {
-            "type": "text",
+            "type": "text+",
             "title": "GUI",
             "text": "<li>left slot selects sensor kind<li>the slot next to it sets additional parameters<li2>click to change for simple sensor modes<li2>some advanced mode may allow other interactions (e.g. click with a bucket to set a fluid to check for)<li2>look at the tooltip for more information<li>the rightmost slot shows the current state"
         },
         {
-            "type": "crafting",
-            "recipe": "pressure:tank_sensor"
+            "type": "crafting+",
+            "recipe": "pressure:tank_sensor",
+            "text2": "Can be rotated with any wrench."
         }
     ]
 }

@@ -4,21 +4,21 @@
     "category": "misc",
     "pages": [
         {
-            "type": "text",
+            "type": "text+",
             "text": "To craft all of the blocks and items in <mod> there are a few intermediary items that are used in multiple recipes."
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "pressure:interface",
             "text": "Used in the pressure system."
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "pressure:fluid_interface",
             "text": "Used in tank blocks."
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "pressure:tank_wall",
             "text": "Used in all tank blocks."
         }

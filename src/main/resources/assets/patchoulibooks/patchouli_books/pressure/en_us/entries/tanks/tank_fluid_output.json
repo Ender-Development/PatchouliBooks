@@ -4,13 +4,13 @@
     "category": "tanks",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "pressure:tank_fluid_output",
             "link_recipe": true,
             "text": "<li>allows output from a tank into pipes, machines or tanks from other mods<li>requires something to pull the liquid<li>can connect on multiple sides, every side will become a separate colored output<li>can be configured from the tank GUI"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "pressure:tank_fluid_output"
         }
     ]

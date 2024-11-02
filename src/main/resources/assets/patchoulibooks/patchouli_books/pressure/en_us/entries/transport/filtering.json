@@ -4,11 +4,11 @@
     "category": "transport",
     "pages": [
         {
-            "type": "text",
-            "text": "The following block can have filters set:<li><l>(transport/input)Inputs</l><li><l>(transport/output)Outputs</l><li><l>(transport/pump)Pumps</l><li><l>(transport/drains)Drains</l>"
+            "type": "text+",
+            "text": "The following block can have filters set:<li><l>(transport/input)Inputs</l><li><l>(transport/output)Outputs</l><li><l>(transport/pump)Pumps</l><li><l>(transport/drain)Drains</l>"
         },
         {
-            "type": "text",
+            "type": "text+",
             "text": "<li>to set a filter right click with a bucket (or any other valid container) filled with a fluid<li>to remove a filter right click with an empty bucket in your hand<li>right click with a <l>(misc/configurator)Configurator</l> to set/remove filter using a GUI"
         }
     ]

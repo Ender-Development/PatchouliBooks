@@ -4,13 +4,13 @@
     "category": "tanks",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "pressure:tank_fluid_input",
             "link_recipe": true,
             "text": "<li>accepts fluids from pipes, connecting to pipes from other mods"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "pressure:tank_fluid_input"
         }
     ]

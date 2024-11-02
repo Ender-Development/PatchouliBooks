@@ -4,13 +4,13 @@
     "category": "tanks",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "pressure:tank_block",
             "link_recipe": true,
             "text": "<li>base storage block of the tank<li>each one adds 32 (configurable) buckets of capacity"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "pressure:tank_block"
         }
     ]

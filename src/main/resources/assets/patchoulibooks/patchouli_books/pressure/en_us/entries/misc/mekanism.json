@@ -5,7 +5,7 @@
     "flag": "mod:mekanism",
     "pages": [
         {
-            "type": "text",
+            "type": "text+",
             "text": "These blocks are available if <mark>Mekanism</> is installed. This includes <li>Pressurized Gas Input/Output<li>Tank Gas Intake/Outlet</>"
         },
         {
@@ -14,22 +14,22 @@
             "link": "https://www.curseforge.com/minecraft/mc-mods/mekanism-ce-unofficial"
         },
         {
-            "type": "text",
+            "type": "text+",
             "title": "Pressurized Gas Input/Output",
             "text": "<li>allows gases input/output from <l>(transport/pipe)pressure pipes</l><li>will convert between gas/fluid as needed<li>to set a filter you need to use the fluid version"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "pressire:gas_input",
             "recipe2": "pressure:gas_output"
         },
         {
-            "type": "text",
+            "type": "text+",
             "title": "Tank Gas Intake/Outlet",
             "text": "<li>allows gases to be stored in <l>(transport/tank)tanks</l><li>will convert to liquid form for storage, and convert back as needed"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "pressire:tank_gas_input",
             "recipe2": "pressure:tank_gas_output"
         }

@@ -4,12 +4,12 @@
     "category": "misc",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "pressure:water_source",
             "text": "<li>exactly what it says on the tin<li>it is really infinite for all intents and purposes<li>Water can be piped out using a <l>(transport/pump)Pump</l>, a <l>(transport/input)High Pressure Input</l> or pipes from other mods"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "pressure:water_source"
         }
     ]
