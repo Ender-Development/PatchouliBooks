@@ -4,24 +4,24 @@
     "category": "bee_keeping",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "gendustry:industrial_apiary",
             "link_recipe": true,
             "text": "<li>requires power to run<li>has 4 slots for <l>(bee_keeping/upgrades)special upgrades</l><li>doesn't have the 90% production reduction of normal apiaries<li>doesn't support frames"
         },
         {
-            "type": "text",
+            "type": "text+",
             "title": "GUI",
             "text": "<li>the gauge on the left is internal power storage<li>left slots are for Queen/Princess and Drones<li>middle 4 slots are for <l>(bee_keeping/upgrades)upgrades</l><li>right 9 slots are for products and offspring<li>mouse over the status icon to see if anything is ok and some general stats (more if the bee is analyzed)"
         },
         {
-            "type": "text",
+            "type": "text+",
             "title": "Automation",
             "anchor": "automation",
             "text": "<li>bees can be inserted from any side<li>products can be removed from any side<li>with an <l>(bee_keeping/upgrades#automation)automation upgrade</l> the apiary will automatically move offspring back to the bee slots allowing them to breed and spawn a new queen<li>upgrades can't be inserted/removed via automation"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:industrial_apiary"
         }
     ]

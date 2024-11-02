@@ -4,22 +4,22 @@
     "category": "bee_keeping",
     "pages": [
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:5",
             "text": "<li>Humidity -25%<li>Energy Consumption +5%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:4",
             "text": "<li>Humidity +25%<li>Energy Consumption +5%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:6",
             "text": "<li>Temperature +25%<li>Energy Consumption +5%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:7",
             "text": "<li>Temperature -25%<li>Energy Consumption +5%"
         }

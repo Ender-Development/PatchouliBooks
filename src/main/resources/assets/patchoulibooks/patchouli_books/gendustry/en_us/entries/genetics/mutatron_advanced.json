@@ -4,14 +4,14 @@
     "category": "genetics",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "title": "Advanced Mutatron",
             "item": "gendustry:mutatron_advanced",
             "link_recipe": true,
             "text": "<li>works like the <l>(genetics/mutatron)Mutatron</l><li>allows selection of which mutation will occur if there are multiple options<li>can work twice as fast if energy supply is adequate"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:mutatron_advanced",
             "text": "Can be used to create new species of bees."
         }

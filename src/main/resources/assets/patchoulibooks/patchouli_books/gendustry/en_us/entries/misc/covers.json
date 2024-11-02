@@ -4,21 +4,21 @@
     "category": "misc",
     "pages": [
         {
-            "type": "text",
+            "type": "text+",
             "text": "<li>covers can be installed on blocks by rightclicking with the item<li>covers can be removed by clicking with an empty hand while sneaking<li>each face of a block can have a separate cover"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:import_cover",
             "text": "<li>automatically imports items from adjacent inventory<li>can be installed on all machines and apiaries"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:eject_cover",
             "text": "<li>automatically exports items to adjacent inventory or pipes<li>can be installed on all machines and apiaries"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:error_sensor_cover",
             "text": "<li>emits a redstone signal when matching condition is detected<li>can be installed on industrial apiaries<li>click with empty hand to configure"
         }

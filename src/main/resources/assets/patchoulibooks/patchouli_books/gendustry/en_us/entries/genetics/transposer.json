@@ -4,23 +4,23 @@
     "category": "genetics",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "gendustry:transposer",
             "link_recipe": true,
             "text": "Consumes a set of <l>(misc/crafting_material#labware)Labware</l> per 5 operations on average."
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:transposer",
             "text": "Can be used to copy genetic information between samples and templates."
         },
         {
-            "type": "text",
+            "type": "text+",
             "title": "Copy Templates",
             "text": "To copy <l>(misc/crafting_material#gene_template)templates</l>:<li>put the source template in the top left slot<li>put the destincation template in the left slot<li>destiantion template must be either empty or contain otther samples from the same organism"
         },
         {
-            "type": "text",
+            "type": "text+",
             "title": "Copy Samples",
             "text": "To copy <l>(misc/crafting_material#gene_sample)gene samples</l>:<li>put the filled sample in the top left slot<li>put the blank sample in the left slot"
         }

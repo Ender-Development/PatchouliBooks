@@ -4,13 +4,13 @@
     "category": "genetics",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "gendustry:replicator",
             "link_recipe": true,
             "text": "<li>constructs new organisms from <l>(misc/resources#dna)DNA</l>, <l>(misc/resources#protein)Protein</l> and a full <l>(misc/crafting_material#gene_template)Genetic Template</l><li>bees produced by this machines will always count as Ignoble stock"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:replicator",
             "text": "Constructs new organisms from <l>(misc/resources#dna)DNA</l> and <l>(misc/resources#protein)Protein</l>."
         }

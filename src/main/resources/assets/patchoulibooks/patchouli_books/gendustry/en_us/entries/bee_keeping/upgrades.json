@@ -4,58 +4,58 @@
     "category": "bee_keeping",
     "pages": [
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:11",
             "text": "<li>enables internal lightning<li>Energy Consumption +5%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:2",
             "text": "<li>Flowering and Pollination +20%<li>Energy Consumption +10%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "anchor": "automation",
             "recipe": "gendustry:apiary.upgrade:14",
             "text": "<li>see <l>(bee_keeping/industrial_apiary#automation)Automation</l><li>Energy Consumption +10%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:10",
             "text": "<li>Rain protection<li>Energy Consumption +5%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:1",
             "text": "<li>Lifespan -33%<li>Energy Consumption +5%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:12",
             "text": "<li>Open Sky Simulation<li>Energy Consumption +5%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:3",
             "text": "<li>Territory +50%<li>Energy Consumption +5%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:15",
             "text": "<li>enables Pollen Collection<li>Energy Consumption +25%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade",
             "text": "<li>Production +20%<li>Energy Consumption +20%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:19",
             "text": "<li>prevents genetic decay of ignoble stock<li>Energy Consumption +100%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:22",
             "text": "<li>Flowering and Pollination -100%<li>Energy Consumption +30%"
         }

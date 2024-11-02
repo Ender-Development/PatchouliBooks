@@ -4,12 +4,12 @@
     "category": "genetics",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "gendustry:sampler",
             "text": "<li>takes a <l>(misc/crafting_material#gene_sample)genetic sample</l> from bees, trees and butterflies<li>can also convert <mark>Extra Bees</> serum into <mod> samples<li>consumes <l>(misc/crafting_material#labware)Labware</l> and <l>(misc/crafting_material#gene_sample_blank)Blank Samples</l> in the process<li>will randomly select 1 genetic trait from the input<li>the sample creature will not survive the process"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:sampler",
             "text": "Can be used to extract genetic traits."
         }

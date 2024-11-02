@@ -4,12 +4,12 @@
     "category": "misc",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "gendustry:pollen_kit",
             "text": "<li>a single use item that collects pollen from trees and other sources<li>right click a leaf block with the kit in your hand to collect pollen"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:pollen_kit"
         }
     ]

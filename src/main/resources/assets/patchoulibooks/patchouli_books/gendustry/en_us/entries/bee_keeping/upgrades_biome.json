@@ -4,32 +4,32 @@
     "category": "bee_keeping",
     "pages": [
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:13",
             "text": "<li>Biome override: Hell<li>affects climate and specialty production<li>Energy Consumption +50%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:17",
             "text": "<li>Biome override: Plains<li>affects climate and specialty production<li>Energy Consumption +20%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:18",
             "text": "<li>Biome override: Jungle<li>affects climate and specialty production<li>Energy Consumption +20%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:11",
             "text": "<li>Biome override: Desert<li>affects climate and specialty production<li>Energy Consumption +20%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:20",
             "text": "<li>Biome override: Taiga<li>affects climate and specialty production<li>Energy Consumption +20%"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "gendustry:apiary.upgrade:21",
             "text": "<li>Biome override: Ocean<li>affects climate and specialty production<li>Energy Consumption +20%"
         }
