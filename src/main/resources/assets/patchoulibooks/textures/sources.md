@@ -3,6 +3,22 @@
 This is a list of all the sources for all textures used in this mod. If you see something that you believe is yours and you are not credited, please let me know.
 If you want a neat way to view all the textures, you can use the [Minecraft Texture Viewer](https://oparisblue.github.io/minecraft-textures-viewer/#github/Ender-Development/PatchouliBooks/master).
 
+## References
+
+These are a few repositories that offer textures for free use. They are not directly used in this mod, but they are a great resource for anyone looking for textures.
+
+- [Foreck-1/foreck-textures](https://oparisblue.github.io/minecraft-textures-viewer/#github/Foreck1/foreck-textures/main)
+- [Kompreya
+/
+Kompy-Textures](https://oparisblue.github.io/minecraft-textures-viewer/#github/Kompreya/Kompy-Textures/master)
+- [malcolmriley/unused-textures](https://oparisblue.github.io/minecraft-textures-viewer/#github/malcolmriley/unused-textures/master)
+- [FreneticScribbler
+/
+OpenTextures](https://oparisblue.github.io/minecraft-textures-viewer/#github/FreneticScribbler/OpenTextures/master)
+- [Futureazoo
+/
+TextureRepository](https://oparisblue.github.io/minecraft-textures-viewer/#github/Futureazoo/TextureRepository/master)
+
 ## [Cataclysm_Spellbooks](https://www.curseforge.com/minecraft/mc-mods/cataclysm-spellbooks) ![GNU Lesser General Public License v2.1](https://img.shields.io/badge/License-LGPL%20v2.1-blue)
 
 | Texture          | Author                                                                                                                                                                          |
