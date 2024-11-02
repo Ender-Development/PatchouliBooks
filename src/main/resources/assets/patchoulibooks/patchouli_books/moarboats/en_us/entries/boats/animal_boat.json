@@ -4,13 +4,13 @@
     "category": "boats",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "moarboats:animal_boat",
             "link_recipe": true,
             "text": "This bigger-than-usual boat allows you to transport entities - if they fit - over water more easily!"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "moarboats:animal_boat"
         }
     ]

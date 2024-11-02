@@ -4,12 +4,12 @@
     "category": "boats",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "moarboats:modular_boat",
             "text": "This is the main attraction of the mod! This boat accepts lots of different modules to customize and automate your experience!"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "moarboats:modular_boat"
         }
     ]

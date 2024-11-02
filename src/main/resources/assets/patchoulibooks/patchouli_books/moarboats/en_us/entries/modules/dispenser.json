@@ -4,13 +4,13 @@
     "category": "modules",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "minecraft:dispenser",
             "title": "Dispenser Module",
             "text": "The Dispenser Module can dispense blocks and items in a set direction around the boat. Allow for a 3-block high column output. The Dispenser module can also place blocks."
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "minecraft:dispenser"
         }
     ]

@@ -4,13 +4,13 @@
     "category": "modules",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "moarboats:chunk_loader",
             "title": "Chunk Loader Module",
             "text": "The Boat Chunk Loader keeps the chunks in a 3x3 area around the boat loaded"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "moarboats:chunk_loader"
         }
     ]

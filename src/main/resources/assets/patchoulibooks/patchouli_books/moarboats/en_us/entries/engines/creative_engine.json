@@ -4,13 +4,9 @@
     "category": "engines",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "moarboats:creative_engine",
             "text": "Engine only accessible in Creative mode that never stops"
-        },
-        {
-            "type": "crafting",
-            "recipe": "moarboats:creative_engine"
         }
     ]
 }

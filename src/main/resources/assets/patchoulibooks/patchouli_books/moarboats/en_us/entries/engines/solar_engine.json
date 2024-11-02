@@ -4,13 +4,13 @@
     "category": "engines",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "minecraft:daylight_detector",
             "text": "Engine that runs only when the sun is out",
             "title": "Solar Engine"
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "minecraft:daylight_detector"
         }
     ]

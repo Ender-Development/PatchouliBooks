@@ -4,13 +4,13 @@
     "category": "modules",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "moarboats:oars",
             "title": "Paddles Module",
             "text": "Allows to control a boat as a vanilla boat."
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "moarboats:oars"
         }
     ]

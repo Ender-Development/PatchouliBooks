@@ -4,14 +4,14 @@
     "category": "modules",
     "pages": [
         {
-            "type": "spotlight",
+            "type": "spotlight+",
             "item": "moarboats:boat_battery",
             "title": "Battery Module",
             "link_recipe": true,
             "text": "The Boat Battery can hold RF/FE energy. Use an Energy (Dis)Charger to (un)load it."
         },
         {
-            "type": "crafting",
+            "type": "crafting+",
             "recipe": "moarboats:boat_battery"
         }
     ]
