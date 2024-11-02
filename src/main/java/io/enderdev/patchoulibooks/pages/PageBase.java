@@ -122,8 +122,22 @@ public abstract class PageBase extends BookPage {
         drawHeading(title, posY, separator, 0);
     }
 
+    /**
+     * Draws a heading at the given position. This also scales the text if the title is too long.
+     *
+     * @param title     The title to draw
+     * @param posY      The y position to draw the title
+     * @param separator If a separator should be drawn below the title
+     * @param spacing   The spacing between the title and the separator
+     */
     protected void drawHeading(String title, int posY, boolean separator, int spacing) {
-        parent.drawCenteredStringNoShadow(title, PAGE_CENTER_HORIZONTAL, posY, book.headerColor);
+        if (title.length() >= 20) {
+            GlStateManager.scale(0.8F, 0.8F, 1F);
+            parent.drawCenteredStringNoShadow(title, (int) (PAGE_CENTER_HORIZONTAL / 0.8), posY, book.headerColor);
+            GlStateManager.scale(1.25F, 1.25F, 1F);
+        } else {
+            parent.drawCenteredStringNoShadow(title, PAGE_CENTER_HORIZONTAL, posY, book.headerColor);
+        }
         if (separator) {
             GuiBook.drawSeparator(book, 0, posY + DIST_HEADER_SEP + spacing);
         }
