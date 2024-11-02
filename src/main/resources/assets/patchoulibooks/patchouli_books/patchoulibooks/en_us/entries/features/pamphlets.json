@@ -5,7 +5,11 @@
     "pages": [
         {
             "type": "text+",
-            "text": "Sometimes, an entire book with multiple categories is too bloated for a small mod or project. For this use-case, <pb> offers pamphlets, which are a special type of book with only one category. This feature was backported from <mark>Patchouli 1.18.2</>.<br>When the player opens a book with only one category, the landing page's right side will open to a list of the entries in the root category, instead of the normal list of categories. If you want to use this feature yourself, be sure to enable it in the config file."
+            "text": "Sometimes, an entire book with multiple categories is too bloated for a small mod or project. For this use-case, <pb> offers pamphlets, which are a special type of book with only one category. This feature was backported from <mark>Patchouli 1.18.2</>. When the player opens a book with only one category, the landing page's right side will open to a list of the entries in the root category, "
+        },
+        {
+            "type": "text+",
+            "text": "instead of the normal list of categories. If you want to use this feature yourself, be sure to enable it in the config file."
         }
     ]
 }
