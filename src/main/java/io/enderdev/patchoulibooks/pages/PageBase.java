@@ -131,13 +131,16 @@ public abstract class PageBase extends BookPage {
      * @param spacing   The spacing between the title and the separator
      */
     protected void drawHeading(String title, int posY, boolean separator, int spacing) {
-        if (title.length() >= 20) {
-            GlStateManager.scale(0.8F, 0.8F, 1F);
-            parent.drawCenteredStringNoShadow(title, (int) (PAGE_CENTER_HORIZONTAL / 0.8), posY, book.headerColor);
-            GlStateManager.scale(1.25F, 1.25F, 1F);
-        } else {
-            parent.drawCenteredStringNoShadow(title, PAGE_CENTER_HORIZONTAL, posY, book.headerColor);
+        float shrinkFactor = 1.0F;
+        int distanceToPageEdge = 10;
+        if (mc.fontRenderer.getStringWidth(title) > PAGE_WIDTH - distanceToPageEdge) {
+            shrinkFactor = (PAGE_WIDTH - distanceToPageEdge) / (float) mc.fontRenderer.getStringWidth(title);
         }
+
+        GlStateManager.scale(shrinkFactor, shrinkFactor, 1F);
+        parent.drawCenteredStringNoShadow(title, (int) (PAGE_CENTER_HORIZONTAL / shrinkFactor), (int) (posY / shrinkFactor), book.headerColor);
+        GlStateManager.scale(1 / shrinkFactor, 1 / shrinkFactor, 1F);
+
         if (separator) {
             GuiBook.drawSeparator(book, 0, posY + DIST_HEADER_SEP + spacing);
         }
@@ -147,27 +150,21 @@ public abstract class PageBase extends BookPage {
      * Draws an item at the given position.
      *
      * @param drawFrame If a frame should be drawn around the item
-     * @param item      The item to draw can be an ItemStack, an Ingredient or a BookIcon
+     * @param obj       The item to draw can be an ItemStack, an Ingredient or a RenderObject
      * @param posX      The x position to draw the item
      * @param posY      The y position to draw the item
      * @param mouseX    The x position of the mouse
      * @param mouseY    The y position of the mouse
      */
-    protected void drawItem(boolean drawFrame, Object item, int posX, int posY, int mouseX, int mouseY) {
-        if (item instanceof ItemStack) {
-            parent.renderItemStack(posX, posY, mouseX, mouseY, (ItemStack) item);
-        } else if (item instanceof Ingredient) {
-            parent.renderIngredient(posX, posY, mouseX, mouseY, (Ingredient) item);
-        } else if (item instanceof RenderObject) {
-            RenderObject renderObject = (RenderObject) item;
-            if (renderObject.isItem()) {
-                parent.renderItemStack(posX, posY, mouseX, mouseY, renderObject.getStack());
-            } else {
-                GlStateManager.color(1F, 1F, 1F, 1F);
-                mc.renderEngine.bindTexture(renderObject.getResource());
-                Gui.drawScaledCustomSizeModalRect(posX, posY, 0, 0, 16, 16, 16, 16, 16, 16);
-            }
+    protected void drawItem(boolean drawFrame, Object obj, int posX, int posY, int mouseX, int mouseY) {
+        if (obj instanceof ItemStack) {
+            parent.renderItemStack(posX, posY, mouseX, mouseY, (ItemStack) obj);
+        } else if (obj instanceof Ingredient) {
+            parent.renderIngredient(posX, posY, mouseX, mouseY, (Ingredient) obj);
+        } else if (obj instanceof RenderObject) {
+            ((RenderObject) obj).render(parent, posX, posY, mouseX, mouseY);
         }
+
         if (drawFrame) {
             GlStateManager.enableBlend();
             GlStateManager.color(1F, 1F, 1F, 1F);
