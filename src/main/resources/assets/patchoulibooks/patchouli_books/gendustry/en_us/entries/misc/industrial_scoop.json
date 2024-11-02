@@ -10,7 +10,7 @@
         },
         {
             "type": "crafting+",
-            "recipe": "gendustry:industrial_scoop:100"
+            "recipe": "gendustry:recipe2"
         }
     ]
 }
