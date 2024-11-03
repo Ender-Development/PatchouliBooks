@@ -8,8 +8,12 @@ Stuff I may work on in the future:
 - [ ] backporting [PatchouliButton](https://www.curseforge.com/minecraft/mc-mods/patchoulibutton)
 - [ ] backporting [PatchouliQuests](https://www.curseforge.com/minecraft/mc-mods/patchouli-quests)
 - [ ] implement the "inventory-scanning-to-open-a-book-entry" thing from [Botania](https://github.com/VazkiiMods/Botania/blob/1.12-final/src/main/java/vazkii/botania/client/core/handler/TooltipAdditionDisplayHandler.java)
-- [ ] add new page types ([PedestalCrafting](https://www.curseforge.com/minecraft/customization/pedestal-recipe-template-for-patchouli), [Boss Info](https://www.curseforge.com/minecraft/customization/patchouli-template-boss-info))
-- [ ] implementing proper [JEI Integration](https://github.com/CaliforniaDemise/Patchouli/issues/1)
+- [ ] add new page types
+  - [x] [PedestalCrafting](https://www.curseforge.com/minecraft/customization/pedestal-recipe-template-for-patchouli)
+  - [ ] [Boss Info](https://www.curseforge.com/minecraft/customization/patchouli-template-boss-info)
+- [ ] implementing proper JEI integration
+  - [ ] [Link from JEI into Books](https://github.com/CaliforniaDemise/Patchouli/issues/1)
+  - [x] Open JEI from inside a book
 
 ## [Ender-Development](https://github.com/Ender-Development)
 
