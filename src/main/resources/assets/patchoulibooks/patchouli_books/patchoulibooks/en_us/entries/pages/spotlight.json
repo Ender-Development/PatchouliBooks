@@ -1,6 +1,6 @@
 {
     "name": "Page: 'spotlight+'",
-    "icon": "patchoulibooks:textures/icons/book_page_written.png",
+    "icon": "patchoulibooks:textures/gui/icons/book_page_written.png",
     "category": "pages",
     "pages": [
         {
@@ -10,7 +10,7 @@
         },
         {
             "type": "spotlight+",
-            "item": "patchoulibooks:textures/icons/info.png",
+            "item": "patchoulibooks:textures/gui/icons/info.png",
             "text": "One major difference to the default 'spotlight' page type is that you can display custom textures instead of items. This allows you to have a more flexible design for your book. Without the need of making a template for it. Like making a 'info' page."
         },
         {

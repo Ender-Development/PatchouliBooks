@@ -1,6 +1,6 @@
 {
     "name": "Pamphlets",
-    "icon": "patchoulibooks:textures/icons/tool_clipboard_papers.png",
+    "icon": "patchoulibooks:textures/gui/icons/tool_clipboard_papers.png",
     "category": "features",
     "pages": [
         {

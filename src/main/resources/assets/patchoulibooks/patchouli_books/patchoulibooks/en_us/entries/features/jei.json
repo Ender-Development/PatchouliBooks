@@ -1,0 +1,23 @@
+{
+    "name": "HEI Integration",
+    "icon": "patchoulibooks:textures/gui/icons/hei.png",
+    "category": "features",
+    "pages": [
+        {
+            "type": "link+",
+            "title": "Had Enough Items",
+            "icon": "patchoulibooks:textures/gui/icons/hei.png",
+            "url": "https://curseforge.com/minecraft/mc-mods/had-enough-items",
+            "button_text": "> CurseForge",
+            "text": "You have <mark>Had Enough Items</> installed? Then you can lookup the recipes of any displayed item in <b>any</> book added by <mark><b>Patchouli</> or <pb>!"
+        },
+        {
+            "type": "link+",
+            "title": "Just Enough Items",
+            "icon": "patchoulibooks:textures/gui/icons/jei.png",
+            "url": "https://curseforge.com/minecraft/mc-mods/jei",
+            "link_text": "> CurseForge",
+            "text": "The same goes for <mark>Just Enough Items</>! But I prefer HEI as it's a maintained fork of JEI for 1.12.2."
+        }
+    ]
+}

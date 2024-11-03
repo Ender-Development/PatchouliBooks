@@ -1,6 +1,6 @@
 {
     "name": "General QoL Features",
-    "icon": "patchoulibooks:textures/icons/book_grimoire_wild.png",
+    "icon": "patchoulibooks:textures/gui/icons/book_grimoire_wild.png",
     "category": "qol",
     "pages": [
         {

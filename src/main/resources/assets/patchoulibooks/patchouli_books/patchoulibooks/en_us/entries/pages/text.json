@@ -1,6 +1,6 @@
 {
     "name": "Page: 'text+'",
-    "icon": "patchoulibooks:textures/icons/book_page_written.png",
+    "icon": "patchoulibooks:textures/gui/icons/book_page_written.png",
     "category": "pages",
     "pages": [
         {

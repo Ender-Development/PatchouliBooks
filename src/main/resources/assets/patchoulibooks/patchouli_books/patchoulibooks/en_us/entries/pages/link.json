@@ -1,0 +1,20 @@
+{
+    "name": "Page: 'link+'",
+    "icon": "patchoulibooks:textures/gui/icons/book_page_written.png",
+    "category": "pages",
+    "pages": [
+        {
+            "type": "link+",
+            "link": "https://github.com/Ender-Development/PatchouliBooks",
+            "link_text": "PB @ GitHub",
+            "text": "The 'link+' page type works similarly to the 'spotlight' page type, but uses the same formating as all my other pages. This allows you to have a more consistent look in your book."
+        },
+        {
+            "type": "link+",
+            "icon": "minecraft:nether_star",
+            "link": "https://minecraft.wiki/w/Nether_Star",
+            "link_text": "@Minecraft Wiki",
+            "text": "One major difference to the default 'link' page type is the addition of an icon. All other formatting is dynamic like all other pages."
+        }
+    ]
+}
