@@ -72,7 +72,7 @@ public class BookExtension extends Book {
         this.showProgress = false;
         this.model = String.format("%s:book_%s", Tags.MOD_ID, this.resourceLoc.getPath());
         this.name = String.format("%s Guide", getOriginalOwner(this.resourceLoc).getName());
-        this.fillerResource = new ResourceLocation(Tags.MOD_ID, String.format("textures/filler/%s.png",this.resourceLoc.getPath()));
+        this.fillerResource = new ResourceLocation(Tags.MOD_ID, String.format("textures/gui/filler/%s.png",this.resourceLoc.getPath()));
         this.version = Tags.VERSION;
 
         // add special macros
