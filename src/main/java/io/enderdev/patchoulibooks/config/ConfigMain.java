@@ -37,6 +37,10 @@ public class ConfigMain {
                 "This is untested with books added by other mods. User added books work fine."
         })
         public static boolean improveRecipeLookup = false;
+
+        @Config.Name("Enable JEI Integration")
+        @Config.Comment("Enable JEI integration for Patchouli Books books.")
+        public static boolean enableJEIinBooks = true;
     }
 
     @SubscribeEvent
