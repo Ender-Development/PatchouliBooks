@@ -23,6 +23,7 @@ public class RecipeRegister {
 
     public RecipeRegister() {
         addBookRecipe("gendustry", "gene_sample_blank");
+        addBookRecipe("thermallogistics","crafter");
         addBookRecipe("moarboats", "oars");
         addBookRecipe("pressure", "pipe");
     }
