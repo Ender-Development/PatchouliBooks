@@ -32,6 +32,9 @@ I also learned about `ComponentProcessors` they allow a developer to provide a b
 ![Important](https://img.shields.io/badge/-Important-blue)
 **Why does this need to be a mod in the first place?** Well technically I could release all of these books as a resource pack. But this would mean it would load all books in every instance instead of only the ones that are present. This is one of the first things I implemented in `PatchouliBooks`. I wrote a little mixins that allows me to check if the mod for one of my books is actually loaded, before I allow Patchouli to load the book for it. Now I can bundle as many books as I want and it still only loads the ones that are actually needed. The second most important thing is the use of `ComponentProcessors`. That way I can access most of the internal mod values and come up with special templates to represent them to the player. This is something that wouldn't be possible with a resource pack. Lastly there are a few ideas I have in mind that I may want to implement. I looked through some of the newer add-ons in the modern Minecraft version and encountered [PatchouliButton](https://www.curseforge.com/minecraft/mc-mods/patchoulibutton). This replaces the inventory book with a GUI list that shows all available Patchouli books without the need of having them in your inventory. Pretty need of you ask me. But I've never done anything GUI related yet, so this may be something for the future. I already have a list of more possible features in my [README](README.md#possible-features).
 
+![Note](https://img.shields.io/badge/-Note-green)
+**Yes there is of course a Patchouli Books book in this mod.** How would you aim to add documentation to as many mods as possible if you don't start with the one you're making? Not that it has any value for any survival player, but maybe there are some packmakers or modauthors, who can find it helpful. Otherwise you can still look at the source code and see how to use the new features I implemented.
+
 ## Mixins
 
 ![Important](https://img.shields.io/badge/-Important-blue)
@@ -67,6 +70,11 @@ This mixin registers my new patchouli pages. I know there is probably a way to r
 
 ![Warning](https://img.shields.io/badge/-Warning-red)
 Small update regarding this mixin. It no longer exists. I refactored the registration process so it doesn't uses a mixin anymore. Instead, I use a custom decorator and some reflection magic to register my pages at the correct loading stage.
+
+### [GuiBookAccessor](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/GuiBookAccessor.java)
+
+![Note](https://img.shields.io/badge/-Note-green)
+A very small mixin that allows access to the item that the book is currently rendering a tooltip for. This allows me to hijack this value and enables my HEI/JEI integration to know which item is currently being hovered over. Because the lack of HEI/JEI integration was has bothered me for a long time.
 
 ### [GuiBookLandingMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/GuiBookLandingMixin.java)
 
