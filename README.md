@@ -1,9 +1,11 @@
 # Patchouli Books
 
-<img src="PatchouliBooks.png" align="center" width="180px"/>
+<img src="PatchouliBooks.png" align="left" width="180px"/>
 
 This is an add-on for the [Patchouli](https://www.curseforge.com/minecraft/mc-mods/patchouli-rofl-edition) mod that adds various books for different mods, trying to document them as best as possible. Furthermore there are a few more QoL features I have in mind. This mod will only ever exist for 1.12.2 as I have currently no interest in doing anything on the newer versions of Minecraft.
 If you want to take a look at the things I encountered while working on this project, feel free to check out my [project notes](NOTES.md). Furthermore I made non of the art this mods uses. All the art used is either from Patchouli or sourced from various repositories. I've compiled a list of all the sourced [here](https://github.com/Ender-Development/PatchouliBooks/blob/master/src/main/resources/assets/patchoulibooks/textures/sources.md) together with the original authors and their respective licenses.
+
+<p>&nbsp;</p>
 
 ## Current Features
 Stuff I have already implemented:
