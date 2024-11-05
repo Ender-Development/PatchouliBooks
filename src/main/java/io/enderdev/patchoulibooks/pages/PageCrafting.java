@@ -13,7 +13,6 @@ import vazkii.patchouli.client.book.gui.GuiBookEntry;
 
 import java.util.Objects;
 
-@PageRegister("crafting+")
 public class PageCrafting extends PageBase {
 
     String title;

@@ -7,7 +7,6 @@ import vazkii.patchouli.client.book.gui.BookTextRenderer;
 import vazkii.patchouli.client.book.gui.GuiBook;
 import vazkii.patchouli.client.book.gui.GuiBookEntry;
 
-@PageRegister("link+")
 public class PageLink extends PageBase {
 
     String title;

@@ -1,12 +1,10 @@
 package io.enderdev.patchoulibooks.pages;
 
 import com.google.gson.annotations.SerializedName;
-import net.minecraft.item.ItemStack;
 import vazkii.patchouli.client.book.BookEntry;
 import vazkii.patchouli.client.book.gui.BookTextRenderer;
 import vazkii.patchouli.client.book.gui.GuiBookEntry;
 
-@PageRegister("spotlight+")
 public class PageSpotlight extends PageBase {
     @SerializedName("item")
     String objRaw;
