@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 import io.enderdev.patchoulibooks.Tags;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
 
@@ -74,6 +75,7 @@ public class BookExtension extends Book {
         this.name = String.format("%s Guide", getOriginalOwner(this.resourceLoc).getName());
         this.fillerResource = new ResourceLocation(Tags.MOD_ID, String.format("textures/gui/filler/%s.png",this.resourceLoc.getPath()));
         this.version = Tags.VERSION;
+        this.landingText = String.format("This Book documents the items and blocks in the <mod> mod. It is part of the <pb> mod that tries to document as many mods as possible.<br>All information about <mod> are taken from these sources:<li>$(l:%s)Curseforge$(/l)<li>$(l:%s)GitHub$(/l)<li>$(l:%s)Wiki$(/l)", this.linkCurseforge, this.linkGitHub, this.linkWiki);
 
         // add special macros
         this.MY_MACROS.put("$(mod)", "$(l)$(#490)" + getOriginalOwner(this.resourceLoc).getName() + "$()");

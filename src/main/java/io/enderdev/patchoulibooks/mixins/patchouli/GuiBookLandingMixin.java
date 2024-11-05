@@ -10,7 +10,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import vazkii.patchouli.client.book.BookEntry;
 import vazkii.patchouli.client.book.gui.GuiBookEntry;
@@ -33,16 +32,6 @@ public abstract class GuiBookLandingMixin extends GuiBook {
 
     private GuiBookLandingMixin(Book book) {
         super(book);
-    }
-
-    @ModifyArg(method = "initGui", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/resources/I18n;format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"))
-    private String modifyLandingText(String title) {
-        Book book = this.book;
-        if (book instanceof BookExtension) {
-            BookExtension bookExtension = (BookExtension) book;
-            return I18n.format("patchoulibooks.gui.lexicon.landing", bookExtension.linkCurseforge, bookExtension.linkGitHub, bookExtension.linkWiki);
-        }
-        return title;
     }
 
     @Inject(method = "initGui", at = @At(value = "INVOKE", target = "Ljava/util/Collections;sort(Ljava/util/List;)V", remap = false), cancellable = true)
