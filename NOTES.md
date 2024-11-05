@@ -43,20 +43,20 @@ I already talked about them, but mixins can't be underestimated. They are a powe
 ### [BookContentsMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/BookContentsMixin.java)
 
 ![Note](https://img.shields.io/badge/-Note-green)
-Patchouli comes with a "version" system by default, that means the book gets a tooltip that say `x`th Edition. I didn't like this, as I prefer to use [SemVer](https://semver.org). So I added a special check to allow the usage of [SemVer](https://semver.org) instead of the default version system. All it does is checking the input matches it against a regex and return a translated I18n string.
+Patchouli comes with a "version" system by default, that means the book gets a tooltip that say `x`th Edition. It's not my cup of tea as I prefer to use [SemVer](https://semver.org). So I added a special check to allow the usage of [SemVer](https://semver.org) instead of the default version system. All it does is checking the input matches it against a regex and return a translated I18n string.
 
 ![Important](https://img.shields.io/badge/-Important-blue)
-The `BookContentsMixin` got another functionality in one of the latest commits. I started tinkering with Templates for my books, but I wanted a way to use them across all books without needing to copy them into every single book. This mixin now also hijacks the loading of the templates and redirects them to a central location and can access them from all of my books.
+The `BookContentsMixin` got another functionality in one of the latest commits. I started tinkering with Templates for my books, but I wanted a way to use them across all books without needing to copy them into every single book. This mixin now also hijacks the loading of the templates and redirects them to a central location where I can access them from all of my books.
 
 ### [BookEntryMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/BookEntryMixin.java)
 
 ![Note](https://img.shields.io/badge/-Note-green)
-By default you have to set a flag in your entry.json if you want to mark it as "already-read", so it displays without the notification symbol. For the amount of entries I'm going to write I want to make the writing progress as quick as possible. The more stuff that's set correctly by default the better. So i circumvented the need of setting the flag in the entry.json by checking if the loaded entry is from one of my books and if it is, I set the flag to true.
+By default you have to set a flag in your entry.json if you want to mark it as "already-read", so it displays without the notification symbol. For the amount of entries I'm going to write I want to make the writing progress as quick as possible. The more stuff that's set correctly by default the better. So i circumvented the need of setting the flag in each of the entry files by checking if the loaded entry is from one of my books and if it is, I set the flag to true.
 
 ### [BookRegistryMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/BookRegistryMixin.java)
 
 ![Important](https://img.shields.io/badge/-Important-blue)
-I already mentioned this one before, when I talked about the mixin to disable my book if the related mod isn't loaded. This was all it did for the longest time, but I wasn't satisfied with the limited option the default `Book.class` offered. That's why I created the [BookExtension.class](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/extension/Bookextension.java). This offers me all possibilities to tweak my books as I see fit. Then there was the problem that I need to register my books as instance of `BookExtension.class` instead of `Book.class`. This is where this mixin plays a role again. Whenever Patchouli tries to register a book and it's one of mine, I replace the instance with the correct one.
+I already mentioned this one before, when I talked about the mixin to disable my book if the related mod isn't loaded. This was all it did for the longest time, but I wasn't satisfied with the limited options the default `Book.class` offered. That's why I created the [BookExtension.class](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/extension/Bookextension.java). This offers me all possibilities to tweak my books as I see fit. Then there was the problem that I need to register my books as instance of `BookExtension.class` instead of `Book.class`. This is where this mixin comes to play again. Whenever Patchouli tries to register a book and it's one of mine, I replace the instance with the correct one.
 
 ### [BookTextParserMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/BookTextParserMixin.java)
 
@@ -74,12 +74,12 @@ Small update regarding this mixin. It no longer exists. I refactored the registr
 ### [GuiBookAccessor](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/GuiBookAccessor.java)
 
 ![Note](https://img.shields.io/badge/-Note-green)
-A very small mixin that allows access to the item that the book is currently rendering a tooltip for. This allows me to hijack this value and enables my HEI/JEI integration to know which item is currently being hovered over. Because the lack of HEI/JEI integration was has bothered me for a long time.
+A very small mixin that allows access to the item that the book is currently rendering a tooltip for. It allows me to use this value and enables my HEI/JEI integration to know which item is currently being hovered over. Because the lack of HEI/JEI integration was bothering me for the longest time.
 
 ### [GuiBookLandingMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/GuiBookLandingMixin.java)
 
 ![Note](https://img.shields.io/badge/-Note-green)
-Like I mentioned before, if I can unify something across all my books, I will do it. This mixin replaced the default Landing Page text with a default I18n String, which gets populated with the data from my `BookExtension.class`. This way I can have a unified landing page for all my books, without the need of setting it in every single book.
+Like I mentioned before, if I can unify something across all my books, I will do it. This mixin replaces the default Landing Page text with a default I18n String, which gets populated with the data from my `BookExtension.class`. Now I can have a unified landing page for all my books, without the need of setting it in every single book.
 
 ![Important](https://img.shields.io/badge/-Important-blue)
 Great news! This mixin now plays a major role as I backported pamphlets from newer versions of Patchouli. Pamphlets a single category books, where all entries are displayed in a list view without having to select a category first. All of the related GUI stuff is now handled by this mixin.
@@ -95,7 +95,7 @@ By default each Patchouli Book comes with a tooltip that displays the version. T
 This is a good one. If you want to display a crafting recipe in a book, you need to provide the recipe id. The problem with that is if a mod like [CraftTweaker](https://www.curseforge.com/minecraft/mc-mods/crafttweaker) or [GroovyScript](https://www.curseforge.com/minecraft/mc-mods/groovyscripts) changes the recipe, the id changes and the book cant't display the recipe anymore. If Patchouli can't find a recipe with the provided String my mixin queries the recipe registry and looks for a crafting recipe with that item as output. If it finds one it returns it's recipe id. This way I can display the recipe without the need of providing the recipe id and I only need to provide the item id.
 
 ![Note](https://img.shields.io/badge/-Note-green)
-Small addition: After switching to my own version of the book pages I added a config option to enable this mixin for all Patchouli Books. This may be useful, if a modpack maker changes a recipe of an item which is displayed in a book. This would break the display of the recipe, but with this mixin enabled it would still display the recipe correctly. It is disabled by default, as I haven't tested it with other mods yet.
+Small addition: After switching to my own version of the book pages I added a config option to enable this mixin for all Patchouli Books. This may be useful, if a modpack maker changes a recipe of an item which is displayed in a book. This would break the display of the recipe, but with this mixin enabled it would still display the recipe correctly (as long as it is a crafting recipe). It is disabled by default, as I haven't tested it with other mods yet.
 
 ### [PageSpotlightMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/PageSpotlightMixin.java)
 
