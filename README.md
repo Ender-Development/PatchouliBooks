@@ -26,6 +26,9 @@ Stuff I may work on in the future:
 - [ ] implementing proper JEI integration
   - [ ] [Link from JEI into Books](https://github.com/CaliforniaDemise/Patchouli/issues/1)
   - [x] Open JEI from inside a book
+- [ ] increase the GUI size of the book
+  - [ ] decrease the font size of the text
+  - [ ] thus increasing the amount of text that can be displayed on a single page
 
 ## Documented Mods
 

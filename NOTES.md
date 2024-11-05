@@ -69,7 +69,7 @@ All this mixin does is adding some logging, when the creation of an internal lin
 This mixin registers my new patchouli pages. I know there is probably a way to register them myself within Patchouli Books, but I don't see a reason to do so. It isn't invasive as it only appends my pages to the default `addPageTypes` method. This may be refactored in the future, but for now it works.
 
 ![Warning](https://img.shields.io/badge/-Warning-red)
-Small update regarding this mixin. It no longer exists. I refactored the registration process so it doesn't uses a mixin anymore. Instead, I use a custom decorator and some reflection magic to register my pages at the correct loading stage.
+Small update regarding this mixin. It no longer exists. I refactored the registration process so it doesn't uses a mixin anymore. Instead, I use a custom decorator and some reflection magic to register my pages at the correct loading stage. **[0.1.1]** Now I don't even use reflection or a custom decorator anymore as they caused a crash when launched outside of the dev environment. I now manually register the new page types.
 
 ### [GuiBookAccessor](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/GuiBookAccessor.java)
 
@@ -80,6 +80,9 @@ A very small mixin that allows access to the item that the book is currently ren
 
 ![Note](https://img.shields.io/badge/-Note-green)
 Like I mentioned before, if I can unify something across all my books, I will do it. This mixin replaces the default Landing Page text with a default I18n String, which gets populated with the data from my `BookExtension.class`. Now I can have a unified landing page for all my books, without the need of setting it in every single book.
+
+![Warning](https://img.shields.io/badge/-Warning-red) **[0.1.1]**
+Small refactor of the custom landing page. I no longer rely on a mixin as it didn't work outside of the dev environment. Now I just set the string for the landing page in the `BookExtension.class` and it gets displayed correctly.
 
 ![Important](https://img.shields.io/badge/-Important-blue)
 Great news! This mixin now plays a major role as I backported pamphlets from newer versions of Patchouli. Pamphlets a single category books, where all entries are displayed in a list view without having to select a category first. All of the related GUI stuff is now handled by this mixin.

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1] - 2024-11-06
+
+### Changes
+- fixed the curseforge link in the patchouli books book
+- removed the reflection part to register the new page types as it causes a crash when launched outside of the dev environment
+- refactored the custom lading page to no longer rely on a mixin
+
 ## [0.1.0] - 2024-11-03
 
 ### Changes
