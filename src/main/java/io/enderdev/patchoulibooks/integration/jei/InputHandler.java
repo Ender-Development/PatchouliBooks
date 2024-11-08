@@ -9,6 +9,8 @@ import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
 import vazkii.patchouli.client.book.gui.GuiBook;
 
@@ -21,6 +23,7 @@ public class InputHandler {
     public InputHandler() {
     }
 
+    @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void keyInputEvent(GuiScreenEvent.KeyboardInputEvent.Pre event) {
         if (handleKeyEvent() && event.getGui() instanceof GuiBook && ConfigMain.ConfigGeneral.enableJEIinBooks) {

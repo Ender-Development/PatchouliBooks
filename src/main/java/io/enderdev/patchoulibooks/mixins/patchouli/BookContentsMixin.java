@@ -5,6 +5,8 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.fml.common.ModContainer;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -32,6 +34,7 @@ public abstract class BookContentsMixin {
     @Shadow
     protected abstract BiFunction<Path, Path, Boolean> pred(String modId, List<ResourceLocation> list);
 
+    @SideOnly(Side.CLIENT)
     @Inject(method = "getSubtitle", at = @At("HEAD"), cancellable = true)
     private void getSubtitle(CallbackInfoReturnable<String> cir) {
         BookContents contents = (BookContents) (Object) this;

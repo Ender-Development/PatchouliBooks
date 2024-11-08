@@ -4,7 +4,6 @@ import com.google.gson.annotations.SerializedName;
 import io.enderdev.patchoulibooks.Tags;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
 
