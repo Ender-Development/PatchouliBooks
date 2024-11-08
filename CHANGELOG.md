@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.2] - 2024-11-08
+
+### Changes
+
+- fixed server crash when trying to load the mod
+
 ## [0.1.1] - 2024-11-06
 
 ### Changes
