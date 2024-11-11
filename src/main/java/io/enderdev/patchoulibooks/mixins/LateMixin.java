@@ -9,12 +9,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class LateMixin implements ILateMixinLoader {
-     public static final List<String> modMixins = ImmutableList.of(
+    public static final List<String> modMixins = ImmutableList.of(
+            "jei",
             "patchouli"
     );
 
     @Override
     public List<String> getMixinConfigs() {
-        return modMixins.stream().filter(Loader::isModLoaded).map(mod -> "mixins."+ Tags.MOD_ID + "." + mod + ".json").collect(Collectors.toList());
+        return modMixins.stream().filter(Loader::isModLoaded).map(mod -> "mixins." + Tags.MOD_ID + "." + mod + ".json").collect(Collectors.toList());
     }
 }

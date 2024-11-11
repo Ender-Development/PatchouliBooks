@@ -2,6 +2,7 @@
     "name": "Page: 'pillar'",
     "icon": "patchoulibooks:textures/gui/icons/book_page_written.png",
     "category": "pages",
+    "locked": true,
     "pages": [
         {
             "type": "text+",
@@ -11,6 +12,7 @@
             "type": "pillar",
             "output": "minecraft:hopper",
             "center": "minecraft:observer",
+            "link_recipe": true,
             "inputs": [
                 "minecraft:comparator",
                 "minecraft:noteblock",

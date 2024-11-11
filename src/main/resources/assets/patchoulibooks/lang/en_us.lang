@@ -12,3 +12,6 @@ config.patchoulibooks.debug=Debug Mode
 config.patchoulibooks.debug.tooltip=Enables debug mode, this registers all books even if the required mod is not present
 config.patchoulibooks.general=General
 config.patchoulibooks.general.tooltip=General settings for Patchouli Books
+
+## JEI
+patchoulibooks.jei.openbook=Open %s
