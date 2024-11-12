@@ -19,7 +19,7 @@ public class ConfigMain {
         public static boolean enableDebug = false;
     }
 
-    @Config(modid = Tags.MOD_ID, category = "recipes")
+    @Config(modid = Tags.MOD_ID, category = "general")
     @Config.LangKey("config.patchoulibooks.general")
     public static class ConfigGeneral {
         @Config.Name("Enable Recipes")
@@ -38,9 +38,17 @@ public class ConfigMain {
         })
         public static boolean improveRecipeLookup = false;
 
-        @Config.Name("Enable JEI Integration")
-        @Config.Comment("Enable JEI integration for Patchouli Books books.")
+        @Config.Name("Open JEI from Books")
+        @Config.Comment("Enable opening JEI for items in Patchouli books.")
         public static boolean enableJEIinBooks = true;
+
+        @Config.Name("Open Patchouli Book from JEI")
+        @Config.Comment({
+                "Enable opening Patchouli books from JEI.",
+                "Each book with a matching item will be displayed next to the recipe.",
+                "If there is more than one book, the books will be displayed in a grid."
+        })
+        public static boolean enableBooksInJEI = true;
     }
 
     @SubscribeEvent
