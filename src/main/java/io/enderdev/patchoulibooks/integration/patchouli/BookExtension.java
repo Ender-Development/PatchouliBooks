@@ -1,4 +1,4 @@
-package io.enderdev.patchoulibooks.extension;
+package io.enderdev.patchoulibooks.integration.patchouli;
 
 import com.google.gson.annotations.SerializedName;
 import io.enderdev.patchoulibooks.Tags;

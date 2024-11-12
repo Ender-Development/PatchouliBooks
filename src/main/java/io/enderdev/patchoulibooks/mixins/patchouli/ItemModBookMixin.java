@@ -2,7 +2,7 @@ package io.enderdev.patchoulibooks.mixins.patchouli;
 
 import io.enderdev.patchoulibooks.PatchouliBooks;
 import io.enderdev.patchoulibooks.Tags;
-import io.enderdev.patchoulibooks.extension.BookExtension;
+import io.enderdev.patchoulibooks.integration.patchouli.BookExtension;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;

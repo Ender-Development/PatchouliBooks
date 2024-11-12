@@ -1,7 +1,7 @@
 package io.enderdev.patchoulibooks.mixins.patchouli;
 
 import io.enderdev.patchoulibooks.config.ConfigMain;
-import io.enderdev.patchoulibooks.extension.BookExtension;
+import io.enderdev.patchoulibooks.integration.patchouli.BookExtension;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;

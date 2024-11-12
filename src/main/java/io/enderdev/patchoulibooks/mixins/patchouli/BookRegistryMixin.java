@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import io.enderdev.patchoulibooks.PatchouliBooks;
 import io.enderdev.patchoulibooks.Tags;
 import io.enderdev.patchoulibooks.config.ConfigMain;
-import io.enderdev.patchoulibooks.extension.BookExtension;
+import io.enderdev.patchoulibooks.integration.patchouli.BookExtension;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
