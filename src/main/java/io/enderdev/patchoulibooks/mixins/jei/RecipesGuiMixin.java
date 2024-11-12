@@ -1,6 +1,5 @@
 package io.enderdev.patchoulibooks.mixins.jei;
 
-import io.enderdev.patchoulibooks.PatchouliBooks;
 import io.enderdev.patchoulibooks.integration.jei.IButtonAccessor;
 import io.enderdev.patchoulibooks.integration.jei.PatchouliButton;
 import mezz.jei.gui.recipes.RecipeLayout;
@@ -26,12 +25,8 @@ public class RecipesGuiMixin extends GuiScreen {
     private void addRecipeTransferButtons(Minecraft minecraft, List<RecipeLayout> recipeLayouts, CallbackInfo ci, EntityPlayer player, Container container, Iterator var5, RecipeLayout recipeLayout) {
         IButtonAccessor accessor = (IButtonAccessor) recipeLayout;
         List<PatchouliButton> listPB = accessor.patchouliBooks$getPatchouliButton();
-        if (!listPB.isEmpty()) {
-            listPB.forEach(button -> {
-                if (button.isUnlocked()) {
-                    this.addButton(button);
-                }
-            });
+        if (listPB != null && !listPB.isEmpty()) {
+            listPB.forEach(this::addButton);
         }
     }
 
