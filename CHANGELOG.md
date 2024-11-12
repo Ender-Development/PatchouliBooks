@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.0] - 2024-11-12
+
+### Changes
+
+- added new JEI integration, which displays books that contain a page with the item you are looking at
+- if there are multiple books with the item, they will be arranged in a grid
+- the book only shows up if the related entry with the item is unlocked
+- added the possibility to force lock a book entry, simply use the `force_lock` field in the entry json
+- maybe now I have the time to actually write more books
+
 ## [0.1.2] - 2024-11-08
 
 ### Changes
@@ -11,7 +21,7 @@
 ### Changes
 - fixed the curseforge link in the patchouli books book
 - removed the reflection part to register the new page types as it causes a crash when launched outside of the dev environment
-- refactored the custom lading page to no longer rely on a mixin
+- refactored the custom landing page to no longer rely on a mixin
 
 ## [0.1.0] - 2024-11-03
 

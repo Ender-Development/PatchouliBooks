@@ -1,4 +1,4 @@
-# Notes
+# 📝Notes
 
 Just a few things I encountered while working on this project.
 
@@ -12,14 +12,15 @@ Just a few things I encountered while working on this project.
 
 ---
 
-## Table of Contents
+## 📂Table of Contents
 
-- [Patchouli](#patchouli)
-- [Patchouli Books](#patchouli-books)
-- [Mixins](#mixins)
-- [Moar Boats](#moar-boats)
+▶ [Patchouli](#patchouli)<br>
+▶ [Patchouli Books](#patchouli-books)<br>
+▶ [Patchouli (Mixins)](#patchouli-mixins)<br>
+▶ [Had Enough Items / Just Enough Items (Mixins)](#had-enough-items--just-enough-items-mixins)<br>
+▶ [Moar Boats](#moar-boats)
 
-## Patchouli
+## 📕 Patchouli
 
 ![Note](https://img.shields.io/badge/-Note-green)
 I thought after working so much with this mod in my modpack [Zerblands-Remastered](https://github.com/MasterEnderman/Zerblands-Remastered) I would know most of its features. But I was wrong. I didn't know that you could disable entries or whole categories in the book by using the flag system that allows checking for a loaded mod by default. This was one of the first features I wanted to implement on my end. Looks like this isn't necessary anymore.
@@ -27,7 +28,7 @@ I thought after working so much with this mod in my modpack [Zerblands-Remastere
 ![Note](https://img.shields.io/badge/-Note-green)
 I also learned about `ComponentProcessors` they allow a developer to provide a book with actual values straight from the source code. No idea why nobody uses this feature. I really like to have some numbers, when it comes to working with various different mods. Most of the time I have to look them up myself. Now I may be able to use some Accessor Mixins to get access to various values of the mods I plan to document. That way all information would still be correct, even if someone alters some values in the config files. I anyone wants to read about them [here](https://vazkiimods.github.io/Patchouli/docs/patchouli-advanced/component-processors/) is the link to the documentation.
 
-## Patchouli Books
+## 📚 Patchouli Books
 
 ![Important](https://img.shields.io/badge/-Important-blue)
 **Why does this need to be a mod in the first place?** Well technically I could release all of these books as a resource pack. But this would mean it would load all books in every instance instead of only the ones that are present. This is one of the first things I implemented in `PatchouliBooks`. I wrote a little mixins that allows me to check if the mod for one of my books is actually loaded, before I allow Patchouli to load the book for it. Now I can bundle as many books as I want and it still only loads the ones that are actually needed. The second most important thing is the use of `ComponentProcessors`. That way I can access most of the internal mod values and come up with special templates to represent them to the player. This is something that wouldn't be possible with a resource pack. Lastly there are a few ideas I have in mind that I may want to implement. I looked through some of the newer add-ons in the modern Minecraft version and encountered [PatchouliButton](https://www.curseforge.com/minecraft/mc-mods/patchoulibutton). This replaces the inventory book with a GUI list that shows all available Patchouli books without the need of having them in your inventory. Pretty need of you ask me. But I've never done anything GUI related yet, so this may be something for the future. I already have a list of more possible features in my [README](README.md#possible-features).
@@ -35,10 +36,7 @@ I also learned about `ComponentProcessors` they allow a developer to provide a b
 ![Note](https://img.shields.io/badge/-Note-green)
 **Yes there is of course a Patchouli Books book in this mod.** How would you aim to add documentation to as many mods as possible if you don't start with the one you're making? Not that it has any value for any survival player, but maybe there are some packmakers or modauthors, who can find it helpful. Otherwise you can still look at the source code and see how to use the new features I implemented.
 
-## Mixins
-
-![Important](https://img.shields.io/badge/-Important-blue)
-I already talked about them, but mixins can't be underestimated. They are a powerful tool to access the internal values of a mod at tweak things as you see fit. I thought about going through my mixins and explaining why I added them in the first place, so this would be a good place to start.
+## Patchouli (Mixins)
 
 ### [BookContentsMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/BookContentsMixin.java)
 
@@ -52,6 +50,9 @@ The `BookContentsMixin` got another functionality in one of the latest commits. 
 
 ![Note](https://img.shields.io/badge/-Note-green)
 By default you have to set a flag in your entry.json if you want to mark it as "already-read", so it displays without the notification symbol. For the amount of entries I'm going to write I want to make the writing progress as quick as possible. The more stuff that's set correctly by default the better. So i circumvented the need of setting the flag in each of the entry files by checking if the loaded entry is from one of my books and if it is, I set the flag to true.
+
+![Important](https://img.shields.io/badge/-Important-blue)
+With version `0.2.0` I added the possibility to force lock a book entry. This is useful if you want to create an entry in the book, but don't want the player to access it yet. This is done by adding a `force_lock` field to the entry json.
 
 ### [BookRegistryMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/BookRegistryMixin.java)
 
@@ -108,7 +109,19 @@ Another minor tweak. It decreases the empty space between the text and the item 
 ![Warning](https://img.shields.io/badge/-Warning-red)
 This mixin is now deprecated. I implemented a custom page for this, so it doesn't break any other Patchouli Books that originate outside of my mod.
 
-## Moar Boats
+## 🛒HEI / JEI (Mixins)
+
+### [RecipeLayoutMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/jei/RecipeLayoutMixin.java)
+
+![Important](https://img.shields.io/badge/-Important-blue)
+This mixin is the core of my HEI/JEI integration. It allows me to display each book that contains a page with the item I'm looking at. If there are multiple books with the item, they will be arranged in a grid. The book only shows up if the related entry with the item is unlocked.
+
+### [RecipesGuiMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/jei/RecipesGuiMixin.java)
+
+![Note](https://img.shields.io/badge/-Note-green)
+This mixin is a small addition to the `RecipeLayoutMixin`. It just registers my new buttons in the right places so that they can be interacted with.
+
+## 🚢Moar Boats
 
 ![Note](https://img.shields.io/badge/-Note-green)
 The `Boats` in Moar Boats don't inherit from the Minecraft `EntityBoat` class. That is why you can't "pick" the boat entities via middle-clicking. I encountered this while contemplating if I should implement the looking up of entities in Patchouli.
