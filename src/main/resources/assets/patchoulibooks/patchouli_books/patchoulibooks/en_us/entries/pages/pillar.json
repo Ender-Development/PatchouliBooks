@@ -11,7 +11,7 @@
             "type": "pillar",
             "output": "minecraft:hopper",
             "center": "minecraft:observer",
-            "link_recipe": true,
+            "link_recipe": false,
             "inputs": [
                 "minecraft:comparator",
                 "minecraft:noteblock",
@@ -30,7 +30,7 @@
             "title": "This is custom Title",
             "output": "minecraft:dragon_egg",
             "center": "minecraft:diamond_block",
-            "link_recipe": true,
+            "link_recipe": false,
             "time": 100,
             "inputs": [
                 "minecraft:wool:0",
