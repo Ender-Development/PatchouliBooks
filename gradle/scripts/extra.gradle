@@ -21,7 +21,7 @@ tasks.register('generateItemModels') {
         sourceDir.eachFile { file ->
             if (file.isFile()) {  // Only process files, not directories
                 // Define the new JSON file in the destination directory
-                def fileName = file.getName().substring(0,file.getName().length()-4)
+                def fileName = file.getName().substring(0, file.getName().length() - 4)
                 def newFile = new File(destDir, "${fileName}.json")
 
                 // Create JSON content with the filename and any other details
@@ -35,6 +35,56 @@ tasks.register('generateItemModels') {
 
                 // Write the JSON content to the new file
                 newFile.text = jsonContent.toPrettyString()
+            }
+        }
+    }
+}
+
+tasks.register('generateEntryFolders') {
+    group 'patchoulibooks'
+    doLast {
+        // Define the parent directory to scan (replace with your desired path)
+        def parentDirectory = file("src/main/resources/assets/patchoulibooks/patchouli_books")
+
+        // Check that the parent directory exists
+        if (!parentDirectory.exists() || !parentDirectory.isDirectory()) {
+            throw new GradleException("Parent directory does not exist or is not a directory: ${parentDirectory}")
+        }
+
+        // Iterate through all the directories in the specified parent directory
+        parentDirectory.eachDir { dir ->
+            def enusDir = new File(dir, "en_us")
+            // Define the paths for the 'entries' and 'categories' subdirectories
+            def entriesDir = new File(enusDir, "entries")
+            def categoriesDir = new File(enusDir, "categories")
+
+            // Ensure the 'categories' directory exists
+            if (!categoriesDir.exists()) {
+                println "Skipping ${dir.name}, as it does not have a 'categories' directory."
+                return
+            }
+
+            // Create 'entries' directory if it doesn't exist
+            if (!entriesDir.exists()) {
+                entriesDir.mkdirs()
+                println "Created entries directory: ${entriesDir.path}"
+            }
+
+            // Iterate over each JSON file in the 'categories' directory
+            categoriesDir.eachFile { file ->
+                if (file.name.endsWith(".json")) {
+                    // Create a folder in 'entries' with the same name as the JSON file (minus the .json extension)
+                    def folderName = file.name.replace(".json", "")
+                    def newFolder = new File(entriesDir, folderName)
+
+                    // Create the directory if it doesn't exist
+                    if (!newFolder.exists()) {
+                        newFolder.mkdirs()
+                        println "Created folder: ${newFolder.path}"
+                    } else {
+                        println "Folder already exists: ${newFolder.path}"
+                    }
+                }
             }
         }
     }
