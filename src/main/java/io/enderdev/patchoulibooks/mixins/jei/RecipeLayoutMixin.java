@@ -38,15 +38,15 @@ public abstract class RecipeLayoutMixin implements IButtonAccessor {
     private void init(int index, IRecipeCategory recipeCategory, IRecipeWrapper recipeWrapper, IFocus focus, int posX, int posY, CallbackInfo ci) {
         if (focus != null && focus.getValue() instanceof ItemStack) {
             ItemStack itemStack = (ItemStack) focus.getValue();
-            List<Book> bookList = BookRegistry.INSTANCE.books.values().stream().filter(book1 -> book1.contents.entries.values().stream().anyMatch(bookEntry -> bookEntry.isStackRelevant(itemStack))).collect(Collectors.toList());
+            List<Book> bookList = BookRegistry.INSTANCE.books.values().stream().filter(book1 -> book1.contents.entries.values().stream().anyMatch(bookEntry -> bookEntry.isStackRelevant(itemStack) && !bookEntry.isLocked())).collect(Collectors.toList());
             if (!bookList.isEmpty() && index >= 0) {
                 int width = recipeCategory.getBackground().getWidth();
                 int height = recipeCategory.getBackground().getHeight();
                 AtomicInteger c = new AtomicInteger();
                 bookList.forEach(book -> {
                     patchouliBooks$patchouliButton.add(new PatchouliButton(90 + index + c.get(), 0, 0, 16, 16, book, itemStack));
-                    patchouliBooks$patchouliButton.get(c.get()).x = c.get()<=1? posX + width + 6 : posX + width + 6 + 18;
-                    patchouliBooks$patchouliButton.get(c.get()).y = c.get() <=1? posY + height - 31 - c.get() * 18 : posY + height - 31 - (c.get() - 2) * 18;
+                    patchouliBooks$patchouliButton.get(c.get()).x = c.get() <= 1 ? posX + width + 6 : posX + width + 6 + 18;
+                    patchouliBooks$patchouliButton.get(c.get()).y = c.get() <= 1 ? posY + height - 31 - c.get() * 18 : posY + height - 31 - (c.get() - 2) * 18;
                     c.getAndIncrement();
                 });
             }
@@ -57,22 +57,14 @@ public abstract class RecipeLayoutMixin implements IButtonAccessor {
     private void drawRecipe(Minecraft minecraft, int mouseX, int mouseY, CallbackInfo ci) {
         if (!patchouliBooks$patchouliButton.isEmpty()) {
             float partialTicks = minecraft.getRenderPartialTicks();
-            patchouliBooks$patchouliButton.forEach(patchouliButton -> {
-                if (patchouliButton.isUnlocked()) {
-                    patchouliButton.drawButton(minecraft, mouseX, mouseY, partialTicks);
-                }
-            });
+            patchouliBooks$patchouliButton.forEach(patchouliButton -> patchouliButton.drawButton(minecraft, mouseX, mouseY, partialTicks));
         }
     }
 
     @Inject(method = "drawOverlays", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/GlStateManager;disableBlend()V"))
     private void drawOverlays(Minecraft minecraft, int mouseX, int mouseY, CallbackInfo ci) {
         if (!patchouliBooks$patchouliButton.isEmpty()) {
-            patchouliBooks$patchouliButton.forEach(patchouliButton -> {
-                if (patchouliButton.isUnlocked()) {
-                    patchouliButton.drawToolTip(minecraft, mouseX, mouseY);
-                }
-            });
+            patchouliBooks$patchouliButton.forEach(patchouliButton -> patchouliButton.drawToolTip(minecraft, mouseX, mouseY));
         }
     }
 
