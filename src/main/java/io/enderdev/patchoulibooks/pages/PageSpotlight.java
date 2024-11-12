@@ -15,7 +15,7 @@ public class PageSpotlight extends PageBase {
     transient BookTextRenderer textRenderer;
 
     @SerializedName("link_recipe")
-    boolean linkRecipe;
+    boolean linkRecipe = true;
 
     transient RenderObject obj;
 

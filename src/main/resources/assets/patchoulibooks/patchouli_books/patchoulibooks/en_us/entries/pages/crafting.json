@@ -7,31 +7,36 @@
             "type": "crafting+",
             "text": "This is probably the most complex page type in the mod. It's an iteration on the default 'crafting' page type, but with a lot more features. It allows you to freely display crafting recipes and texts with and without titles on the page.",
             "title2": "",
-            "recipe2": "minecraft:crafting_table"
+            "recipe2": "minecraft:crafting_table",
+            "link_recipe": false
         },
         {
             "type": "crafting+",
             "recipe": "minecraft:chest",
             "title2": "More explanation",
-            "text2": "You can mix and match crafting recipes and text boxes on the same page. This allows you to have a lot of flexibility in how you present information to the player."
+            "text2": "You can mix and match crafting recipes and text boxes on the same page. This allows you to have a lot of flexibility in how you present information to the player.",
+            "link_recipe": false
         },
         {
             "type": "crafting+",
             "text": "The text features are the same as for the 'text+' page type, this is why the text render at the top of the page. I didn't define a title for this text box, so the start of the text renderer gets moved to the top of the page.",
             "title2": "Why use the 'text+' page type at all?",
-            "text2": "That's totally up to you. You don't always need to display crafting recipes on a 'crafting+' page. 2 texts are fine as well. Fun Fact: this page is a 'crafting+' page."
+            "text2": "That's totally up to you. You don't always need to display crafting recipes on a 'crafting+' page. 2 texts are fine as well. Fun Fact: this page is a 'crafting+' page.",
+            "link_recipe": false
         },
         {
             "type": "crafting+",
             "title": "Double Crafting Recipe",
             "recipe": "minecraft:bookshelf",
-            "recipe2": "minecraft:enchanting_table"
+            "recipe2": "minecraft:enchanting_table",
+            "link_recipe": false
         },
         {
             "type": "crafting+",
             "title": "More Explanation",
             "text": "Everything is dynamic, that means if you don't want an aspect of the page to be displayed, you can simply don't define it and it won't be rendered.",
-            "recipe": "minecraft:jukebox"
+            "recipe": "minecraft:jukebox",
+            "link_recipe": false
         },
         {
             "type": "text+",

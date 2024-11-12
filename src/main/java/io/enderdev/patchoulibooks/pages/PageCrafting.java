@@ -26,6 +26,9 @@ public class PageCrafting extends PageBase {
     String recipe2Raw;
     String text2;
 
+    @SerializedName("link_recipe")
+    boolean linkRecipe = true;
+
     protected transient IRecipe recipe1, recipe2;
     protected transient BookTextRenderer textRenderer1, textRenderer2;
 
@@ -124,7 +127,7 @@ public class PageCrafting extends PageBase {
             }
         }
 
-        if (tempRecipe != null) {
+        if (tempRecipe != null && !linkRecipe) {
             entry.addRelevantStack(tempRecipe.getRecipeOutput(), pageNum);
         }
         return tempRecipe;

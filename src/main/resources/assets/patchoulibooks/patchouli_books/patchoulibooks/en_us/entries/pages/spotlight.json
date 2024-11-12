@@ -6,7 +6,8 @@
         {
             "type": "spotlight+",
             "item": "minecraft:nether_star",
-            "text": "The 'spotlight+' page type works similarly to the 'spotlight' page type, but uses the same formating as all my other pages. This allows you to have a more consistent look in your book. You also get the improved debug information like on all other pages."
+            "text": "The 'spotlight+' page type works similarly to the 'spotlight' page type, but uses the same formating as all my other pages. This allows you to have a more consistent look in your book. You also get the improved debug information like on all other pages.",
+            "link_recipe": false
         },
         {
             "type": "spotlight+",
@@ -16,7 +17,8 @@
         {
             "type": "spotlight+",
             "item": "ore:ingotIron",
-            "text": "You can also display Ingredients."
+            "text": "You can also display Ingredients.",
+            "link_recipe": false
         }
     ]
 }
