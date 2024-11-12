@@ -1,6 +1,7 @@
 package io.enderdev.patchoulibooks.mixins.patchouli;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 import io.enderdev.patchoulibooks.PatchouliBooks;
 import io.enderdev.patchoulibooks.Tags;
 import io.enderdev.patchoulibooks.config.ConfigMain;
@@ -11,6 +12,7 @@ import net.minecraftforge.fml.common.ModContainer;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -37,10 +39,10 @@ public class BookRegistryMixin {
     @Inject(method = "loadBook", at = @At("HEAD"), cancellable = true)
     private void loadBook(ModContainer mod, ResourceLocation res, InputStream stream, boolean external, CallbackInfo ci) {
         PatchouliBooks.LOGGER.debug("Loading {}: [Mod]<{}> || [Book]<{}>", external ? "EXTERNAL" : "INTERNAL", mod.getModId(), res.getPath());
-        if (!mod.getModId().equals(Tags.MOD_ID)) {
+        if (!mod.getModId().equals(Tags.MOD_ID) && !external) {
             return;
         }
-        if (!Loader.isModLoaded(res.getPath()) && !ConfigMain.ConfigDebug.enableDebug) {
+        if (!Loader.isModLoaded(res.getPath()) && !ConfigMain.ConfigDebug.enableDebug && !external) {
             PatchouliBooks.LOGGER.debug("Cancelling: [Book]<{}>, because the mod is not present.", res.getPath());
             ci.cancel();
             return;
@@ -50,6 +52,9 @@ public class BookRegistryMixin {
         if (book == null) {
             PatchouliBooks.LOGGER.error("Failed to load [Book]<{}> from [Mod]<{}>", res, mod.getModId());
             PatchouliBooks.LOGGER.error("Returning to normal loading...");
+            return;
+        }
+        if (!book.bookPlus && !mod.getModId().equals(Tags.MOD_ID)) {
             return;
         }
         books.put(res, book);

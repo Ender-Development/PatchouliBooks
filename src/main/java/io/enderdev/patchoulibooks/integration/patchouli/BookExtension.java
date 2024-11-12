@@ -62,19 +62,29 @@ public class BookExtension extends Book {
     @SerializedName("link_wiki")
     public String linkWiki = "https://minecraft.wiki";
 
+    @SerializedName("book_plus")
+    public boolean bookPlus = false;
+
+    @SerializedName("pamphlet")
+    public boolean isPamphlet = true;
+
     @Override
     public void build(ModContainer owner, ResourceLocation resource, boolean external) {
         this.owner = owner;
         this.resourceLoc = resource;
-        this.isExternal = external;
+        this.isExternal = bookPlus;
 
-        // override some default values
-        this.showProgress = false;
-        this.model = String.format("%s:book_%s", Tags.MOD_ID, this.resourceLoc.getPath());
-        this.name = String.format("%s Guide", getOriginalOwner(this.resourceLoc).getName());
-        this.fillerResource = new ResourceLocation(Tags.MOD_ID, String.format("textures/gui/filler/%s.png",this.resourceLoc.getPath()));
-        this.version = Tags.VERSION;
-        this.landingText = String.format("This Book documents the items and blocks in the <mod> mod. It is part of the <pb> mod that tries to document as many mods as possible.<br>All information about <mod> are taken from these sources:<li>$(l:%s)Curseforge$(/l)<li>$(l:%s)GitHub$(/l)<li>$(l:%s)Wiki$(/l)", this.linkCurseforge, this.linkGitHub, this.linkWiki);
+        if (!isExternal) {
+            // override some default values
+            this.showProgress = false;
+            this.model = String.format("%s:book_%s", Tags.MOD_ID, this.resourceLoc.getPath());
+            this.name = String.format("%s Guide", getOriginalOwner(this.resourceLoc).getName());
+            this.fillerResource = new ResourceLocation(Tags.MOD_ID, String.format("textures/gui/filler/%s.png", this.resourceLoc.getPath()));
+            this.version = Tags.VERSION;
+            this.landingText = String.format("This Book documents the items and blocks in the <mod> mod. It is part of the <pb> mod that tries to document as many mods as possible.<br>All information about <mod> are taken from these sources:<li>$(l:%s)Curseforge$(/l)<li>$(l:%s)GitHub$(/l)<li>$(l:%s)Wiki$(/l)", this.linkCurseforge, this.linkGitHub, this.linkWiki);
+        } else {
+            this.fillerResource = new ResourceLocation(Tags.MOD_ID, "textures/gui/filler/external.png");
+        }
 
         // add special macros
         this.MY_MACROS.put("$(mod)", "$(l)$(#490)" + getOriginalOwner(this.resourceLoc).getName() + "$()");
@@ -97,8 +107,9 @@ public class BookExtension extends Book {
             progressBarBackground = 0xFF000000 | Integer.parseInt(progressBarBackgroundRaw, 16);
 
             for (String m : MY_MACROS.keySet())
-                if (!macros.containsKey(m))
+                if (!macros.containsKey(m)) {
                     macros.put(m, MY_MACROS.get(m));
+                }
         }
     }
 

@@ -102,6 +102,6 @@ public abstract class GuiBookLandingMixin extends GuiBook {
 
     @Unique
     private boolean patchouliBooks$checkPamphlet(Book book) {
-        return book.contents.categories.size() <= 1 && book.contents.entries.size() <= 14 && (book instanceof BookExtension || ConfigMain.ConfigGeneral.enablePamphlets);
+        return book.contents.categories.size() <= 1 && book.contents.entries.size() <= 14 && (book instanceof BookExtension && ((BookExtension) book).isPamphlet || ConfigMain.ConfigGeneral.enablePamphlets);
     }
 }

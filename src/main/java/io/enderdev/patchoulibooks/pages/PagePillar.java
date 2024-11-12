@@ -25,7 +25,7 @@ public class PagePillar extends PageBase {
     int time = 0;
 
     @SerializedName("link_recipe")
-    boolean linkRecipe;
+    boolean linkRecipe = true;
 
     transient ItemStack itemOutput;
     transient Ingredient itemMiddle;
