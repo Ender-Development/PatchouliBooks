@@ -5,6 +5,7 @@ import vazkii.patchouli.client.book.BookEntry;
 import vazkii.patchouli.client.book.gui.BookTextRenderer;
 import vazkii.patchouli.client.book.gui.GuiBookEntry;
 
+@PageDecorator("spotlight+")
 public class PageSpotlight extends PageBase {
     @SerializedName("item")
     String objRaw;

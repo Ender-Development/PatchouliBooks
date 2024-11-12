@@ -4,6 +4,7 @@ import vazkii.patchouli.client.book.BookEntry;
 import vazkii.patchouli.client.book.gui.BookTextRenderer;
 import vazkii.patchouli.client.book.gui.GuiBookEntry;
 
+@PageDecorator("text+")
 public class PageText extends PageBase {
     String title;
     String title2;
