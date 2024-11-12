@@ -25,9 +25,13 @@ public class RecipesGuiMixin extends GuiScreen {
     @Inject(method = "addRecipeTransferButtons", at = @At(value = "INVOKE", target = "Lmezz/jei/gui/recipes/RecipeLayout;getRecipeTransferButton()Lmezz/jei/gui/recipes/RecipeTransferButton;"), locals = LocalCapture.CAPTURE_FAILHARD)
     private void addRecipeTransferButtons(Minecraft minecraft, List<RecipeLayout> recipeLayouts, CallbackInfo ci, EntityPlayer player, Container container, Iterator var5, RecipeLayout recipeLayout) {
         IButtonAccessor accessor = (IButtonAccessor) recipeLayout;
-        PatchouliButton patchouliButton = accessor.patchouliBooks$getPatchouliButton();
-        if (patchouliButton != null && patchouliButton.isUnlocked()) {
-            this.addButton(patchouliButton);
+        List<PatchouliButton> listPB = accessor.patchouliBooks$getPatchouliButton();
+        if (!listPB.isEmpty()) {
+            listPB.forEach(button -> {
+                if (button.isUnlocked()) {
+                    this.addButton(button);
+                }
+            });
         }
     }
 
