@@ -1,0 +1,11 @@
+{
+    "name": "Stack Crafting",
+    "category": "base_concepts",
+    "icon": "minecraft:piston",
+    "pages" : [
+        {
+            "type": "text+",
+            "text": "A new feature in IC2 Classic is a modification to the normal Minecraft Shaped Crafting system: IC2C Shaped or Shapeless Crafting recipes can consume more than 1 item from each input slot. Fortunately, Just Enough Items (JEI) knows how to read these non-standard stack size inputs, and can correctly display them to the user."
+        }
+    ]
+}

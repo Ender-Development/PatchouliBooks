@@ -1,0 +1,32 @@
+{
+    "name": "Energy Units",
+    "category": "base_concepts",
+    "icon": "ic2:rebattery",
+    "pages" : [
+        {
+            "type": "text+",
+            "text": "IC2C is a tech-based mod, and like many tech-based mods it uses an energy system. This system is known as EU. EU is transmitted from Generators, through Cables, to Storage blocks and Machines, in packets. These packets have a given size (EU/p; Voltage), and each machine has a maximum size of packet it can absorb which determines its tier."
+        },
+        {
+            "type": "text+",
+            "title": "Energy Tiers",
+            "text": "<li>LV-Tier: 32EU/p<li>MV-Tier: 128EU/p<li>HV-Tier: 512EU/p<li>EV-Tier: 2048EU/p<li>IV-Tier: 8192EU/p<li>LuV-Tier: 32768EU/p<li>ZPM-Tier: 131072EU/p<li>UV-Tier: 524288EU/p"
+        },
+        {
+            "type": "text+",
+            "text": "Generators and storage blocks output 1 packet per tick. Wires and machines can handle any number of packets per tick, so long as none of the packets exceed their size limit. Transformers can either absorb 4 packets of their lower voltage to output 1 packet of their higher voltage, or absorb 1 packet of their higher voltage to output 4 packets of their lower voltage. Long lines of Cables will eventually cause small amounts of EU to be lost. Insulated Cables lose energy more slowly than equivalent uninsulated Cables, however higher voltage Cables also lose energy faster than lower voltage Cables."
+        },
+        {
+            "type": "text+",
+            "text": "Cables do not store packets, they simply move them. Cables also do not split individual packets moving through them; each single packet must travel from one source to one target. If a Cable attempts to transmit a larger packet than it allows, the entire cable line the packet followed will explode weakly. If a machine receives a larger packet than it allows, it will explode violently."
+        },
+        {
+            "type": "text+",
+            "text": "EU traveling through a cable or machine can be measured with an EU-Reader. The measurement is taken as a 'total EU traversing per tick'; all packets are added together. If the mod WAILA is installed, it allows the user to see how much EU is stored inside a machine, but only if the player has an EU-Reader in their hotbar."
+        },
+        {
+            "type": "text+",
+            "text": "EU can also be stored in RE-Batteries and the like, and can be used to power certain tools and armor pieces. These tools and armors are unbreakable, but are useless without energy."
+        }
+    ]
+}

@@ -51,12 +51,12 @@ TextureRepository](https://oparisblue.github.io/minecraft-textures-viewer/#githu
 
 ## [WhoNeedsBooks](https://www.curseforge.com/minecraft/mc-mods/whoneedsbooks) ![CC-BY-2.0 Contributors](https://img.shields.io/badge/License-CC--BY--2.0-blue)
 
-| Texture              | Author                                                                                                                                                 |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `book_adept.png`     | [tschallacka](https://github.com/tschallacka/whoneedsbooks/blob/master/src/main/resources/assets/whoneedsbooks/textures/items/spellbook.adept.png)     |
-| `book_aurelian.png`  | [tschallacka](https://github.com/tschallacka/whoneedsbooks/blob/master/src/main/resources/assets/whoneedsbooks/textures/items/spellbook.aurelian.png)  |
-| `book_masterful.png` | [tschallacka](https://github.com/tschallacka/whoneedsbooks/blob/master/src/main/resources/assets/whoneedsbooks/textures/items/spellbook.masterful.png) |
-| `book_novice.png`    | [tschallacka](https://github.com/tschallacka/whoneedsbooks/blob/master/src/main/resources/assets/whoneedsbooks/textures/items/spellbook.novice.png)    |
+| Texture             | Author                                                                                                                                                 |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `book_adept.png`    | [tschallacka](https://github.com/tschallacka/whoneedsbooks/blob/master/src/main/resources/assets/whoneedsbooks/textures/items/spellbook.adept.png)     |
+| `book_aurelian.png` | [tschallacka](https://github.com/tschallacka/whoneedsbooks/blob/master/src/main/resources/assets/whoneedsbooks/textures/items/spellbook.aurelian.png)  |
+| `book_ic2c.png`     | [tschallacka](https://github.com/tschallacka/whoneedsbooks/blob/master/src/main/resources/assets/whoneedsbooks/textures/items/spellbook.masterful.png) |
+| `book_novice.png`   | [tschallacka](https://github.com/tschallacka/whoneedsbooks/blob/master/src/main/resources/assets/whoneedsbooks/textures/items/spellbook.novice.png)    |
 
 ## [TextureRepository](https://github.com/Futureazoo/TextureRepository) ![Attribution-NonCommercial-ShareAlike 4.0 International](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue)
 

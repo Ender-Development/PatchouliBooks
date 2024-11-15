@@ -1,0 +1,20 @@
+{
+    "name": "The Wrench",
+    "category": "base_concepts",
+    "icon": "ic2:wrench",
+    "pages" : [
+        {
+            "type": "spotlight+",
+            "item": "ic2:wrench",
+            "text": "As with many other tech mods, IC2C contains a Wrench. This one is made of Bronze. It has two uses: 1, rotating machine blocks, and 2, safely harvesting machine blocks. When broken with a Pickaxe, all IC2C machines drop as some form of Machine Block."
+        },
+        {
+            "type": "text+",
+            "text": "When right-clicked with a Wrench on their front face, they have a very good chance (but not a perfect chance) to drop as themselves (and not a Machine Block). The Electric Wrench improves that chance, and has an automatic 'lossless' mode that consumes a large amount of EU but forces a machine to not be lost if it otherwise would be."
+        },
+        {
+            "type": "text+",
+            "text": "The Precision Wrench consumes more EU than the Electric Wrench, but is lossless for any machine with a 50% or better drop rate. At present, all IC2C machines have at least a 70% drop rate, so the Precision Wrench is, for the time being, effectively lossless."
+        }
+    ]
+}
