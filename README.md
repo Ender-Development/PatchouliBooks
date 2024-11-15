@@ -11,7 +11,7 @@ If you want to take a look at the things I encountered while working on this pro
 Stuff I have already implemented:
 - added HEI/JEI integration (you can now open JEI for every item rendered inside a book using the same keybind as for JEI)
 - added more JEI integration (you can now open a book from JEI for every item that has a book entry)
-- backported Pamphlets from the 1.18 version of Patchouli (needs to be enabled in the config)
+- backported Pamphlets from the 1.18 version of Patchouli (needs to be enabled in the config) (these will be moved to the base Patchouli mod in the future)
 - new Page Types (an iteration of most of the existing ones as well as a new custom one for PedestalCrafting/ExtendedCrafting)
 - of course a Patchouli Book explaining the features of this mod
 - [documentation](#documented-mods) for various mods (their respective books will only be loaded if the mod is present)
@@ -20,7 +20,7 @@ Stuff I have already implemented:
 Stuff I may work on in the future:
 - 🔳 backporting [PatchouliButton](https://www.curseforge.com/minecraft/mc-mods/patchoulibutton)
 - 🔳 backporting [PatchouliQuests](https://www.curseforge.com/minecraft/mc-mods/patchouli-quests)
-- 🔳 implement the "inventory-scanning-to-open-a-book-entry" thing from [Botania](https://github.com/VazkiiMods/Botania/blob/1.12-final/src/main/java/vazkii/botania/client/core/handler/TooltipAdditionDisplayHandler.java)
+- ⛔ implement the "inventory-scanning-to-open-a-book-entry" thing from [Botania](https://github.com/VazkiiMods/Botania/blob/1.12-final/src/main/java/vazkii/botania/client/core/handler/TooltipAdditionDisplayHandler.java) (this will be added by the base Patchouli mod in the future)
 - 🔳 add new page types
   - ✅ [PedestalCrafting](https://www.curseforge.com/minecraft/customization/pedestal-recipe-template-for-patchouli)
   - 🔳 [Boss Info](https://www.curseforge.com/minecraft/customization/patchouli-template-boss-info)
