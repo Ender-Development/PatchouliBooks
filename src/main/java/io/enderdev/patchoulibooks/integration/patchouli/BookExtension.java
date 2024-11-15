@@ -65,6 +65,9 @@ public class BookExtension extends Book {
     @SerializedName("book_plus")
     public boolean bookPlus = false;
 
+    @SerializedName("disabled")
+    public boolean bookDisabled = false;
+
     @SerializedName("pamphlet")
     public boolean isPamphlet = true;
 
@@ -78,7 +81,7 @@ public class BookExtension extends Book {
             // override some default values
             this.showProgress = false;
             this.model = String.format("%s:book_%s", Tags.MOD_ID, this.resourceLoc.getPath());
-            this.name = String.format("%s Guide", getOriginalOwner(this.resourceLoc).getName());
+            this.name = String.format("%s Guide", getOriginalOwner(this.resourceLoc));
             this.fillerResource = new ResourceLocation(Tags.MOD_ID, String.format("textures/gui/filler/%s.png", this.resourceLoc.getPath()));
             this.version = Tags.VERSION;
             this.landingText = String.format("This Book documents the items and blocks in the <mod> mod. It is part of the <pb> mod that tries to document as many mods as possible.<br>All information about <mod> are taken from these sources:<li>$(l:%s)Curseforge$(/l)<li>$(l:%s)GitHub$(/l)<li>$(l:%s)Wiki$(/l)", this.linkCurseforge, this.linkGitHub, this.linkWiki);
@@ -87,7 +90,7 @@ public class BookExtension extends Book {
         }
 
         // add special macros
-        this.MY_MACROS.put("$(mod)", "$(l)$(#490)" + getOriginalOwner(this.resourceLoc).getName() + "$()");
+        this.MY_MACROS.put("$(mod)", "$(l)$(#490)" + getOriginalOwner(this.resourceLoc) + "$()");
         this.MY_MACROS.put("<mod>", "$(mod)");
 
         isExtension = !extend.isEmpty();
@@ -113,7 +116,15 @@ public class BookExtension extends Book {
         }
     }
 
-    private ModContainer getOriginalOwner(ResourceLocation resourceLoc) {
-        return Loader.instance().getActiveModList().stream().filter(modContainer -> modContainer.getModId().equals(resourceLoc.getPath())).findFirst().orElse(this.owner);
+    private String getOriginalOwner(ResourceLocation resourceLoc) {
+        ModContainer mod_owner = Loader.instance().getActiveModList().stream().filter(modContainer -> modContainer.getModId().equals(resourceLoc.getPath())).findFirst().orElse(this.owner);
+        switch (mod_owner.getModId()) {
+            case "ic2":
+                return "IC2C";
+            case "embers":
+                return "Embers UEL";
+            default:
+                return mod_owner.getName();
+        }
     }
 }

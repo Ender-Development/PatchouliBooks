@@ -26,6 +26,7 @@ public class RecipeRegister {
         addBookRecipe("thermallogistics","crafter");
         addBookRecipe("moarboats", "oars");
         addBookRecipe("pressure", "pipe");
+        addBookRecipe("ic2", "blockrubsapling");
     }
 
     @SubscribeEvent
@@ -42,7 +43,12 @@ public class RecipeRegister {
                     return;
                 }
                 ResourceLocation id = new ResourceLocation(Tags.MOD_ID, mod_id);
-                event.getRegistry().register(generateRecipe(id, input).setRegistryName(id));
+                ShapelessOreRecipe recipe = generateRecipe(id, input);
+                if (recipe == null) {
+                    PatchouliBooks.LOGGER.error("Unable to generate recipe for {}", id);
+                    return;
+                }
+                event.getRegistry().register(recipe.setRegistryName(id));
             }
         });
     }
@@ -50,7 +56,8 @@ public class RecipeRegister {
     private ShapelessOreRecipe generateRecipe(ResourceLocation id, Item input) {
         ItemStack book = BookRegistry.INSTANCE.books.values().stream().filter(b -> b.resourceLoc.getPath().equals(id.getPath())).map(Book::getBookItem).findFirst().orElse(ItemStack.EMPTY);
         if (book.isEmpty()) {
-            throw new IllegalArgumentException("Book not found for mod id: " + id.getPath());
+            PatchouliBooks.LOGGER.warn("Book not found for mod id: {}", id.getPath());
+            return null;
         }
         return new ShapelessOreRecipe(id, book, Items.BOOK, Ingredient.fromItem(input));
     }

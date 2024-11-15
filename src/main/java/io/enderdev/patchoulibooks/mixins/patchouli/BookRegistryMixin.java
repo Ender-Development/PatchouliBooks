@@ -57,8 +57,10 @@ public class BookRegistryMixin {
         if (!book.bookPlus && !mod.getModId().equals(Tags.MOD_ID)) {
             return;
         }
-        books.put(res, book);
-        book.build(mod, res, external);
+        if (!book.bookDisabled) {
+            books.put(res, book);
+            book.build(mod, res, external);
+        }
         ci.cancel();
     }
 }
