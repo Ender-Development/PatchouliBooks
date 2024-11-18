@@ -26,6 +26,7 @@ public class InventoryBookButtonHandlerMixin {
         GuiButton button = event.getButton();
         if (button instanceof GuiButtonInventoryBook) {
             Minecraft.getMinecraft().displayGuiScreen(new ButtonScreen(Arrays.asList(BookRegistry.INSTANCE.books.values().toArray(new Book[0]))));
+            button.playPressSound(Minecraft.getMinecraft().getSoundHandler());
             event.setCanceled(true);
             ci.cancel();
         }
