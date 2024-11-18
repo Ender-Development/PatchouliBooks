@@ -18,7 +18,7 @@ Stuff I have already implemented:
 
 ##  Possible Features
 Stuff I may work on in the future:
-- 🔳 backporting [PatchouliButton](https://www.curseforge.com/minecraft/mc-mods/patchoulibutton)
+- ✅ backporting [PatchouliButton](https://www.curseforge.com/minecraft/mc-mods/patchoulibutton) (0.2.1)
 - 🔳 backporting [PatchouliQuests](https://www.curseforge.com/minecraft/mc-mods/patchouli-quests)
 - ⛔ implement the "inventory-scanning-to-open-a-book-entry" thing from [Botania](https://github.com/VazkiiMods/Botania/blob/1.12-final/src/main/java/vazkii/botania/client/core/handler/TooltipAdditionDisplayHandler.java) (this will be added by the base Patchouli mod in the future)
 - 🔳 add new page types

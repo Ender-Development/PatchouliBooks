@@ -36,7 +36,7 @@ I also learned about `ComponentProcessors` they allow a developer to provide a b
 ![Note](https://img.shields.io/badge/-Note-green)
 **Yes there is of course a Patchouli Books book in this mod.** How would you aim to add documentation to as many mods as possible if you don't start with the one you're making? Not that it has any value for any survival player, but maybe there are some packmakers or modauthors, who can find it helpful. Otherwise you can still look at the source code and see how to use the new features I implemented.
 
-## Patchouli (Mixins)
+## 📕 Patchouli (Mixins)
 
 ### [BookContentsMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/BookContentsMixin.java)
 
@@ -88,6 +88,11 @@ Small refactor of the custom landing page. I no longer rely on a mixin as it did
 ![Important](https://img.shields.io/badge/-Important-blue)
 Great news! This mixin now plays a major role as I backported pamphlets from newer versions of Patchouli. Pamphlets a single category books, where all entries are displayed in a list view without having to select a category first. All of the related GUI stuff is now handled by this mixin.
 
+### [InventoryBookButtonMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/InventoryBookButtonMixin.java)
+
+![Important](https://img.shields.io/badge/-Important-blue)
+This is the backbone of my PatchouliButton implementation. It adds a button to the inventory screen that opens a GUI, which displays all loaded Patchouli books and gives you easy access to all of them. This comes with its own config option to disable it. To make sure it functions with every mod that adds special compatibility I use a mixin to add my button instead of the default patchouli one through the patchouli method. This way no special compatibility for Patchouli Books is needed.
+
 ### [ItemModBookMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/patchouli/ItemModBookMixin.java)
 
 ![Note](https://img.shields.io/badge/-Note-green)
@@ -109,7 +114,7 @@ Another minor tweak. It decreases the empty space between the text and the item 
 ![Warning](https://img.shields.io/badge/-Warning-red)
 This mixin is now deprecated. I implemented a custom page for this, so it doesn't break any other Patchouli Books that originate outside of my mod.
 
-## 🛒HEI / JEI (Mixins)
+## 🛒 HEI / JEI (Mixins)
 
 ### [RecipeLayoutMixin](https://github.com/Ender-Development/PatchouliBooks/tree/master/src/main/java/io/enderdev/patchoulibooks/mixins/jei/RecipeLayoutMixin.java)
 
