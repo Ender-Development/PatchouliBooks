@@ -121,6 +121,8 @@ public class BookExtension extends Book {
         switch (mod_owner.getModId()) {
             case "ic2":
                 return "IC2C";
+            case "buildcraftlib":
+                return "BuildCraft";
             case "embers":
                 return "Embers UEL";
             default:
