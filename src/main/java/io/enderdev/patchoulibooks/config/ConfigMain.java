@@ -31,6 +31,14 @@ public class ConfigMain {
         @Config.Comment("Enable Pamphlets for all books if there is only one category, which has less than 15 entries.")
         public static boolean enablePamphlets = false;
 
+        @Config.Name("Enable Inventory Button")
+        @Config.Comment({
+                "Enable the inventory button for Patchouli books.",
+                "The button will be displayed only if the is no book specified in the patchouli config."
+        })
+        @Config.RequiresMcRestart
+        public static boolean enableInventoryButton = true;
+
         @Config.Name("Improve Recipe Lookup")
         @Config.Comment({
                 "Improve recipe lookup by checking for output instead of recipe id.",

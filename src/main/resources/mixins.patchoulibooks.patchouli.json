@@ -9,6 +9,7 @@
         "BookEntryMixin",
         "BookRegistryMixin",
         "BookTextParserMixin",
+        "InventoryBookButtonHandlerMixin",
         "ItemModBookMixin",
         "PageCraftingMixin"
     ],

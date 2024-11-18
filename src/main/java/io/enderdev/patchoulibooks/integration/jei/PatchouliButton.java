@@ -1,6 +1,5 @@
 package io.enderdev.patchoulibooks.integration.jei;
 
-import io.enderdev.patchoulibooks.PatchouliBooks;
 import mezz.jei.gui.TooltipRenderer;
 import mezz.jei.gui.elements.DrawableIngredient;
 import mezz.jei.gui.elements.GuiIconButtonSmall;
@@ -12,7 +11,6 @@ import org.apache.commons.lang3.tuple.Pair;
 import vazkii.patchouli.client.book.BookEntry;
 import vazkii.patchouli.client.book.gui.GuiBook;
 import vazkii.patchouli.client.book.gui.GuiBookEntry;
-import vazkii.patchouli.client.book.gui.GuiBookLanding;
 import vazkii.patchouli.common.book.Book;
 import vazkii.patchouli.common.util.ItemStackUtil;
 

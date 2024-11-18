@@ -3,11 +3,14 @@
 patchoulibooks.gui.lexicon.version_str=Patchouli Books v%s
 patchoulibooks.gui.lexicon.pamphlet=Entries
 patchoulibooks.gui.lexicon.page_type=§4Current Page Type: §l%s§r
+patchoulibooks.gui.inventory_button.title=§lPatchouli Books§r
+patchoulibooks.gui.inventory_button.tooltip=Open §7%s§r
+patchoulibooks.gui.inventory_button.page=(%s/%s)
 
 ## Item Tweaks
 patchoulibooks.item.book.tooltip=written by §5%s§r
 
-## Comfigs
+## Configs
 config.patchoulibooks.debug=Debug Mode
 config.patchoulibooks.debug.tooltip=Enables debug mode, this registers all books even if the required mod is not present
 config.patchoulibooks.general=General
