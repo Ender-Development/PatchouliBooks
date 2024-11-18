@@ -87,11 +87,15 @@ dependencies {
     }
 
     // Dependencies
-    if (project.debug_moarboats.toBoolean()) {
+    if (project.debug_ae2.toBoolean()) {
+        runtimeOnly "curse.maven:ae2-extended-life-570458:5411078"
+    }
+
+    if (project.debug_moarboats.toBoolean() || project.debug_ae2.toBoolean()) {
         runtimeOnly "curse.maven:forgelin-continuous-456403:5832299"
     }
 
-    if (project.debug_pressure.toBoolean() || project.debug_gendustry.toBoolean()) {
+    if (project.debug_pressure.toBoolean() || project.debug_gendustry.toBoolean() || project.debug_ae2.toBoolean()) {
         runtimeOnly "curse.maven:bdlib-70496:4675629"
     }
 
@@ -115,9 +119,26 @@ dependencies {
     }
 
     // Content Mods
+    // AE2 Addons
+    if (project.debug_ae2.toBoolean()) {
+        runtimeOnly "curse.maven:lazy-ae2-322347:3254160"
+        runtimeOnly "curse.maven:lazy-ae2-patch-870503:4568625"
+        runtimeOnly "curse.maven:nae2-884359:5380800"
+        runtimeOnly "curse.maven:ae2-fluid-crafting-rework-623955:5751930"
+        runtimeOnly "curse.maven:ae2-stuff-unofficial-951064:5002181"
+        runtimeOnly "curse.maven:ae2-crafting-tree-legacy-1121489:5814089"
+        runtimeOnly "curse.maven:ae2-network-visualiser-321720:2711427"
+        runtimeOnly "curse.maven:betterer-p2p-943734:4928154"
+    }
+
     // Gendustry
     if (project.debug_gendustry.toBoolean()) {
         runtimeOnly "curse.maven:gendustry-70492:2516215"
+    }
+
+    // IC2C
+    if (project.debug_ic2.toBoolean()) {
+        runtimeOnly "curse.maven:ic2-classic-242942:5800761"
     }
 
     // Moar Boats
