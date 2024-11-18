@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.2.1] - 2024-11-XX
+## [0.2.1] - 2024-11-19
 
 ### Changes
 - added more keys to my ExtendedBooks
@@ -12,6 +12,10 @@
 - backported [PatchouliButton](https://www.curseforge.com/minecraft/mc-mods/patchoulibutton) from 1.20
   - if you don't specify an override in the patchouli config, I now add a button that opens a GUI, which displays all loaded Patchouli books and gives you easy access to all of them
   - this comes with its own config option to disable it
+
+### Books
+- started working on IC2C
+- started working on BuildCraft (FlashyGuitar603)
 
 ## [0.2.0] - 2024-11-12
 
