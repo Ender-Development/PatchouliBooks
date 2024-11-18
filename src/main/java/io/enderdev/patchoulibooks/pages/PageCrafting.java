@@ -127,7 +127,7 @@ public class PageCrafting extends PageBase {
             }
         }
 
-        if (tempRecipe != null && !linkRecipe) {
+        if (tempRecipe != null && linkRecipe) {
             entry.addRelevantStack(tempRecipe.getRecipeOutput(), pageNum);
         }
         return tempRecipe;
