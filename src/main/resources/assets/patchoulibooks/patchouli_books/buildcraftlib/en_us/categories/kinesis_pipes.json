@@ -1,0 +1,5 @@
+{
+    "name": "Kinesis Pipes",
+    "description": "Ways to transport Minecraft Joules from point A to point B",
+    "icon": "buildcrafttransport:pipe_gold_power:0"
+}

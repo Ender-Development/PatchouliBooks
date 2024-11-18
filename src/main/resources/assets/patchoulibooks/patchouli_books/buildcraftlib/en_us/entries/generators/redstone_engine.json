@@ -1,0 +1,17 @@
+{
+    "name": "Redstone Engine",
+    "icon": "buildcraftcore:engine:0",
+    "category": "generators",
+    "pages": [
+        {
+            "type": "spotlight+",
+            "item": "buildcraftcore:engine:0",
+            "link_recipe": true,
+            "text": "As of Buildcraft 1.12.2 the Redstone Engine no longer produces power, but instead it is required to use Fluid and Transport wooden pipes.<li>Requires a redstone signal for operation<li>Requires no fuel<li>Adding more Redstone engines onto the same wooden pipe will increase throughput"
+        },
+        {
+            "type": "crafting+",
+            "recipe": "buildcraftcore:engine:0"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "book_texture": "patchoulibooks:textures/gui/book_white.png",
+    "creative_tab": "minecraft:tools_and_utilities",
+    "landing_text": "BuildCraft 7 is a great BuildCraft release, bringing additions and improvements in almost every area of the mod.",
+    "link_curseforge": "https://www.curseforge.com/minecraft/mc-mods/buildcraft",
+    "link_github": "https://github.com/BuildCraft/BuildCraft",
+    "link_wiki": "https://mod-buildcraft.com/",
+    "disabled": true,
+    "author": "FlashyGuitar603"
+}

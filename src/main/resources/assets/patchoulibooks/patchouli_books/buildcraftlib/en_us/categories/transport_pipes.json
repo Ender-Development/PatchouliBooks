@@ -1,0 +1,5 @@
+{
+    "name": "Item Transport Pipes",
+    "description": "Moving items from point A to point B",
+    "icon": "buildcrafttransport:pipe_gold_item:0"
+}

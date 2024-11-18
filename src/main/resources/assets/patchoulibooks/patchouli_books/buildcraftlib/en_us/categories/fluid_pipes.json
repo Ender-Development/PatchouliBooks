@@ -1,0 +1,5 @@
+{
+    "name": "Fluid Pipes",
+    "description": "Moving liquids from point A to point B",
+    "icon": "buildcrafttransport:pipe_gold_fluid:0"
+}
