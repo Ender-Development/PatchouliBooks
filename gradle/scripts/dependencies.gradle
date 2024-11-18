@@ -131,6 +131,11 @@ dependencies {
         runtimeOnly "curse.maven:betterer-p2p-943734:4928154"
     }
 
+    // Buildcraft
+    if (project.debug_buildcraft.toBoolean()) {
+        runtimeOnly "curse.maven:bc-remastered-892913:5880716"
+    }
+
     // Gendustry
     if (project.debug_gendustry.toBoolean()) {
         runtimeOnly "curse.maven:gendustry-70492:2516215"
