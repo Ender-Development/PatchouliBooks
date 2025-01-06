@@ -31,7 +31,7 @@ public class RecipeRegister {
 
     @SubscribeEvent
     public void init(RegistryEvent.Register<IRecipe> event) {
-        if (!ConfigMain.ConfigGeneral.enableRecipes) {
+        if (!ConfigMain.GENERAL.enableRecipes) {
             return;
         }
         RECIPES.forEach((resourceLocation) -> {
