@@ -18,7 +18,8 @@ public class InventoryButton {
     @Config.Name("Enable Inventory Button")
     @Config.Comment({
             "Enable the inventory button for Patchouli books.",
-            "The button will be displayed only if the is no book specified in the patchouli config."
+            "On click it will open a list of all loaded books.",
+            "The button will be displayed only if the is no book specified in the patchouli config and 'addUniqueInventoryButton' is set to false."
     })
     @Config.RequiresMcRestart
     public final boolean enableInventoryButton = true;

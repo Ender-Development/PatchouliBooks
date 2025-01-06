@@ -9,7 +9,10 @@ public class General {
     public final boolean enableRecipes = true;
 
     @Config.Name("Enable Pamphlets for everyone")
-    @Config.Comment("Enable Pamphlets for all books if there is only one category, which has less than 15 entries.")
+    @Config.Comment({
+            "Enable Pamphlets for all books if there is only one category, which has less than 15 entries.",
+            "You can still create pamphlets manually by adding the 'pamphlet' tag to a book.json."
+    })
     public final boolean enablePamphlets = false;
 
     @Config.Name("Improve Recipe Lookup")
