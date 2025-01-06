@@ -28,7 +28,7 @@ public class InventoryButton {
             "Instead of overriding the patchouli inventory button, add a new button.",
             "This requires the inventory button to be enabled."
     })
-    public final boolean addUniqueInventoryButton = false;
+    public final boolean addUniqueInventoryButton = true;
 
     @Config.Name("Button Anchor")
     @Config.Comment("Anchor position of the inventory button.")
