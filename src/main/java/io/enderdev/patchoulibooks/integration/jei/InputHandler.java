@@ -26,7 +26,7 @@ public class InputHandler {
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void keyInputEvent(GuiScreenEvent.KeyboardInputEvent.Pre event) {
-        if (handleKeyEvent() && event.getGui() instanceof GuiBook && ConfigMain.ConfigGeneral.enableJEIinBooks) {
+        if (handleKeyEvent() && event.getGui() instanceof GuiBook && ConfigMain.JEI.enableJEIinBooks) {
             GuiBook guiBook = (GuiBook) event.getGui();
             ItemStack itemStack = ((GuiBookAccessor) guiBook).getTooltipStack();
             if (itemStack != null) {

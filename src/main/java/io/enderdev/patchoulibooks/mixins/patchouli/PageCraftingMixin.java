@@ -1,7 +1,6 @@
 package io.enderdev.patchoulibooks.mixins.patchouli;
 
 import io.enderdev.patchoulibooks.PatchouliBooks;
-import io.enderdev.patchoulibooks.Tags;
 import io.enderdev.patchoulibooks.config.ConfigMain;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -23,7 +22,7 @@ public abstract class PageCraftingMixin extends BookPage {
 
     @Inject(method = "loadRecipe(Lvazkii/patchouli/client/book/BookEntry;Ljava/lang/String;)Lnet/minecraft/item/crafting/IRecipe;", at = @At("HEAD"), cancellable = true)
     protected void loadRecipeMixin(BookEntry entry, String loc, CallbackInfoReturnable<IRecipe> cir) {
-        if (ConfigMain.ConfigGeneral.improveRecipeLookup) {
+        if (ConfigMain.GENERAL.improveRecipeLookup) {
             if (loc == null) {
                 cir.setReturnValue(null);
                 cir.cancel();

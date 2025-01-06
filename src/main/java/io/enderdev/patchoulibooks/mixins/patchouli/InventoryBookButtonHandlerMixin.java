@@ -35,7 +35,7 @@ public class InventoryBookButtonHandlerMixin {
     @Inject(method = "onGuiInitPost", at = @At(value = "HEAD"), cancellable = true)
     private static void createButton(GuiScreenEvent.InitGuiEvent.Post event, CallbackInfo ci) {
         String bookID = PatchouliConfig.inventoryButtonBook;
-        if (!bookID.isEmpty() || !(event.getGui() instanceof GuiInventory) || !ConfigMain.General.enableInventoryButton || ConfigMain.General.addUniqueInventoryButton) {
+        if (!bookID.isEmpty() || !(event.getGui() instanceof GuiInventory) || !ConfigMain.INVENTORY_BUTTON.enableInventoryButton || ConfigMain.INVENTORY_BUTTON.addUniqueInventoryButton) {
             return;
         }
 

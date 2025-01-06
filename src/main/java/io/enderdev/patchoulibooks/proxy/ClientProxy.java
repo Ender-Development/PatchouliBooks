@@ -24,7 +24,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void init(FMLInitializationEvent event) {
         super.init(event);
-        if (ConfigMain.General.enableInventoryButton && ConfigMain.General.addUniqueInventoryButton) {
+        if (ConfigMain.INVENTORY_BUTTON.enableInventoryButton && ConfigMain.INVENTORY_BUTTON.addUniqueInventoryButton) {
             MinecraftForge.EVENT_BUS.register(new InventoryBookEvent());
         }
     }

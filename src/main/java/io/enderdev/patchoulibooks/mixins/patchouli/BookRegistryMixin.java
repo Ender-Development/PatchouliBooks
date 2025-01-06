@@ -1,7 +1,6 @@
 package io.enderdev.patchoulibooks.mixins.patchouli;
 
 import com.google.gson.Gson;
-import com.google.gson.annotations.SerializedName;
 import io.enderdev.patchoulibooks.PatchouliBooks;
 import io.enderdev.patchoulibooks.Tags;
 import io.enderdev.patchoulibooks.config.ConfigMain;
@@ -12,7 +11,6 @@ import net.minecraftforge.fml.common.ModContainer;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -42,7 +40,7 @@ public class BookRegistryMixin {
         if (!mod.getModId().equals(Tags.MOD_ID) && !external) {
             return;
         }
-        if (!Loader.isModLoaded(res.getPath()) && !ConfigMain.ConfigDebug.enableDebug && !external) {
+        if (!Loader.isModLoaded(res.getPath()) && !ConfigMain.DEBUG.enableDebug && !external) {
             PatchouliBooks.LOGGER.debug("Cancelling: [Book]<{}>, because the mod is not present.", res.getPath());
             ci.cancel();
             return;

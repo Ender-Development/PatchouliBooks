@@ -80,7 +80,7 @@ public class InventoryBookEvent {
         int height = ((GuiInventory) gui).getYSize();
         // Calculate anchor position from origin (e.g. x/y pixels at right side of gui)
         // The x/y is still relative to the top/left corner of the screen at this point
-        switch (ConfigMain.InventoryButton.buttonAnchor) {
+        switch (ConfigMain.INVENTORY_BUTTON.buttonAnchor) {
             case TOP:
                 x = width / 2;
                 y = 0;
@@ -125,8 +125,8 @@ public class InventoryBookEvent {
 
 
         // Then add the offset as defined in the config file
-        x += ConfigMain.InventoryButton.buttonXPosition;
-        y += ConfigMain.InventoryButton.buttonYPosition;
+        x += ConfigMain.INVENTORY_BUTTON.buttonXPosition;
+        y += ConfigMain.INVENTORY_BUTTON.buttonYPosition;
 
         return new int[]{x, y};
     }
