@@ -12,7 +12,7 @@ public class ConfigMain {
 
     @Config(modid = Tags.MOD_ID, category = "debug")
     @Config.LangKey("config.patchoulibooks.debug")
-    public static class ConfigDebug {
+    public static class Debug {
         @Config.Name("Enable Debug")
         @Config.Comment("Enable debug mode.")
         @Config.RequiresMcRestart
@@ -21,7 +21,7 @@ public class ConfigMain {
 
     @Config(modid = Tags.MOD_ID, category = "general")
     @Config.LangKey("config.patchoulibooks.general")
-    public static class ConfigGeneral {
+    public static class General {
         @Config.Name("Enable Recipes")
         @Config.Comment("Add default recipes for Patchouli Books books.")
         @Config.RequiresMcRestart
@@ -38,6 +38,13 @@ public class ConfigMain {
         })
         @Config.RequiresMcRestart
         public static boolean enableInventoryButton = true;
+
+        @Config.Name("Add unique inventory button")
+        @Config.Comment({
+                "Instead of overriding the patchouli inventory button, add a new button.",
+                "This requires the inventory button to be enabled."
+        })
+        public static boolean addUniqueInventoryButton = false;
 
         @Config.Name("Improve Recipe Lookup")
         @Config.Comment({
@@ -57,6 +64,34 @@ public class ConfigMain {
                 "If there is more than one book, the books will be displayed in a grid."
         })
         public static boolean enableBooksInJEI = true;
+    }
+
+    @Config(modid = Tags.MOD_ID, category = "inventory_button")
+    @Config.LangKey("config.patchoulibooks.inventory_button")
+    public static class InventoryButton {
+        public enum Anchor {
+            TOP,
+            RIGHT,
+            BOTTOM,
+            LEFT,
+            TOP_LEFT,
+            TOP_RIGHT,
+            BOTTOM_LEFT,
+            BOTTOM_RIGHT,
+            CENTER
+        }
+
+        @Config.Name("Button Anchor")
+        @Config.Comment("Anchor position of the inventory button.")
+        public static Anchor buttonAnchor = Anchor.TOP_LEFT;
+
+        @Config.Name("Button Offset X")
+        @Config.Comment("Offset of the button from the anchor position on the x-axis.")
+        public static int buttonXPosition = 134;
+
+        @Config.Name("Button Offset Y")
+        @Config.Comment("Offset of the button from the anchor position on the y-axis.")
+        public static int buttonYPosition = 61;
     }
 
     @SubscribeEvent
