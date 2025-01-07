@@ -45,7 +45,6 @@ public class InventoryBookEvent {
 
         // Create button
         buttonBook = new GuiButtonImage(BUTTON_ID, pos[0], pos[1], 20, 18, 14, 0, 19, BUTTON_ICON);
-        PatchouliBooks.LOGGER.debug("Button created at x: {} y: {}", pos[0], pos[1]);
         event.getButtonList().add(buttonBook);
     }
 
