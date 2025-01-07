@@ -3,7 +3,7 @@
 ## [0.2.3] - 2025-01-07
 
 ### Changes
-- redid the config system -> please regen your config
+- redid the config system (twice) -> please regen your config
 - added my own inventory button, which can be placed freely, addresses [#2](https://github.com/Ender-Development/PatchouliBooks/issues/2)
 - fixed the broken refmap
 
