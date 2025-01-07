@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2] - 2025-01-07
+
+### Changes
+- redid the config system -> please regen your config
+- added my own inventory button, which can be placed freely, addresses [#2](https://github.com/Ender-Development/PatchouliBooks/issues/2)
+- fixed the broken refmap
+
 ## [0.2.1] - 2024-11-19
 
 ### Changes
@@ -42,7 +49,7 @@
 
 ### Changes
 - implemented pamphlets for books that have only 1 category
-- added HEI/JEI integratiopn so you can lookup all recipes and usages of all items rendered in any book
+- added HEI/JEI integration so you can lookup all recipes and usages of all items rendered in any book
 - added a new page type for [Pedestal Crafting](https://www.curseforge.com/minecraft/mc-mods/pedestal-crafting) but should also be usable for stuff like [Extended Crafting](https://www.curseforge.com/minecraft/mc-mods/extended-crafting-nomifactory-edition)
 - added my own version for most of the default pages
   - these are more modular and space efficient

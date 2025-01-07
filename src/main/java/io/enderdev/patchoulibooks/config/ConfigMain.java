@@ -11,6 +11,8 @@ import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@Config(modid = Tags.MOD_ID, name = Tags.MOD_ID, category = Tags.MOD_ID)
+@Config.LangKey("config.patchoulibooks")
 @Mod.EventBusSubscriber(modid = Tags.MOD_ID)
 public class ConfigMain {
 

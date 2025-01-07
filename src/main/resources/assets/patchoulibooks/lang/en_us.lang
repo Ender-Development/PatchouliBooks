@@ -11,6 +11,8 @@ patchoulibooks.gui.inventory_button.page=(%s/%s)
 patchoulibooks.item.book.tooltip=written by §5%s§r
 
 ## Configs
+config.patchoulibooks=Patchouli Books
+config.patchoulibooks.tooltip=Settings for Patchouli Books
 config.patchoulibooks.debug=Debug Mode
 config.patchoulibooks.debug.tooltip=Enables debug mode, this registers all books even if the required mod is not present
 config.patchoulibooks.general=General
