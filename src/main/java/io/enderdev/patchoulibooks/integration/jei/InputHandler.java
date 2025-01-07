@@ -1,7 +1,7 @@
 package io.enderdev.patchoulibooks.integration.jei;
 
 import io.enderdev.patchoulibooks.Tags;
-import io.enderdev.patchoulibooks.config.ConfigMain;
+import io.enderdev.patchoulibooks.PBConfig;
 import io.enderdev.patchoulibooks.mixins.patchouli.GuiBookAccessor;
 import mezz.jei.config.KeyBindings;
 import net.minecraft.item.ItemStack;
@@ -26,7 +26,7 @@ public class InputHandler {
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void keyInputEvent(GuiScreenEvent.KeyboardInputEvent.Pre event) {
-        if (handleKeyEvent() && event.getGui() instanceof GuiBook && ConfigMain.JEI.enableJEIinBooks) {
+        if (handleKeyEvent() && event.getGui() instanceof GuiBook && PBConfig.JEI.enableJEIinBooks) {
             GuiBook guiBook = (GuiBook) event.getGui();
             ItemStack itemStack = ((GuiBookAccessor) guiBook).getTooltipStack();
             if (itemStack != null) {

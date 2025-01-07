@@ -1,6 +1,6 @@
 package io.enderdev.patchoulibooks.mixins.jei;
 
-import io.enderdev.patchoulibooks.config.ConfigMain;
+import io.enderdev.patchoulibooks.PBConfig;
 import io.enderdev.patchoulibooks.integration.jei.IButtonAccessor;
 import io.enderdev.patchoulibooks.integration.jei.PatchouliButton;
 import mezz.jei.api.recipe.IFocus;
@@ -37,7 +37,7 @@ public abstract class RecipeLayoutMixin implements IButtonAccessor {
 
     @Inject(method = "<init>", at = @At("RETURN"))
     private void init(int index, IRecipeCategory recipeCategory, IRecipeWrapper recipeWrapper, IFocus focus, int posX, int posY, CallbackInfo ci) {
-        if (focus != null && focus.getValue() instanceof ItemStack && ConfigMain.JEI.enableBooksInJEI) {
+        if (focus != null && focus.getValue() instanceof ItemStack && PBConfig.JEI.enableBooksInJEI) {
             ItemStack itemStack = (ItemStack) focus.getValue();
             List<Book> bookList = BookRegistry.INSTANCE.books.values().stream().filter(book1 -> book1.contents.entries.values().stream().anyMatch(bookEntry -> bookEntry.isStackRelevant(itemStack) && !bookEntry.isLocked())).collect(Collectors.toList());
             if (!bookList.isEmpty() && index >= 0) {

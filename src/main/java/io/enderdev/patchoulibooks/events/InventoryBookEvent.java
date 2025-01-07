@@ -1,8 +1,9 @@
 package io.enderdev.patchoulibooks.events;
 
 
+import io.enderdev.patchoulibooks.PatchouliBooks;
 import io.enderdev.patchoulibooks.Tags;
-import io.enderdev.patchoulibooks.config.ConfigMain;
+import io.enderdev.patchoulibooks.PBConfig;
 import io.enderdev.patchoulibooks.integration.patchouli.ButtonScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButtonImage;
@@ -25,26 +26,26 @@ Date retrieved: 06/January/2025
  */
 public class InventoryBookEvent {
 
-    private final int BUTTON_ID = 801;
-    private final ResourceLocation BUTTON_ICON = new ResourceLocation(Tags.MOD_ID, "textures/gui/button.png");
+    private static final int BUTTON_ID = 801;
+    private static final ResourceLocation BUTTON_ICON = new ResourceLocation(Tags.MOD_ID, "textures/gui/button.png");
     private GuiButtonImage buttonBook;
+    private int[] pos;
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
     public void guiOpen(GuiScreenEvent.InitGuiEvent.Post event) {
         // If any inventory except player inventory is opened, get out
         GuiScreen gui = event.getGui();
-        if (!(gui instanceof GuiInventory)) {
+        if (!(gui instanceof GuiInventory )|| !PBConfig.INVENTORY_BUTTON.addUniqueInventoryButton) {
             return;
         }
 
         // Get button position
-        int[] pos = calculateButtonPosition(gui);
-        int x = pos[0];
-        int y = pos[1];
+        pos = calculateButtonPosition(gui);
 
         // Create button
-        buttonBook = new GuiButtonImage(BUTTON_ID, x, y, 20, 18, 14, 0, 19, BUTTON_ICON);
+        buttonBook = new GuiButtonImage(BUTTON_ID, pos[0], pos[1], 20, 18, 14, 0, 19, BUTTON_ICON);
+        PatchouliBooks.LOGGER.debug("Button created at x: {} y: {}", pos[0], pos[1]);
         event.getButtonList().add(buttonBook);
     }
 
@@ -62,7 +63,7 @@ public class InventoryBookEvent {
             buttonBook.playPressSound(Minecraft.getMinecraft().getSoundHandler());
         } else {
             // Presumably recipe book button was clicked - recalculate nutrition button position
-            int[] pos = calculateButtonPosition(event.getGui());
+            pos = calculateButtonPosition(event.getGui());
             int xPosition = pos[0];
             int yPosition = pos[1];
             buttonBook.setPosition(xPosition, yPosition);
@@ -80,7 +81,7 @@ public class InventoryBookEvent {
         int height = ((GuiInventory) gui).getYSize();
         // Calculate anchor position from origin (e.g. x/y pixels at right side of gui)
         // The x/y is still relative to the top/left corner of the screen at this point
-        switch (ConfigMain.INVENTORY_BUTTON.buttonAnchor) {
+        switch (PBConfig.INVENTORY_BUTTON.buttonAnchor) {
             case TOP:
                 x = width / 2;
                 y = 0;
@@ -125,8 +126,8 @@ public class InventoryBookEvent {
 
 
         // Then add the offset as defined in the config file
-        x += ConfigMain.INVENTORY_BUTTON.buttonXPosition;
-        y += ConfigMain.INVENTORY_BUTTON.buttonYPosition;
+        x += PBConfig.INVENTORY_BUTTON.buttonXPosition;
+        y += PBConfig.INVENTORY_BUTTON.buttonYPosition;
 
         return new int[]{x, y};
     }

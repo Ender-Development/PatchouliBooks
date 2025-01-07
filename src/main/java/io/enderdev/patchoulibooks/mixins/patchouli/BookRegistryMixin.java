@@ -3,7 +3,7 @@ package io.enderdev.patchoulibooks.mixins.patchouli;
 import com.google.gson.Gson;
 import io.enderdev.patchoulibooks.PatchouliBooks;
 import io.enderdev.patchoulibooks.Tags;
-import io.enderdev.patchoulibooks.config.ConfigMain;
+import io.enderdev.patchoulibooks.PBConfig;
 import io.enderdev.patchoulibooks.integration.patchouli.BookExtension;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
@@ -40,7 +40,7 @@ public class BookRegistryMixin {
             return;
         }
         // return if the required mod for one of my books isn't loaded
-        if (!Loader.isModLoaded(res.getPath()) && !ConfigMain.DEBUG.enableDebug && !external) {
+        if (!Loader.isModLoaded(res.getPath()) && !PBConfig.DEBUG.enableDebug && !external) {
             PatchouliBooks.LOGGER.debug("Cancelling: [Book]<{}>, because the mod is not present.", res.getPath());
             ci.cancel();
             return;

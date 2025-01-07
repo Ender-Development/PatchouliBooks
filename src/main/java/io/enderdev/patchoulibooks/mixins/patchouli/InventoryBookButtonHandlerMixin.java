@@ -1,6 +1,6 @@
 package io.enderdev.patchoulibooks.mixins.patchouli;
 
-import io.enderdev.patchoulibooks.config.ConfigMain;
+import io.enderdev.patchoulibooks.PBConfig;
 import io.enderdev.patchoulibooks.integration.patchouli.ButtonScreen;
 import io.enderdev.patchoulibooks.integration.patchouli.GuiButtonInventoryBook;
 import net.minecraft.client.Minecraft;
@@ -35,7 +35,7 @@ public class InventoryBookButtonHandlerMixin {
     @Inject(method = "onGuiInitPost", at = @At(value = "HEAD"), cancellable = true)
     private static void createButton(GuiScreenEvent.InitGuiEvent.Post event, CallbackInfo ci) {
         String bookID = PatchouliConfig.inventoryButtonBook;
-        if (!bookID.isEmpty() || !(event.getGui() instanceof GuiInventory) || !ConfigMain.INVENTORY_BUTTON.enableInventoryButton || ConfigMain.INVENTORY_BUTTON.addUniqueInventoryButton) {
+        if (!bookID.isEmpty() || !(event.getGui() instanceof GuiInventory) || !PBConfig.INVENTORY_BUTTON.enableInventoryButton || PBConfig.INVENTORY_BUTTON.addUniqueInventoryButton) {
             return;
         }
 

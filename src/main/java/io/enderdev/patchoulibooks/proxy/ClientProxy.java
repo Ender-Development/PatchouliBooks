@@ -1,6 +1,6 @@
 package io.enderdev.patchoulibooks.proxy;
 
-import io.enderdev.patchoulibooks.config.ConfigMain;
+import io.enderdev.patchoulibooks.PBConfig;
 import io.enderdev.patchoulibooks.events.InventoryBookEvent;
 import io.enderdev.patchoulibooks.pages.*;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,7 +24,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void init(FMLInitializationEvent event) {
         super.init(event);
-        if (ConfigMain.INVENTORY_BUTTON.enableInventoryButton && ConfigMain.INVENTORY_BUTTON.addUniqueInventoryButton) {
+        if (PBConfig.INVENTORY_BUTTON.enableInventoryButton && PBConfig.INVENTORY_BUTTON.addUniqueInventoryButton) {
             MinecraftForge.EVENT_BUS.register(new InventoryBookEvent());
         }
     }

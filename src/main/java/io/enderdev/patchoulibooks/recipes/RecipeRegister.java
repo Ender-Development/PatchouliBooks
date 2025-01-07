@@ -2,7 +2,7 @@ package io.enderdev.patchoulibooks.recipes;
 
 import io.enderdev.patchoulibooks.PatchouliBooks;
 import io.enderdev.patchoulibooks.Tags;
-import io.enderdev.patchoulibooks.config.ConfigMain;
+import io.enderdev.patchoulibooks.PBConfig;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -31,7 +31,7 @@ public class RecipeRegister {
 
     @SubscribeEvent
     public void init(RegistryEvent.Register<IRecipe> event) {
-        if (!ConfigMain.GENERAL.enableRecipes) {
+        if (!PBConfig.GENERAL.enableRecipes) {
             return;
         }
         RECIPES.forEach((resourceLocation) -> {

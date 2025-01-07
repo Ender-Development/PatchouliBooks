@@ -1,6 +1,6 @@
 package io.enderdev.patchoulibooks.mixins.patchouli;
 
-import io.enderdev.patchoulibooks.config.ConfigMain;
+import io.enderdev.patchoulibooks.PBConfig;
 import io.enderdev.patchoulibooks.integration.patchouli.BookExtension;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.renderer.GlStateManager;
@@ -102,6 +102,6 @@ public abstract class GuiBookLandingMixin extends GuiBook {
 
     @Unique
     private boolean patchouliBooks$checkPamphlet(Book book) {
-        return book.contents.categories.size() <= 1 && book.contents.entries.size() <= 14 && (book instanceof BookExtension && ((BookExtension) book).isPamphlet || ConfigMain.GENERAL.enablePamphlets);
+        return book.contents.categories.size() <= 1 && book.contents.entries.size() <= 14 && (book instanceof BookExtension && ((BookExtension) book).isPamphlet || PBConfig.GENERAL.enablePamphlets);
     }
 }
