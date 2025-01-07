@@ -40,7 +40,7 @@ public class BookRegistryMixin {
             return;
         }
         // return if the required mod for one of my books isn't loaded
-        if (!Loader.isModLoaded(res.getPath()) && !ConfigMain.ConfigDebug.enableDebug && !external) {
+        if (!Loader.isModLoaded(res.getPath()) && !ConfigMain.DEBUG.enableDebug && !external) {
             PatchouliBooks.LOGGER.debug("Cancelling: [Book]<{}>, because the mod is not present.", res.getPath());
             ci.cancel();
             return;
