@@ -54,7 +54,7 @@ public abstract class RecipeLayoutMixin implements IButtonAccessor {
         }
     }
 
-    @Inject(method = "drawRecipe", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/GlStateManager;disableBlend()V"))
+    @Inject(method = "drawRecipe", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/GlStateManager;disableBlend()V", remap = true), remap = false)
     private void drawRecipe(Minecraft minecraft, int mouseX, int mouseY, CallbackInfo ci) {
         if (!patchouliBooks$patchouliButton.isEmpty()) {
             float partialTicks = minecraft.getRenderPartialTicks();
@@ -62,7 +62,7 @@ public abstract class RecipeLayoutMixin implements IButtonAccessor {
         }
     }
 
-    @Inject(method = "drawOverlays", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/GlStateManager;disableBlend()V"))
+    @Inject(method = "drawOverlays", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/GlStateManager;disableBlend()V", remap = true), remap = false)
     private void drawOverlays(Minecraft minecraft, int mouseX, int mouseY, CallbackInfo ci) {
         if (!patchouliBooks$patchouliButton.isEmpty()) {
             patchouliBooks$patchouliButton.forEach(patchouliButton -> patchouliButton.drawToolTip(minecraft, mouseX, mouseY));

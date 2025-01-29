@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.4] - 2025-01-29
+
+### Changes
+- fixed the JEI integration not working properly, now books should actually show up next to a recipe
+
 ## [0.2.3] - 2025-01-07
 
 ### Changes
