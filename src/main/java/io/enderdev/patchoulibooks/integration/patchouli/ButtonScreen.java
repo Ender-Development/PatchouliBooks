@@ -22,7 +22,7 @@ public class ButtonScreen extends GuiScreen {
     private int page = 0;
 
     public ButtonScreen(List<Book> list) {
-        list.stream().sorted(Comparator.comparing(a -> a.name)).forEach(bookList::add);
+        list.stream().sorted(Comparator.comparing(a -> a.name)).filter(a -> !a.name.isEmpty()).forEach(bookList::add);
     }
 
     @Override
@@ -33,7 +33,9 @@ public class ButtonScreen extends GuiScreen {
         String title = I18n.format("patchoulibooks.gui.inventory_button.title");
         this.fontRenderer.drawString(title, (this.width / 2 - this.fontRenderer.getStringWidth(title) / 2), this.height / 2 - 75, 0x55AA00);
 
-        String pageText = I18n.format("patchoulibooks.gui.inventory_button.page", this.page + 1, this.bookList.size() / BOOKS_PER_PAGE + 1);
+        int maxPageOffset = this.bookList.size() % BOOKS_PER_PAGE == 0 ? 0 : 1;
+
+        String pageText = I18n.format("patchoulibooks.gui.inventory_button.page", this.page + 1, this.bookList.size() / BOOKS_PER_PAGE + maxPageOffset);
         this.fontRenderer.drawString(pageText, (this.width / 2 - this.fontRenderer.getStringWidth(pageText) / 2), this.height / 2 + 65, 0x999999);
 
         if (this.bookList.size() > BOOKS_PER_PAGE) {

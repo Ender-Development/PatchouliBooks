@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.5] - 2025-03-17
+
+### Changes
+- fixed display of broken books in JEI and the Booklist
+- fixed a issue where the page count in the booklist was higher than the actual page count
+
 ## [0.2.4] - 2025-01-29
 
 ### Changes

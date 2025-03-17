@@ -45,6 +45,7 @@ public abstract class RecipeLayoutMixin implements IButtonAccessor {
                 int height = recipeCategory.getBackground().getHeight();
                 AtomicInteger c = new AtomicInteger();
                 bookList.forEach(book -> {
+                    if (book.name.isEmpty()) return;
                     patchouliBooks$patchouliButton.add(new PatchouliButton(90 + index + c.get(), 0, 0, 16, 16, book, itemStack));
                     patchouliBooks$patchouliButton.get(c.get()).x = c.get() <= 1 ? posX + width + 6 : posX + width + 6 + 18;
                     patchouliBooks$patchouliButton.get(c.get()).y = c.get() <= 1 ? posY + height - 31 - c.get() * 18 : posY + height - 31 - (c.get() - 2) * 18;
