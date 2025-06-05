@@ -21,19 +21,19 @@ public class PBConfig {
         CENTER
     }
 
-    @Config.Name("Debug")
+    @Config.Name("debug")
     @Config.LangKey("config.patchoulibooks.debug")
     public static final Debug DEBUG = new Debug();
 
-    @Config.Name("General")
+    @Config.Name("general")
     @Config.LangKey("config.patchoulibooks.general")
     public static final General GENERAL = new General();
 
-    @Config.Name("Just Enough Items / Had Enough Items")
+    @Config.Name("jei_hei")
     @Config.LangKey("config.patchoulibooks.jei")
     public static final JustEnoughItems JEI = new JustEnoughItems();
 
-    @Config.Name("Inventory Button")
+    @Config.Name("inventory_button")
     @Config.LangKey("config.patchoulibooks.inventory_button")
     public static final InventoryButton INVENTORY_BUTTON = new InventoryButton();
 
@@ -108,6 +108,10 @@ public class PBConfig {
                 "If there is more than one book, the books will be displayed in a grid."
         })
         public boolean enableBooksInJEI = true;
+
+        @Config.Name("Book Blacklist")
+        @Config.Comment("Prevent books from showing up in JEI.")
+        public String[] blacklistBook = new String[]{"patchoulibooks:patchoulibooks"};
     }
 
 

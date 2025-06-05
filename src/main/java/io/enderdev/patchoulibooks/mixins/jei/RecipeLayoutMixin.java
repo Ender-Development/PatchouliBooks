@@ -19,6 +19,7 @@ import vazkii.patchouli.common.book.Book;
 import vazkii.patchouli.common.book.BookRegistry;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
@@ -39,7 +40,10 @@ public abstract class RecipeLayoutMixin implements IButtonAccessor {
     private void init(int index, IRecipeCategory recipeCategory, IRecipeWrapper recipeWrapper, IFocus focus, int posX, int posY, CallbackInfo ci) {
         if (focus != null && focus.getValue() instanceof ItemStack && PBConfig.JEI.enableBooksInJEI) {
             ItemStack itemStack = (ItemStack) focus.getValue();
-            List<Book> bookList = BookRegistry.INSTANCE.books.values().stream().filter(book1 -> book1.contents.entries.values().stream().anyMatch(bookEntry -> bookEntry.isStackRelevant(itemStack) && !bookEntry.isLocked())).collect(Collectors.toList());
+            List<Book> bookList = BookRegistry.INSTANCE.books.values().stream()
+                    .filter(book -> !Arrays.asList(PBConfig.JEI.blacklistBook).contains(book.resourceLoc.toString()))
+                    .filter(book1 -> book1.contents.entries.values().stream().anyMatch(bookEntry -> bookEntry.isStackRelevant(itemStack) && !bookEntry.isLocked()))
+                    .collect(Collectors.toList());
             if (!bookList.isEmpty() && index >= 0) {
                 int width = recipeCategory.getBackground().getWidth();
                 int height = recipeCategory.getBackground().getHeight();
