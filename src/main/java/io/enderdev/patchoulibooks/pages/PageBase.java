@@ -36,6 +36,7 @@ public abstract class PageBase extends BookPage {
     public static final int PAGE_CENTER_HORIZONTAL = PAGE_WIDTH / 2;
     public static final int PAGE_CENTER_VERTICAL = DIST_SEP_TEXT + 7 * TEXT_LINE_HEIGHT;
 
+
     protected static final Map<String, ResourceLocation> TEXTURES = new HashMap<String, ResourceLocation>() {
         {
             put("hourglass", new ResourceLocation(Tags.MOD_ID, "textures/templates/pedestal_crafting/hourglass.png"));
