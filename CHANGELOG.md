@@ -1,10 +1,40 @@
 # Changelog
 
+## [0.2.6] - 2025-08-15
+
+### Changes
+- entries can now be locked via gamestages
+- entries can now be visible only when the player is in a specific gamemode
+- entries can now be visible only when the player is in a specific dimension
+- fixed an error with the ic2 book as it's still WIP and should not have been registered
+
+Syntax for your page json files:
+```json
+{
+  "name": "Crafting Test",
+  "icon": "minecraft:crafting_table",
+  "category": "test_category",
+  "requirements": [
+    {
+      "type": "gamemode",
+      "trigger": "creative"
+    }, {
+      "type": "gamestage",
+      "trigger": "test"
+    }, {
+      "type": "dimension",
+      "trigger": "the_nether"
+    }
+  ],
+  "pages": []
+}
+```
+
 ## [0.2.5] - 2025-03-17
 
 ### Changes
 - fixed display of broken books in JEI and the Booklist
-- fixed a issue where the page count in the booklist was higher than the actual page count
+- fixed an issue where the page count in the booklist was higher than the actual page count
 
 ## [0.2.4] - 2025-01-29
 
@@ -57,15 +87,15 @@
 ## [0.1.1] - 2024-11-06
 
 ### Changes
-- fixed the curseforge link in the patchouli books book
-- removed the reflection part to register the new page types as it causes a crash when launched outside of the dev environment
+- fixed the curseforge link in the patchouli books
+- removed the reflection part to register the new page types as it causes a crash when launched outside the dev environment
 - refactored the custom landing page to no longer rely on a mixin
 
 ## [0.1.0] - 2024-11-03
 
 ### Changes
 - implemented pamphlets for books that have only 1 category
-- added HEI/JEI integratiopn so you can lookup all recipes and usages of all items rendered in any book
+- added HEI/JEI integratiopn so you can look up all recipes and usages of all items rendered in any book
 - added a new page type for [Pedestal Crafting](https://www.curseforge.com/minecraft/mc-mods/pedestal-crafting) but should also be usable for stuff like [Extended Crafting](https://www.curseforge.com/minecraft/mc-mods/extended-crafting-nomifactory-edition)
 - added my own version for most of the default pages
   - these are more modular and space efficient

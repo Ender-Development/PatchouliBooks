@@ -26,7 +26,7 @@ public class RecipeRegister {
         addBookRecipe("thermallogistics","crafter");
         addBookRecipe("moarboats", "oars");
         addBookRecipe("pressure", "pipe");
-        addBookRecipe("ic2", "blockrubsapling");
+        // addBookRecipe("ic2", "blockrubsapling");
     }
 
     @SubscribeEvent

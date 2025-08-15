@@ -7,7 +7,7 @@ repositories {
         forRepository {
             maven {
                 name 'CurseMaven'
-                url 'https://cursemaven.com'
+                url 'https://curse.cleanroommc.com'
             }
         }
         filter {
@@ -66,6 +66,9 @@ dependencies {
     implementation("com.cleanroommc:groovyscript:1.2.0-hotfix1") { transitive = false } // so it doesn't installs JEI
 
     implementation rfg.deobf("curse.maven:patchouli-rofl-edition-905159:5201041")
+
+    implementation rfg.deobf("curse.maven:bookshelf-228525:2836960")
+    implementation rfg.deobf("curse.maven:game-stages-268655:2951840")
 
     // Runtime dependencies
     runtimeOnly "curse.maven:the-one-probe-community-edition-885670:5824252"

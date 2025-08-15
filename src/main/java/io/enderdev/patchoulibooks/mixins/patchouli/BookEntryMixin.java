@@ -71,7 +71,7 @@ public class BookEntryMixin {
     @Inject(method = "build", at = @At("HEAD"))
     private void build(ResourceLocation resource, CallbackInfo ci) {
         if (!built) {
-            Arrays.stream(patchouliBooks$requirements).forEach(requirement -> patchouliBooks$realRequirements.add(new Requirement()));
+            patchouliBooks$realRequirements.addAll(Arrays.asList(patchouliBooks$requirements));
         }
     }
 

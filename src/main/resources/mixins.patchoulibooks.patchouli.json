@@ -1,21 +1,14 @@
 {
-    "package": "io.enderdev.patchoulibooks.mixins.patchouli",
-    "refmap": "mixins.patchoulibooks.refmap.json",
-    "target": "@env(DEFAULT)",
-    "minVersion": "0.8.5",
-    "compatibilityLevel": "JAVA_8",
-    "mixins": [
-        "BookContentsMixin",
-        "BookEntryMixin",
-        "BookRegistryMixin",
-        "BookTextParserMixin",
-        "InventoryBookButtonHandlerMixin",
-        "ItemModBookMixin",
-        "PageCraftingMixin"
-    ],
-    "server": [],
-    "client": [
-        "GuiBookAccessor",
-        "GuiBookLandingMixin"
-    ]
+  "package": "io.enderdev.patchoulibooks.mixins.patchouli",
+  "refmap": "mixins.patchoulibooks.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8.5",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "BookContentsMixin", "BookEntryMixin", "BookRegistryMixin", "BookTextParserMixin", "InventoryBookButtonHandlerMixin", "ItemModBookMixin", "PageCraftingMixin"
+  ],
+  "server": [],
+  "client": [
+    "GuiBookAccessor", "GuiBookLandingMixin", "GuiBookMixin"
+  ]
 }
