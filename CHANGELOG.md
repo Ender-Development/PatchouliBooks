@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.2.7] - 2025-08-29
+
+### Changes
+- updated MixinBooter version to 10.6
+- fixed breaking all books (I forgot the null check)
+- added support to lock entries behind a gamerule (only boolean gamerules are supported)
+
+```json
+{
+  "requirements": [
+    {
+      "type": "gamerule",
+      "trigger": "doDaylightCycle"
+    }
+  ]
+}
+```
+
 ## [0.2.6] - 2025-08-15
 
 ### Changes

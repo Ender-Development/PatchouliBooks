@@ -79,9 +79,9 @@ dependencies {
     runtimeOnly rfg.deobf("curse.maven:modern-splash-629058:5282442") // otherwise it will crash
 
     runtimeOnly "com.cleanroommc:configanytime:3.0"
-    runtimeOnly "curse.maven:red-core-873867:5618189"
-    runtimeOnly "curse.maven:alfheim-lighting-engine-910715:5637644"
-    runtimeOnly "curse.maven:valkyrie-874067:5235356"
+    runtimeOnly "curse.maven:red-core-873867:6230904"
+    runtimeOnly "curse.maven:alfheim-lighting-engine-910715:6687458"
+    runtimeOnly "curse.maven:valkyrie-874067:6377168"
 
     // Mod Compatibility
     compileOnly "mezz:jei:4.26.1" // HEI
