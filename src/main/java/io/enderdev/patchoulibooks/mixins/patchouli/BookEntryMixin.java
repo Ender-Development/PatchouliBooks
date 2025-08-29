@@ -70,7 +70,7 @@ public class BookEntryMixin {
 
     @Inject(method = "build", at = @At("HEAD"))
     private void build(ResourceLocation resource, CallbackInfo ci) {
-        if (!built) {
+        if (!built && patchouliBooks$requirements != null && patchouliBooks$requirements.length != 0) {
             patchouliBooks$realRequirements.addAll(Arrays.asList(patchouliBooks$requirements));
         }
     }
