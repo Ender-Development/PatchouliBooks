@@ -3,8 +3,11 @@ package io.enderdev.patchoulibooks.unlock;
 import net.darkhax.gamestages.GameStageHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.world.GameRules;
 import net.minecraftforge.fml.common.Loader;
 
+import javax.annotation.Nonnull;
 import java.util.Locale;
 
 public class Requirement {
@@ -27,21 +30,23 @@ public class Requirement {
     }
 
     public boolean unlocked() {
+        EntityPlayerSP player = Minecraft.getMinecraft().player;
+        if (player == null) return false;
         switch (getType()) {
             case GAMEMODE:
-                return checkGamemode();
+                return checkGamemode(player);
             case DIMENSION:
-                return checkDimension();
+                return checkDimension(player);
             case GAMESTAGE:
-                return checkGamestage();
+                return checkGamestage(player);
+            case GAMERULE:
+                return checkGamerule(player);
             default:
                 return false;
         }
     }
 
-    private boolean checkGamemode() {
-        EntityPlayerSP player = Minecraft.getMinecraft().player;
-        if (player == null) return false;
+    private boolean checkGamemode(@Nonnull EntityPlayer player) {
         boolean creative = player.isCreative() && getTrigger().toLowerCase(Locale.ROOT).equals("creative");
         boolean spectator = player.isSpectator() && getTrigger().toLowerCase(Locale.ROOT).equals("spectator");
         boolean survival = !player.isCreative() && !player.isSpectator() && (getTrigger().toLowerCase(Locale.ROOT).equals("survival") || getTrigger().toLowerCase(Locale.ROOT).equals("adventure"));
@@ -49,18 +54,20 @@ public class Requirement {
         return fullfilled;
     }
 
-    private boolean checkDimension() {
-        EntityPlayerSP player = Minecraft.getMinecraft().player;
-        if (player == null) return false;
+    private boolean checkDimension(@Nonnull EntityPlayer player) {
         String currentDimension = player.world.provider.getDimensionType().getName().toLowerCase(Locale.ROOT);
         fullfilled = currentDimension.equals(getTrigger().toLowerCase(Locale.ROOT));
         return fullfilled;
     }
 
-    private boolean checkGamestage() {
+    private boolean checkGamestage(@Nonnull EntityPlayer player) {
         if (!Loader.isModLoaded("gamestages")) return true;
-        EntityPlayerSP player = Minecraft.getMinecraft().player;
-        fullfilled = player != null && GameStageHelper.hasStage(player, getTrigger());
+        fullfilled = GameStageHelper.hasStage(player, getTrigger());
         return fullfilled;
+    }
+
+    private boolean checkGamerule(@Nonnull EntityPlayer player) {
+        GameRules rules = player.world.getGameRules();
+        return rules.hasRule(getTrigger()) && rules.getBoolean(getTrigger());
     }
 }

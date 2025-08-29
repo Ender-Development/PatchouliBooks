@@ -6,7 +6,8 @@ public enum UnlockTypes {
     ERROR("error"),
     GAMESTAGE("gamestage"),
     GAMEMODE("gamemode"),
-    DIMENSION("dimension");
+    DIMENSION("dimension"),
+    GAMERULE("gamerule");
 
     private final String type;
 
