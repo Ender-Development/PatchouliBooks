@@ -101,6 +101,14 @@ public class PBConfig {
         @Config.Name("[5] Button Offset Y")
         @Config.Comment("Offset of the button from the anchor position on the y-axis.")
         public int buttonYPosition = 61;
+
+        @Config.Name("[6] Annoy Player")
+        @Config.Comment("Play a sound when the player has unread entries in the inventory book.")
+        public boolean annoyPlayer = true;
+
+        @Config.Name("[7] Annoy Sound")
+        @Config.Comment("The sound that plays every 2 seconds to notify the player about unread entries.")
+        public String annoySound = "entity.llama.spit";
     }
 
     public static class JustEnoughItems {

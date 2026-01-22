@@ -5,10 +5,19 @@
   "minVersion": "0.8.5",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "BookContentsMixin", "BookEntryMixin", "BookRegistryMixin", "BookTextParserMixin", "InventoryBookButtonHandlerMixin", "ItemModBookMixin", "PageCraftingMixin"
+    "BookContentsMixin",
+    "BookEntryMixin",
+    "BookRegistryMixin",
+    "BookTextParserMixin",
+    "InventoryBookButtonHandlerMixin",
+    "ItemModBookMixin",
+    "PageCraftingMixin"
   ],
   "server": [],
   "client": [
-    "GuiBookAccessor", "GuiBookLandingMixin", "GuiBookMixin"
+    "GuiBookAccessor",
+    "GuiBookLandingMixin",
+    "GuiBookMixin",
+    "GuiButtonInventoryBookMixin"
   ]
 }

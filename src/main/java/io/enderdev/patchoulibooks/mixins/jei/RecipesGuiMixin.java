@@ -17,7 +17,7 @@ import java.util.List;
 @Mixin(value = RecipesGui.class, remap = false)
 public class RecipesGuiMixin extends GuiScreen {
 
-    @Inject(method = "addRecipeSpecificButtons", at = @At(value = "INVOKE", target = "Lmezz/jei/gui/recipes/RecipesGui;getParentContainer()Lnet/minecraft/inventory/Container;", remap = true), remap = false)
+    @Inject(method = "addRecipeSpecificButtons", at = @At(value = "INVOKE", target = "Lmezz/jei/gui/recipes/RecipesGui;getParentContainer()Lnet/minecraft/inventory/Container;"))
     private void addRecipeTransferButtons(Minecraft minecraft, List<RecipeLayout> recipeLayouts, CallbackInfo ci) {
         for (RecipeLayout recipeLayout : recipeLayouts) {
             IButtonAccessor accessor = (IButtonAccessor) recipeLayout;
