@@ -63,6 +63,13 @@ public class PBConfig {
                 "This is untested with books added by other mods. User added books work fine."
         })
         public boolean improveRecipeLookup = false;
+
+        @Config.Name("[4] Pre-read Books")
+        @Config.Comment({
+                "If true, mark all entries of PatchouliBooks books as read.",
+                "Because who wants to click through all entries?"
+        })
+        public boolean preReadBooks = true;
     }
 
     public static class InventoryButton {

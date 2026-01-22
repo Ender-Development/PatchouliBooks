@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 public abstract class RecipeLayoutMixin implements IButtonAccessor {
 
     @Unique
-    private List<PatchouliButton> patchouliBooks$patchouliButton = new ArrayList<>();
+    private final List<PatchouliButton> patchouliBooks$patchouliButton = new ArrayList<>();
 
     @Override
     public List<PatchouliButton> patchouliBooks$getPatchouliButton() {
@@ -45,7 +45,7 @@ public abstract class RecipeLayoutMixin implements IButtonAccessor {
                     .filter(book1 -> book1.contents.entries.values().stream().anyMatch(bookEntry -> bookEntry.isStackRelevant(itemStack) && !bookEntry.isLocked()))
                     .collect(Collectors.toList());
             if (!bookList.isEmpty() && index >= 0) {
-                int width = recipeCategory.getBackground().getWidth();
+                int width = recipeCategory.getBackground().getWidth() + 14;
                 int height = recipeCategory.getBackground().getHeight();
                 AtomicInteger c = new AtomicInteger();
                 bookList.forEach(book -> {

@@ -1,6 +1,7 @@
 package io.enderdev.patchoulibooks.mixins.patchouli;
 
 import com.google.gson.annotations.SerializedName;
+import io.enderdev.patchoulibooks.PBConfig;
 import io.enderdev.patchoulibooks.Tags;
 import io.enderdev.patchoulibooks.unlock.Requirement;
 import net.minecraft.util.ResourceLocation;
@@ -47,7 +48,7 @@ public class BookEntryMixin {
      */
     @Inject(method = "computeReadState", at = @At("HEAD"), cancellable = true)
     private void computeReadState(CallbackInfoReturnable<EntryDisplayState> cir) {
-        if (book.owner.getModId().equals(Tags.MOD_ID)) {
+        if (book.owner.getModId().equals(Tags.MOD_ID) && PBConfig.GENERAL.preReadBooks) {
             cir.setReturnValue(EntryDisplayState.NEUTRAL);
             cir.cancel();
         }
