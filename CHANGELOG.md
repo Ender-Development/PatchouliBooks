@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.8] - 2026-01-22
+
+### Changes
+- added a few more config options
+- annoy the player, when there are unread entries in the inventory book
+- fixed the JEI button position to comply with the newest HEI versions
+- update mixins to work with newest HEI version
+- updated dependencies
+
 ## [0.2.7] - 2025-08-29
 
 ### Changes
