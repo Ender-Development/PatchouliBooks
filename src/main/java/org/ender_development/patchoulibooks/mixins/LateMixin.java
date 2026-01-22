@@ -1,8 +1,8 @@
 package org.ender_development.patchoulibooks.mixins;
 
 import com.google.common.collect.ImmutableList;
-import io.enderdev.patchoulibooks.Tags;
 import net.minecraftforge.fml.common.Loader;
+import org.ender_development.patchoulibooks.Tags;
 import zone.rong.mixinbooter.ILateMixinLoader;
 
 import java.util.List;

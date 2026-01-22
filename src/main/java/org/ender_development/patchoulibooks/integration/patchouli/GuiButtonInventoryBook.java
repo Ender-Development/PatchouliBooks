@@ -1,6 +1,6 @@
 package org.ender_development.patchoulibooks.integration.patchouli;
 
-import io.enderdev.patchoulibooks.Tags;
+import org.ender_development.patchoulibooks.Tags;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiButton;

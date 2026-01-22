@@ -1,6 +1,6 @@
 package org.ender_development.patchoulibooks.mixins.patchouli;
 
-import io.enderdev.patchoulibooks.Tags;
+import org.ender_development.patchoulibooks.Tags;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;

@@ -1,7 +1,7 @@
 package org.ender_development.patchoulibooks.recipes;
 
 import org.ender_development.patchoulibooks.PatchouliBooks;
-import io.enderdev.patchoulibooks.Tags;
+import org.ender_development.patchoulibooks.Tags;
 import org.ender_development.patchoulibooks.PBConfig;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;

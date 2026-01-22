@@ -25,3 +25,7 @@ config.patchoulibooks.inventory_button.tooltip=Settings for the inventory button
 
 ## JEI
 patchoulibooks.jei.openbook=Open %s
+
+## Toast
+patchoulibooks.toast.title=Unread Entries!
+patchoulibooks.toast.sub=Check Inventory Book.

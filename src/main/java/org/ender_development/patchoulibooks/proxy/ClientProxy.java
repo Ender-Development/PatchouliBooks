@@ -2,7 +2,7 @@ package org.ender_development.patchoulibooks.proxy;
 
 import org.ender_development.patchoulibooks.PBConfig;
 import org.ender_development.patchoulibooks.events.InventoryBookEvent;
-import io.enderdev.patchoulibooks.pages.*;
+import org.ender_development.patchoulibooks.pages.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;

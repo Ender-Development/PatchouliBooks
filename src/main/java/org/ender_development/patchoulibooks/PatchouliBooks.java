@@ -1,6 +1,6 @@
 package org.ender_development.patchoulibooks;
 
-import io.enderdev.patchoulibooks.Tags;
+import org.ender_development.patchoulibooks.Tags;
 import org.ender_development.patchoulibooks.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;

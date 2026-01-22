@@ -1,12 +1,12 @@
 package org.ender_development.patchoulibooks.mixins.jei;
 
-import org.ender_development.patchoulibooks.integration.jei.IButtonAccessor;
-import org.ender_development.patchoulibooks.integration.jei.PatchouliButton;
 import mezz.jei.gui.recipes.RecipeLayout;
 import mezz.jei.gui.recipes.RecipesGui;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
+import org.ender_development.patchoulibooks.integration.jei.IButtonAccessor;
+import org.ender_development.patchoulibooks.integration.jei.PatchouliButton;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

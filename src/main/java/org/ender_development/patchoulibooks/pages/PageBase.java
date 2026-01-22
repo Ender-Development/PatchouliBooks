@@ -1,6 +1,6 @@
 package org.ender_development.patchoulibooks.pages;
 
-import io.enderdev.patchoulibooks.Tags;
+import org.ender_development.patchoulibooks.Tags;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;

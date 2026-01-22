@@ -1,6 +1,6 @@
 package org.ender_development.patchoulibooks.integration.jei;
 
-import io.enderdev.patchoulibooks.Tags;
+import org.ender_development.patchoulibooks.Tags;
 import org.ender_development.patchoulibooks.PBConfig;
 import org.ender_development.patchoulibooks.mixins.patchouli.GuiBookAccessor;
 import mezz.jei.config.KeyBindings;

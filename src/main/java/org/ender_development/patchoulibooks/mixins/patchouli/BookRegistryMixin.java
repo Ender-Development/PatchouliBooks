@@ -2,7 +2,7 @@ package org.ender_development.patchoulibooks.mixins.patchouli;
 
 import com.google.gson.Gson;
 import org.ender_development.patchoulibooks.PatchouliBooks;
-import io.enderdev.patchoulibooks.Tags;
+import org.ender_development.patchoulibooks.Tags;
 import org.ender_development.patchoulibooks.PBConfig;
 import org.ender_development.patchoulibooks.integration.patchouli.BookExtension;
 import net.minecraft.util.ResourceLocation;

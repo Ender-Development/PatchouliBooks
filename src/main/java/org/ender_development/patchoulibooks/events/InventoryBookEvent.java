@@ -1,7 +1,7 @@
 package org.ender_development.patchoulibooks.events;
 
 
-import io.enderdev.patchoulibooks.Tags;
+import org.ender_development.patchoulibooks.Tags;
 import org.ender_development.patchoulibooks.PBConfig;
 import org.ender_development.patchoulibooks.integration.patchouli.ButtonScreen;
 import net.minecraft.client.Minecraft;

@@ -1,7 +1,7 @@
 package org.ender_development.patchoulibooks.integration.patchouli;
 
 import com.google.gson.annotations.SerializedName;
-import io.enderdev.patchoulibooks.Tags;
+import org.ender_development.patchoulibooks.Tags;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;

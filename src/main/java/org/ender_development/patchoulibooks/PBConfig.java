@@ -103,12 +103,33 @@ public class PBConfig {
         public int buttonYPosition = 61;
 
         @Config.Name("[6] Annoy Player")
-        @Config.Comment("Play a sound when the player has unread entries in the inventory book.")
+        @Config.Comment("Notify the player that they have unread entries in the inventory book.")
         public boolean annoyPlayer = true;
 
         @Config.Name("[7] Annoy Sound")
-        @Config.Comment("The sound that plays every 2 seconds to notify the player about unread entries.")
+        @Config.Comment({
+                "The sound that plays to notify the player about unread entries.",
+                "Leaving this empty, will disable the sound."
+        })
         public String annoySound = "entity.llama.spit";
+
+        @Config.Name("[8] Annoy Sound Delay")
+        @Config.Comment({
+                "Time in seconds, whenever the sound should get played,",
+                "while the inventory is open."
+        })
+        public int annoySoundDelay = 3;
+
+        @Config.Name("[9] Annoy Toast")
+        @Config.Comment("Display a toast while there are unread entries.")
+        public boolean annoyToast = true;
+
+        @Config.Name("[10] Annoy Toast Delay")
+        @Config.Comment({
+                "Time in seconds, whenever the toast should be displayed,",
+                "while the inventory is open."
+        })
+        public int annoyToastDelay = 10;
     }
 
     public static class JustEnoughItems {

@@ -2,7 +2,7 @@ package org.ender_development.patchoulibooks.mixins.patchouli;
 
 import com.google.gson.annotations.SerializedName;
 import org.ender_development.patchoulibooks.PBConfig;
-import io.enderdev.patchoulibooks.Tags;
+import org.ender_development.patchoulibooks.Tags;
 import org.ender_development.patchoulibooks.unlock.Requirement;
 import net.minecraft.util.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;

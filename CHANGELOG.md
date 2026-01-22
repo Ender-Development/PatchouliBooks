@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-01-22
+
+### Changes
+- change class path according to organization
+- fixed a few buildscript issues
+- enabled maven publishing for our maven
+- added a toast for unread entries
+
 ## [0.2.8] - 2026-01-22
 
 ### Changes
