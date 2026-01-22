@@ -1,14 +1,14 @@
 {
-    "package": "io.enderdev.patchoulibooks.mixins.jei",
+    "package": "org.ender_development.patchoulibooks.mixins.jei",
     "refmap": "mixins.patchoulibooks.refmap.json",
     "target": "@env(DEFAULT)",
     "minVersion": "0.8.5",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-        "RecipeLayoutMixin"
+      "RecipeLayoutMixin"
     ],
     "server": [],
     "client": [
-        "RecipesGuiMixin"
+      "RecipesGuiMixin"
     ]
 }

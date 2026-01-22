@@ -164,7 +164,7 @@ if (propertyBool('use_access_transformer')) {
 processResources {
 
     def filterList = ['mcmod.info', 'pack.mcmeta']
-    filterList.addAll(propertyStringList('mixin_configs').collect(config -> "mixins.${config}.json" as String))
+    filterList.addAll(propertyStringList('mixin_configs').collect(config -> "mixins.${propertyString('mod_id')}.${config}.json" as String))
 
     filesMatching(filterList) { fcd ->
         fcd.expand(
@@ -273,7 +273,7 @@ String parserChangelog() {
 
 tasks.register('generateMixinJson') {
     group 'cleanroom helpers'
-    def missingConfig = propertyStringList('mixin_configs').findAll(config -> !file("src/main/resources/mixins.${config}.json").exists())
+    def missingConfig = propertyStringList('mixin_configs').findAll(config -> !file("src/main/resources/mixins.${propertyString('mod_id')}.${config}.json").exists())
     onlyIf {
         if (propertyBool('use_mixins') && propertyBool('generate_mixins_json')) {
             return !missingConfig.empty
@@ -282,8 +282,8 @@ tasks.register('generateMixinJson') {
     }
     doLast {
         for (String mixinConfig : missingConfig) {
-            def file = file("src/main/resources/mixins.${mixinConfig}.json")
-            file << """{\n\t"package": "",\n\t"required": true,\n\t"refmap": "${mixin_refmap}",\n\t"target": "@env(DEFAULT)",\n\t"minVersion": "0.8.5",\n\t"compatibilityLevel": "JAVA_8",\n\t"mixins": [],\n\t"server": [],\n\t"client": []\n}"""
+            def file = file("src/main/resources/mixins.${propertyString('mod_id')}.${mixinConfig}.json")
+            file << """{\n\t"package": "",\n\t"required": true,\n\t"refmap": "${propertyString('mixin_refmap')}",\n\t"target": "@env(DEFAULT)",\n\t"minVersion": "0.8.5",\n\t"compatibilityLevel": "JAVA_8",\n\t"mixins": [],\n\t"server": [],\n\t"client": []\n}"""
         }
     }
 }

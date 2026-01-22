@@ -1,5 +1,5 @@
 {
-  "package": "io.enderdev.patchoulibooks.mixins.patchouli",
+  "package": "org.ender_development.patchoulibooks.mixins.patchouli",
   "refmap": "mixins.patchoulibooks.refmap.json",
   "target": "@env(DEFAULT)",
   "minVersion": "0.8.5",
